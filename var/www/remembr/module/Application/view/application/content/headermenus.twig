@@ -1,0 +1,98 @@
+<div class="page_drop fade header_dropdown" ng-if="ui.active=='pages'" ng-click="$event.stopPropagation()"><div ng-if='user.pages[page.url]'>
+    <h4><span>{{'Page settings' |trans}}</span></h4>
+    <p><a ui-sref="root.page.fancybox.setting.info" >{{'Edit info' | trans}}</a></p>
+{#                            <p><a ui-sref="root.page.fancybox.setting.admins" >{{'Beheerders' | trans}}</a></p>#}
+    <p><a ui-sref="root.page.fancybox.setting.privacy" >{{'Privacy' | trans}}</a></p>
+{#                            <p><a ui-sref="root.page.fancybox.setting.block" >{{'Blokkeringen' | trans}}</a></p>#}
+    <p><a ui-sref="root.page.fancybox.setting.publish" >{{'Publish page' | trans}}</a></p>
+{#                            <p><a ui-sref="root.page.fancybox.setting.themes" >{{'Pagina Thema' | trans}}</a></p>#}
+        <p><a ui-sref="root.page.fancybox.setting.labels" >{{'Add labels' | trans}}</a></p>
+        <p><a ui-sref="root.page.fancybox.setting.invite" >{{'Invite friends' | trans}}</a></p>
+        <p><a ui-sref="root.page.fancybox.setting.qrcode" >{{'QR code' | trans}}</a></p>
+    </div>
+    <h4><span>{{'Pages' | trans }}</span></h4>
+    <p class="page-item" ng-repeat="(url, item) in $root.user.pages">
+        <img ng-src="{[{imgcrop(item.photo.url,item.photo.roi,25,25)}]}" width="25" height="25" alt=""/>
+        <span><a ui-rel-sref="root.page({page:'{[{url}]}'})">{[{item.firstname}]} {[{item.lastname}]}</a></span>
+        <span class="ballon_box" ng-if="item.newcoms">{[{item.newcoms > 99 ? '99+' : item.newcoms}]}</span>
+        <em class="clear"></em>
+    </p>
+    <h4>&nbsp;</h4>
+    <p class="no_border page-item" ng-show="$root.user.loggedin">
+        <img src="/images/plus_icon.png" width="24" height="24" alt="">
+        <a ui-rel-sref=".fancybox.createpage.info">{{'Create page' | trans}}</a>
+        <em class="clear"></em>
+    </p>
+</div>
+<div ng-controller="notificationsCtrl" ng-show="notifications.notifications.length" class="note_drop fade header_dropdown" ng-if="ui.active=='notifications'" ng-click="$event.stopPropagation()">
+    <h4><span>{{'Notifications' | trans}}</span></h4>
+    <div ng-repeat="item in notifications.notifications | orderBy:'-createDate'">
+        <p ng-if="item.softdeleted" class="noti">{{ 'Deleted' | trans }} {[{translate(item.type)}]} {{ 'at' | trans }}
+            <a ng-if="item.softdeleted" ng-click="readNotification(item, false)" ui-sref="root.page({page:item.url})">{[{item.name}]}</a>
+        </p>
+        <p ng-if="!item.softdeleted" class="noti">{{ 'New' | trans }} {[{translate(item.type)}]} {{ 'at' | trans }}
+            <a ng-if="!item.softdeleted" ng-click="readNotification(item, true)" ui-sref="root.page({page:item.url})">{[{item.name}]}</a>
+            <span ng-if="item.senderName">by {[{item.senderName}]}</span>
+        </p>
+    </div>
+    <p>
+        <a class="nobg" ui-rel-sref="root.notifications">{{ "See all" | trans }}</a>
+        <a class="all-read nobg" ng-click="markNotifications()">{{ "Mark as read" | trans }}</a>
+    </p>
+</div>
+<div ng-controller="notificationsCtrl" ng-show="notifications.notifications.length == 0" class="note_drop fade header_dropdown" ng-if="ui.active=='notifications'" ng-click="$event.stopPropagation()">
+    <h4><span>{{'Notifications' | trans}}</span></h4>
+    <p>{{ "No new notifications" | trans }}</p>
+    <h4>&nbsp;</h4>
+    <p>
+        <a class="nobg" ui-rel-sref="root.notifications">{{ "See all" | trans }}</a>
+    </p>
+</div>
+<div ng-controller="managementCtrl" class="user_drop fade header_dropdown" ng-if="ui.active=='management'" ng-click="$event.stopPropagation()">
+    <h4><span>{{'Personal details' |trans}}</span></h4>
+    <p><a ui-sref="root.dashboard">{{'Dashboard' | trans}}</a></p>
+    <p><a ui-sref="root.usersettings">{{'Account settings' | trans}}</a></p>
+    <p><a ng-click="sign_out($event)">{{'Log out' | trans}}</a></p>
+     {#<li class="no_border">
+            <h4><span>{{'Memories of someone else' |trans}}</span></h4>
+            <p><a>{{'Your Remembr. pages' | trans}}</a></p>
+            <p><a>{{'Your shared memories' | trans}}</a></p>
+     </li>
+     <li class="no_border">
+            <h4><span>{{'How you want to be remembered' |trans}}</span></h4>
+            <p><a>{{'Save memories' | trans}}</a></p>
+            <p><a>{{'Memorial wish list' | trans}}</a></p>
+    </li>#}
+</div>
+<div class="mess_drop fade header_dropdown" ng-controller="messagesCtrl" ng-if="ui.active=='messages'" ng-click="$event.stopPropagation()">
+    <h4><span>{{'Messages' | trans}}</span></h4>
+    <div ng-repeat="msg in inbox.messages | orderBy:'-senddate' | limitTo:3">
+        <div class="message-box" ng-click="openInbox(msg); ui.active='';" style="cursor: pointer;">
+            <img class="user-photo" ng-src="{[{imgresize(msg.from_photo,25,25)}]}" width="25" height="25" alt=""/>
+            <p class="message-sent-date" ng-class="{bold: msg.new == true}">{[{msg.senddate | date:'dd-MM yyyy HH:mm'}]}</p>
+            <p class="user-name" ng-class="{bold: msg.new == true}">{[{msg.from_firstname}]} {[{msg.from_lastname}]}</p>
+
+            {#<p ng-class="{bold: msg.new == true}" class="subject" ng-if="msg.extra.type=='link'">{{'Invitation' |trans }}</a></p>
+            <p ng-class="{bold: msg.new == true}" class="subject" ng-if="msg.extra.type=='request'">{{'Request for invite' |trans }}</p>
+            <p ng-class="{bold: msg.new == true}" class="subject" ng-if="msg.extra.type!='request' && msg.extra.type!='link' && !msg.extra">{[{msg.title}]}</p>#}
+        </div>
+    </div>
+    <p class="no_border">
+        <a ng-click="openInboxFirst(); ui.active='';">{{'View all messages' | trans}}</a>
+    </p>
+</div>
+<div class="sett_drop fade header_dropdown" ng-if="ui.active=='settings'" ng-click="$event.stopPropagation()">
+    <h4><span>{{'Need Help?' | trans}}</span></h4>
+    <p><a ui-sref="root.cms({slug:'faq'})">{{'FAQ' | trans}}</a></p>
+    <p><a ui-sref="root.cms({slug:'contact'})">{{'Contact' | trans}}</a></p>
+    <h4><span>{{'Language' | trans}}</span></h4>
+    <p><a ui-rel-sref=".({lang:'nl'})">Nederlands</a></p>
+    <p><a ui-rel-sref=".({lang:'en'})">English</a></p>
+    <h4><span>{{'Search' | trans}}</span></h4>
+    <p><a ui-rel-sref="root.search({search: '{{'memorialpages' | trans }}'})">{{ 'Search memorial page...' | trans }}</a></p>
+</div>
+<div class="hamb_drop fade header_dropdown" ng-if="ui.active=='hamburger'" ng-click="$event.stopPropagation()">
+    {% include '/application/content/hamburger' %}
+</div>
+
+<div class="clear"></div>

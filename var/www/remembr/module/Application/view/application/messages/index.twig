@@ -1,0 +1,36 @@
+{% block content %}
+<div class="content"> <!--content start-->
+    <div class="container" ng-controller="messagesCtrl" ng-class="{loader: $root.user.loggedin == false}">
+        <div id="plain_light" class="ng-scope" ng-init="polling()">
+            <div id="messages">
+                <h5 class="no_border fc">{{ "Messages" | trans }}</h5>
+                <div class="top_info_tab">
+                    <ul>
+                        <li>
+                            <a ng-click="openTab('inbox')" ng-class="{tab_act : currenttab=='inbox'}">
+                                {{'Inbox' | trans}}
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="openTab('outbox')" ng-class="{tab_act : currenttab=='outbox'}">
+                                {{'Outbox' | trans}}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey" ng-class="{tab_act : currenttab=='new' || currenttab=='reply'}">
+                                {{'New message' | trans}}
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                {% include 'application/messages/inbox' %}
+                {% include 'application/messages/outbox' %}
+                {% include 'application/messages/new' %}
+                {% include 'application/messages/reply' %}
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div> <!--content end-->
+</div>
+{% endblock content %}

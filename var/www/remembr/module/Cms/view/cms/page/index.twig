@@ -1,0 +1,10 @@
+{% do headTitle(title ~ ' | Remembr.') %}
+
+<h1>{{ title }}</h1>
+
+{{ text | raw }}
+
+{% if metaDescription %}
+    {{ addglobal('metaDescriptionAlreadySet', true) }}
+    {% do headMeta().setName('description', metaDescription) %}    
+{% endif %}

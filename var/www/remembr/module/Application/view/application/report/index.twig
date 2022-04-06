@@ -1,0 +1,152 @@
+{{ doctype() }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+    {% block title %}
+    {{ headTitle('Report a problem | Remembr.') }}
+    {% endblock %}
+
+    {% block meta %}
+    {% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %}
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap-responsive.min.css')) %}
+		{% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+		{% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{{ headLink() }}
+    {% endblock %}
+
+
+    {% block headscript %}
+		{% do headScript().prependFile(basePath('/js/bootstrap.min.js')) %}
+		{% do headScript().prependFile(basePath('/js/html5.js'), null, {'conditional':'lt IE 9'}) %}
+		{% do headScript().prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+		{% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js')) %}
+		{% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js') %}
+		{{ headScript() }}
+    {% endblock %}
+
+    </head>
+
+    <body id="noheader">
+
+		<noscript>
+			<div class="nojs">{{'Javascript is turned off.' | trans}}</div>
+		</noscript>
+
+		<div class="content"> <!--content start-->
+			<form id="report" method="post" action="/report" enctype="multipart/form-data">
+				<div class="logo">
+					<img src="/images/merk-logo-com-large.png" width="180" height="65" alt="">
+				</div>
+				<h1>{{'Bug report form' |trans }}</h1>
+				<div class="clear"></div>
+				<div>
+					<label>{{'Name / Email' |trans }}:</label>
+					<input name="username" {#placeholder="{{'Name' |trans}}"#}/> <input name="email" {#placeholder="{{'Email' |trans}}"#} />
+				</div>
+				<div>
+					<label>{{'Problem' |trans }}:</label>
+					<textarea name="problem"></textarea>
+				</div>
+				<div>
+					<label>{{'Expected result' |trans }}:</label>
+					<textarea name="expected"></textarea>
+				</div>
+				<div>
+					<label>{{'Actual result' |trans }}:</label>
+					<textarea name="actual"></textarea>
+				</div>
+				<div>
+					<label>{{'Other remarks' |trans }}:</label>
+					<textarea name="comments"></textarea>
+				</div>
+				<div>
+					<label>{{'Attachments / Screenshots' |trans }}</label>
+					<div class="fileadd"><button class="add"> + </button> <button class="rem"> - </button> <input name="attachment[]" type="file" /></div>
+				</div>
+
+				<div>
+					<input type="submit" value="{{'Send' |trans }}" />
+				</div>
+
+
+				<div class="browserinfo">
+					<h2> {{'Browser information' |trans }} </h2>
+					<div>
+						<label>User agent</label> <input name="useragent" readonly="readonly" />
+					</div>
+					<div>
+						<label>Features (modernizr)</label> <textarea name="modernizr" readonly="readonly" /></textarea>
+					</div>
+					<div>
+						<label>{{'Flash version' |trans }}</label> <input name="flashversion" readonly="readonly" />
+					</div>
+					<div>
+						<label>{{'Height x Width' |trans }}</label> <input name="height" readonly="readonly" size="3"/> x <input name="width" readonly="readonly" size="3"/>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script>
+
+			function getFlashVersion(){
+				// ie
+				try {
+					try {
+						// avoid fp6 minor version lookup issues
+						// see: http://blog.deconcept.com/2006/01/11/getvariable-setvariable-crash-internet-explorer-flash-6/
+						var axo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash.6');
+						try { axo.AllowScriptAccess = 'always'; }
+						catch(e) { return '6,0,0'; }
+					} catch(e) {}
+					return new ActiveXObject('ShockwaveFlash.ShockwaveFlash').GetVariable('$version').replace(/\D+/g, ',').match(/^,?(.+),?$/)[1];
+				// other browsers
+				} catch(e) {
+					try {
+						if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){
+							return (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g, ",").match(/^,?(.+),?$/)[1];
+						}
+					} catch(e) {}
+				}
+				return '0,0,0';
+			}
+
+			function browserinfo()
+			{
+				try { $('input[name=width]').val($(window).width()); }  catch(e) {}
+				try { $('input[name=height]').val($(window).height()); }  catch(e) {}
+				try { $('input[name=flashversion]').val(getFlashVersion()); }  catch(e) {}
+				try { $('textarea[name=modernizr]').val($('html').attr('class')); }  catch(e) {}
+				try { $('input[name=useragent]').val(navigator.userAgent); }  catch(e) {}
+			}
+			$(function(){
+				browserinfo();
+
+				$(document).on('click', '.fileadd button.add', function(e){
+					e.preventDefault();
+					$('.fileadd').parent().append('<div class="fileadd"><button class="add"> + </button> <button class="rem"> - </button> <input name="attachment[]" type="file" /></div>');
+				});
+
+				$(document).on('click', '.fileadd button.rem', function(e){
+					e.preventDefault();
+					if ($('.fileadd').length < 2)
+					{
+						$('.fileadd').parent().append('<div class="fileadd"><button class="add"> + </button> <button class="rem"> - </button> <input name="attachment[]" type="file" /></div>');
+					}
+					$(this).parent().remove();
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

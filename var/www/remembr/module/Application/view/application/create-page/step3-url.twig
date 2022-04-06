@@ -1,0 +1,46 @@
+{% extends format == 'tpl' ? 'application/create-page/tpl' : 'application/create-page/index' %}
+{% do headTitle('Create a memorial page step 3 | Remembr.' | trans)%}
+{% block step %}
+	<div>
+
+		<div class="update_info light_container">
+			<form name="url" novalidate ng-submit="nextStep()">
+				<h5>{{'Create a unique page name and web address'|trans}}</h5>
+
+				<div class="help_cont_lft">
+					{{cms('help_create_url').text() | raw}}
+				</div>
+
+				<div class="update_info_rht wide">
+
+					<img id="remembrcom" src="/images/remembr_com.jpg" />
+
+					<span class="light_txtbox_bg floatleft"  ng-class="{invalid : url.url.$invalid && url.url.$dirty}">
+						<input style="word-spacing:0" ng-pattern="/^[a-zA-Z0-9\-]+(?:\.(?:[a-zA-Z0-9\-]+))+$/" ng-model="newpage.url" reg-filter="{reg:'[^a-zA-Z0-9.-]|\\.{2,}', rep:'.'}" name="url" type="text" class="light_txtbox" required ng-blur="url.url.$dirty=true" placeholder="{{'Name of the page' | trans }}" />
+						<span class="error required">{{'You are required to enter a pagename'|trans}}</span>
+						<span class="error connect">{{'Connection failed while trying to check availability'|trans}}</span>
+						<span class="error available">{{'This name is no longer available'|trans}}</span>
+					</span>
+{#
+					<input type="button" class="med_blue_but" value="check" ng-click="checkAvailable()" />
+#}
+					<div class="clear"></div>
+
+					<h5>{{ 'Suggestion' | trans }}</h5>
+                    
+					<!--<p ng-repeat="item in suggestions">-->
+                    <p><strong class='themecolor'>remembr.com/</strong><strong>{[{suggestions[0].url}]} | </strong> &nbsp; <a ng-click="select(suggestions[0])">{{'select' | trans }}</a></p>
+					<!--</p>-->
+				</div>
+
+				<div class="clear"></div>
+
+					<button ui-sref="^.photo" class="save_changes floatleft">{{'Previous step' | trans }}</button>
+					<input type="submit" value="{{'Next step' | trans }}" class="save_changes" ng-class="{disabled:url.$invalid}" />
+
+				<div class="clear"></div>
+			</form>
+		</div>
+
+	</div>
+{% endblock step %}

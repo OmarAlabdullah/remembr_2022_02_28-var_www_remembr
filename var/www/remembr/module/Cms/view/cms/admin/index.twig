@@ -1,0 +1,62 @@
+{% block content %}
+
+<div class="toolbar">
+    <ul class="nav nav-pills">
+        <li><a href="{{url(null, { action: 'create'}, true)}}">New content</a></li>
+    </ul>
+</div>
+
+	<table class="table tablesorter" id="adminTable">
+		<thead>
+		<tr>
+			<th>Name / Id</th>
+			<th>Language</th>
+			<th>Title</th>
+			<th>Text</th>
+			<th>Created</th>
+			<th>Last update</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for c in content %}
+		<tr>
+			<td>{{ c.getSlug() }}</td>
+			<td>{{ c.getLang() }}</td>
+			<td>{{ c.getTitle() }}</td>
+			<td>
+				{% set text = c.getText()|length > 30 ? c.getText()|slice(0, 30) ~ '...' : c.getText() %}
+				{{ text|striptags  }}
+			</td>
+			<td>{{ c.getCreateDate() | date('Y-m-d H:i') }}</td>
+			<td>{{ c.getUpdateDate() | date('Y-m-d H:i')  }}</td>
+			<td>
+				<a href="{{url(null, {action: 'edit', id: c.getId()}, true)}}" class="btn btn-mini btn-primary" type="button">Edit</a>
+				<a href="{{url(null, {action: 'delete', id: c.getId()}, true)}}"class="btn btn-mini btn-danger remove-btn" type="button">×</a>
+			</td>
+		</tr>
+
+	{%else%}
+		<tr><td colspan="8">There is no content.</td></tr>
+	{%endfor%}
+		</tbody>
+	</table>
+
+<div id="pager" class="pager">
+                <form>
+                    <img src="/addons/pager/icons/first.png" class="first"/>
+                    <img src="/addons/pager/icons/prev.png" class="prev"/>
+                    <input type="text" class="pagedisplay"/>
+                    <img src="/addons/pager/icons/next.png" class="next"/>
+                    <img src="/addons/pager/icons/last.png" class="last"/>
+                    <select class="pagesize">
+                        <option selected="selected" value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                    </select>
+                </form>
+            </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Publish memorial page | Remembr.' | trans)%}
+{% block settings %}
+	<div>
+		<div class="publish_page light_container">
+			<form name="publish" novalidate ng-submit="save()">
+				<div class="inv_friend_lft">
+					<h5>{{ 'Publish your page' | trans }}</h5>
+
+					<ul ng-class="{loader : editpage.status === undefined }">
+						<li class="publish_act">
+							<span class="ng-hide" ng-show="editpage.status=='unpublished'">{{ 'This page is not yet published' | trans}}</span>
+							<span class="ng-hide" ng-show="editpage.status=='deactivated'">{{ 'This page has been deactivated' | trans}}</span>
+							<span class="ng-hide" ng-show="editpage.status=='tobedeleted'">{{ 'This page will be removed when removal is confirmed' | trans}}</span>
+							<span class="ng-hide" ng-show="editpage.status=='published'">{{ 'This page is published' | trans}}</span>
+							<span class="ng-hide" ng-show="editpage.status=='deleted'">{{ 'This page has been removed.' | trans}}</span>
+						</li>
+
+						<li class="by_email">
+							<a class="ng-hide blue-inline-btn" ng-show="editpage.status!='published' && editpage.dateofdeath != ''" ng-click="publishnow()">{{ 'Publish' | trans}}</a>
+							<a class="ng-hide blue-inline-btn" ng-show="editpage.status=='published' || editpage.status=='tobedeleted'" ng-click="deactivate()">{{ 'Deactivate' | trans}}</a>
+							<a class="ng-hide blue-inline-btn" ng-show="editpage.status!='tobedeleted'" ng-click="remove()">{{ 'Remove' | trans}}</a>
+						</li>
+					</ul>
+
+					<div class="clear"></div>
+
+				</div>
+
+				<div class="help_cont">
+					<h5>{{cms('help_settings_publish').title()}}</h5>
+					{{cms('help_settings_publish').text() | raw}}
+				</div>
+
+				<div class="clear"></div>
+				<input type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ng-click="close()" />
+
+				<div class="clear"></div>
+			</form>
+		</div>
+
+	</div>
+{% endblock settings %}

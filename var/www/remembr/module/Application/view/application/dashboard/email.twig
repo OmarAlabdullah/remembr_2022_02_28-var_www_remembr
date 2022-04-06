@@ -1,0 +1,51 @@
+{% block content %}
+<div class="content"> <!--content start-->
+
+    <div class="container" ng-controller="dashboardCtrl" {# ng-class="{loader: page.url == undefined}" @TODO: is not working all the time #}>
+
+        <div id="plain_light" class="ng-scope">
+            <div id="useraccount" class="email">
+                <div class="">
+                    <div class="update_info_lft">
+                        <span><img ng-src="{[{imgresize(user.profilephoto,160,160)}]}" width="160" height="160" alt="{[{user.firstname}]} {[{user.lastname}]}"></span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="update_info_rht">
+                        <h5 class="no_border">{{ "Provide your e-mail address" | trans }}</h5>
+                        <form method="post" name="emailForm" id="emailForm" ng-submit="submitEditEmailForm(emailForm.$valid)" novalidate class="">
+                            <ul>
+                                <li>
+                                    <label>{{ 'E-mail' | trans }}
+                                    <span class="light_txtbox_bg" ng-class="{invalid : emailForm.password.$invalid &amp;&amp; emailForm.password.$dirty}">
+                                        <input  type="text" name="email" required="true" placeholder="{{ 'Enter your e-mail address' | trans }}" ng-model="user.email1" class="light_txtbox" >
+                                    </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>{{ 'Confirm your e-mail' | trans }}
+                                    <span class="light_txtbox_bg" ng-class="{invalid : emailForm.password2.$invalid &amp;&amp; emailForm.password2.$dirty}">
+                                        <input data-password-verify="user.email1" name="email2" ng-model="user.email2" required="true" type="text" size="30" autocomplete="off" class="password2 light_txtbox" placeholder="{{ 'Confirm your e-mail address' | trans }}" value="">
+                                    </span>
+                                    </label>
+                                    <p class="signup-error" ng-show="emailForm.email2.$error.passwordVerify">{{ 'E-mail addresses do not match' | trans }}</p>
+                                </li>
+
+                            </ul>
+                            <input name="" type="submit" value="{{ 'Save changes' | trans }}" class="save_changes disabled" ng-class="{disabled:emailForm.$invalid || !emailForm.$dirty}" class="">
+                            <input name="" type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ui-sref="root.usersettings">
+                        </form>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div> <!--content end-->
+{% endblock content %}

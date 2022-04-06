@@ -1,0 +1,66 @@
+{{ doctype() }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+    {% block title %}
+    {{ headTitle('Remembr.') }}
+    {% endblock %}
+
+    {% block meta %}
+    {% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %}
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap-responsive.min.css')) %}
+		{% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+		{% do headLink().appendStylesheet(basePath('/css/jquery-ui-1.10.3.custom.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/banner.css')) %}
+        {% do headLink().appendStylesheet(basePath('/css/colorbox.css')) %}
+        {% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{{ headLink() }}
+    {% endblock %}
+
+    {% block headscript %}
+		{% do headScript().prependFile(basePath('/js/bootstrap.min.js')) %}
+		{% do headScript().prependFile(basePath('/js/html5.js'), null, {'conditional':'lt IE 9'}) %}
+		{% do headScript().prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+		{% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js')) %}
+        {% do headScript().appendFile(basePath('/js/jquery.colorbox.js')) %}
+        {% do headScript().appendFile(basePath('/js/add-provider.js')) %}
+
+
+		{{ headScript() }}
+    {% endblock %}
+    </head>
+
+    <body id="noheader">
+        {# Uncaught exception 'Twig_Error_Syntax' with message 'The function "image" does not exist in "layout/layout-noheader.twig" at line 44'
+{{ image('/images/zf2-logo.png', 'e[t]s[t]w[200]h[200]') }}
+{{ 'now' | date('Y-m-d H:i:s')}} #}
+	{% if constant('APPLICATION_ENV') != 'production' %}
+            <div class="testing-environment"></div>
+	{% endif %}
+
+            <noscript>
+            <div class="nojs">{{'Please enable JavaScript to use Remembr.' |trans}}</div>
+            </noscript>
+            <div class="container">
+                <div class="logo">
+                    <img src="/images/merk-logo-com-large.png" width="180" height="65" alt="">
+                </div>
+
+                <div class="contentview popupview">
+                    <p><strong>{{'An error occurred. Sorry for the inconvenience.' | trans}}</strong></p>
+                    <br /><br />
+			<p>{{ errormsg }}</p>
+		</div>
+            </div>
+     </body>
+  </html>

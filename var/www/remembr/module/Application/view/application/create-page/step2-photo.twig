@@ -1,0 +1,33 @@
+{% extends format == 'tpl' ? 'application/create-page/tpl' : 'application/create-page/index' %}
+{% do headTitle('Create a memorial page step 2 | Remembr.' | trans)%}
+{% block step %}
+    <div>
+        <div class="update_info light_container">
+            <h5>{{'Choose an image'|trans}}</h5>
+            <div class="help_cont_lft">
+                {{cms('help_create_photo').text() | raw}}
+            </div>
+            <div class="update_info_rht">
+                <div class="drag_drop_box" ng-file-drop="onFileSelect($files)" ng-file-drag-over-class="another-file-over-class">
+                    <div class="drag_drop_rht">
+                        <label class="btn">
+                            <input type="file" ng-model="file" ng-file-select="onFileSelect($files)"/>
+                            <div class="allover" ng-show="!dataUrl">
+                                <p class="draganddrop">{{'To attach an image drag & drop it here or' | trans}}</p>
+                                <p class="upload-link">{{'select a file from your computer' | trans}}</p>
+                            </div>
+                            <div class="upload-link another" ng-show="dataUrl" ng-click="disableCropper()">{{'I would like to select another file' | trans}}</div>
+                        </label>
+                        <div class="crop-container" ng-show="dataUrl || false">
+                            <img class="actual-image" src="/images/light_img.jpg" ng-src="{[{ dataUrl }]}" alt="preview" ng-img-load="enableCropper()"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <button ui-sref="^.info" class="save_changes floatleft">{{'Previous step' | trans }}</button>
+            <button ui-sref="^.url" class="save_changes">{{'Next step' | trans }}</button>
+            <div class="clear"></div>
+        </div>
+    </div>
+{% endblock step %}

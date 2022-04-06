@@ -1,0 +1,55 @@
+{% block content %}
+<div class="content"> <!--content start-->
+
+    <div class="container" ng-controller="notificationsCtrl">
+
+        <div id="plain_light" class="ng-scope">
+            <div id="notifications-history">
+                <h5>{{ "Notifications" | trans }}</h5>
+                <ul>
+                    <li ng-repeat="item in notificationsHistory.notifications | orderBy:'-createTime' | startFrom:currentPage * pageSize | limitTo:pageSize | groupBy:'createDate'">
+                        {#<img class="user-photo" ng-src="{[{imgresize(item.profilePhoto,50,50)}]}" width="50" height="50" alt="">#}
+                        <h2 ng-class="$first ? 'no_border' : ''" ng-show="item.createDate_CHANGED" class="date-header"> {[{item.createDate | date:'dd-MM yyyy' }]}</h2>
+                        <div class='noti-box'>
+
+                             <p class="noti" ng-class="!item.softdeleted ? '' : 'deleted'">
+                                <span class="{[{item.type}]}">
+									<span ng-if="item.softdeleted">
+										{{'%s has deleted the %s on %s' | trans | 
+										format('{[{item.senderName}]}',
+										'<a ng-click="readNotification(item, !item.softdeleted)" ui-sref="root.page({page:item.url})">{[{translate(item.type)}]}</a>',
+										'<a ui-sref="root.page({page:item.url})">{[{item.name}]}</a>') | raw}}
+									</span>
+									<span ng-if="!item.softdeleted">
+										{{'%s has shared a %s on %s' | trans |
+										format('{[{item.senderName}]}',
+										'<a ng-click="readNotification(item, !item.softdeleted)" ui-sref="root.page({page:item.url})">{[{translate(item.type)}]}</a>',
+										'<a ui-sref="root.page({page:item.url})">{[{item.name}]}</a>'
+										) | raw}}
+									</span>:
+									<span text="item.text" letters="30"></span>
+									<span class="create-date">
+										{[{item.createTime | date:'hh:mm' }]}
+									</span>
+                                </span>
+                             </p>
+                        <div class="clear"></div>
+                        </div>
+                    </li>
+                </ul>
+                <span simplepaging page-size='20' nritems={[{notificationsHistory.notifications.length}]}></span>
+
+                <ul ng-show="notificationsHistory.notifications.length == 0" class="note_drop slide">
+                    <li>
+                        <p>{{ "You don't have notifications" | trans }}</p>
+                    </li>
+                </ul>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div> <!--content end-->
+{% endblock content %}

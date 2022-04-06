@@ -1,0 +1,88 @@
+<div id="inbox" ng-show="currenttab=='inbox'" class="message-tab">
+    <div class="messages_lft">
+        <div class="message-header">
+            <div ng-if="!inbox.messages">
+                <p>{{ "Loading messages" |trans}}</p>
+            </div>
+            <div ng-if="inbox.messages && !inbox.messages.length">
+                <p>{{ "You have no messages in your inbox" |trans}}</p>
+            </div>
+        </div>
+        <ul class="message-list">
+            <li class="animate-hide" ng-repeat="msg in inbox.messages | orderBy:'-senddate' | startFrom:currentPage * pageSize | limitTo:pageSize" ng-class="{active: selected == msg.id}" ng-hide="msg.deleted">
+                <a ng-click="setSelected(msg)">
+                    <img class="user-photo" ng-src="{[{imgresize(msg.from_photo,65,65)}]}" width="65" height="65" alt="">
+                    <div class="message-box">
+                        <p class="message-sent-date">{[{msg.senddate | date:'dd-MM yyyy HH:mm' }]}</p>
+                        <p class="user-name">{[{msg.from_firstname}]} {[{msg.from_lastname}]}</p>
+						
+						<p class="subject" ng-class="{bold: msg.new == true}" ng-if="msg.extra.type=='link'">{{'Invitation' |trans }}</p>
+						<p class="subject" ng-class="{bold: msg.new == true}" ng-if="msg.extra.type=='request'">{{'Request for invite' |trans }}</p>
+						<p class="subject" ng-class="{bold: msg.new == true}" ng-if="msg.extra.type!='request' && msg.extra.type!='link' && !msg.extra.length">{[{msg.title}]}</p>
+
+                        <p ng-if="msg.extra.type=='link'" shorten="1"
+						   ng-bind="'{{"You've been invited to %s"
+										| trans | addslashes | format("'+msg.extra.url+'")}}' | htmlToPlaintext"></p>
+                        <p ng-if="msg.extra.type=='request'" shorten="1"
+						   ng-bind="'{{'%s would like an invitation for %s'
+										 | trans | format("'+msg.from_firstname+' '+msg.from_lastname+'","'+msg.extra.pageurl+'")}}' | htmlToPlaintext"></p>
+                        <p ng-if="msg.extra.type!='request' && msg.extra.type!='link' && !msg.extra.length" shorten="1"
+						   ng-bind="msg.content | htmlToPlaintext"></p>
+                        <p>
+                            <span><a >{{'More...' |trans}}</a></span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <span class="box-paging" simplepaging page-size="5" nritems="{[{inbox.messages.length}]}"></span>
+    </div>
+
+    <div class="messages_rht">
+
+        <div ng-repeat="msg in inbox.messages" class="message" ng-show="selected == msg.id">
+            <div class="animate-hide" ng-hide="msg.deleted">
+                <div class="message-header menu">
+                    <a ng-click="replyMsg(msg)" class="reply-icon">Reply</a>
+                    <a ng-click="deleteMsg(msg, 'in')" class="delete-icon">Delete</a>
+                </div>
+
+				<div class="ng-cloak floatright" ng-if="msg.extra.type=='request' && !msg.extra.granted">
+					<button class="save_changes" ng-click="grantaccess(msg)">{{'Grant invite' |trans}}</button>
+				</div>
+				<div class="ng-cloak floatright" ng-if="msg.extra.type=='request' && msg.extra.granted">
+					{{'Request granted' |trans}}
+				</div>
+
+				<div class="ng-cloak floatright" ng-if="msg.extra.type=='link' && msg.extra.url">
+					<a ui-sref="root.page({page:msg.extra.url})">{[{msg.extra.url}]}</a>
+				</div>
+
+                <img class="user-photo" ng-src="{[{imgresize(msg.from_photo,65,65)}]}" width="65" height="65" alt="">
+                <p class="user-name">{[{msg.from_firstname}]} {[{msg.from_lastname}]}</p>
+
+                <p class="subject" ng-if="msg.extra.type=='link'">{{'Invitation' |trans }}</p>
+                <p class="subject" ng-if="msg.extra.type=='request'">{{'Request for invite' |trans }}</p>
+				<p class="subject" ng-if="msg.extra.type!='request' && msg.extra.type!='link' && !msg.extra.length">{[{msg.title}]}</p>
+
+				<p class="message-sent-date">{[{msg.senddate | date:'dd-MM yyyy HH:mm'}]}</p>
+                <div class="clear"></div>
+                
+				<div ng-if="msg.extra.type=='link'" class="text"
+					 ng-bind-html="'{{"You've been invited to %s"
+										| trans | addslashes | format("'+msg.extra.url+'")}}' | unsafe"></div>
+				<div ng-if="msg.extra.type=='request'" class="text"
+					 ng-bind-html="'{{'%s would like an invitation for %s'
+										| trans | format("'+msg.from_firstname+' '+msg.from_lastname+'","'+msg.extra.pageurl+'")}}' | unsafe"></div>
+				<div ng-if="msg.extra.type!='request' && msg.extra.type!='link' && !msg.extra.length" class="text"
+					 ng-bind-html="msg.content | unsafe"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <div class="clear"></div>
+</div>

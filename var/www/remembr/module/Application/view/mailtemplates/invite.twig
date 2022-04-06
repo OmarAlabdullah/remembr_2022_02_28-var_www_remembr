@@ -1,0 +1,38 @@
+<table>
+    <tr>
+        <td valign="top">
+            <p>
+                {{ text | escape | replace({'[[url]]' : '<a href="'~url~'">'~shorturl~'</a>'}) | raw | nl2br }}
+            </p>
+            <p>
+            <a href="{{ url }}">{{ 'View page' | trans }}</a>
+            </p>
+        </td>
+        <td valign="top" style="width:100px;padding:10px;">
+            {% if pagephoto %}
+            <span><img src="{{url('remembr', [],{'force_canonical':true},0)}}minify?files={{ pagephoto.location }}&crop=width[{{ pagephoto.roi.width }}]height[{{ pagephoto.roi.height }}]x[{{ pagephoto.roi.x}}]y[{{ pagephoto.roi.y }}]&resize=w[120]h[120]" width="120" height="120"></span>
+            {% endif %}
+        </td>
+
+    </tr>
+</table>
+<hr />
+<table>
+    <tr>
+        <td valign="top">
+            <p>
+                <small>
+		{{ 'This e-mail is sent by [[remembr]] on behalf of %s, for the memorial page of [[profileurl]]'
+			| trans| format(sender) | escape
+			| replace({'[[remembr]]':'<span>Remembr.</span>','[[profileurl]]':'<a href="'~url~'">'~(profile |escape)~'</a>'})
+			| raw }}
+                </small>
+            </p>
+        </td>
+        <td  valign="top" style="width:100px;padding:10px;">
+            
+            <span><img src="{{ profilephoto.location }}" width="80" height="80"></span>
+        </td>
+
+    </tr>
+</table>

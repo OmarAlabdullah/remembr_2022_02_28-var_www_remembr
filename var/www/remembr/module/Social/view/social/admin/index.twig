@@ -1,0 +1,73 @@
+{% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+
+{% block content %}
+
+	<h1>Social tools</h1>
+	
+	<p>This tool allows you to refresh the Facebook cache of a certain page, such that old images, titles and descriptions are replaced by the current settings.</p>
+	
+	<form class="form" id="facebookForm">
+		<label><input type="radio" name="locale" value="nl_NL" checked>Dutch</label>
+		<label><input type="radio" name="locale" value="en_US">English</label>
+		<input type="text" name="url"  placeholder="URL to refresh" value="https://www.remembr.com/"/><br/>
+		<button id="refreshFacebookCache">Refresh facebook cache</button>
+	</form>
+	
+	<table id="facebookData" class="hide form">
+		<tr><td colspan="2"><h2>What facebook thinks of this url:</h2></td></tr>
+		<tr><td>canonical url</td><td id="canonicalUrl"></td></tr>
+		<tr><td>image</td><td id="image"></td></tr>
+		<tr><td>sitename</td><td id="sitename"></td></tr>
+		<tr><td>title</td><td id="title"></td></tr>						
+		<tr><td>description</td><td id="description"></td></tr>			
+		<tr><td>shares</td><td id="shares"></td></tr>						
+		<tr><td>likes</td><td id="likes"></td></tr>						 
+	</table>
+	
+	<script>
+		var facebook;
+		$(function() {
+			$("#refreshFacebookCache").click(function() {
+				$("#facebookData").addClass('hide');
+				$.ajax({
+					type:   'POST',
+					url:    'https://graph.facebook.com/',
+					data:    { id: $("#facebookForm input[name=url]").val(), scrape: 'true', locale: $("#facebookForm input[name=locale]:checked").val(), fbrefresh: true, refresh: true},
+					success: function(data) {
+						facebook_data = data;
+						$("#canonicalUrl").html(data['url']);
+						
+						var link = $('<button style="float: right;">refresh canonical url</button>')
+						link.click(function() {
+							$("#facebookForm input[name=url]").val(data['url']);
+							$("#refreshFacebookCache").trigger('click');
+						});
+						$("#canonicalUrl").append(link);
+						
+						var images = (data['image'].length === 0 ? "none" : "");
+						for(var i=0; i<data['image'].length; ++i)
+						{
+							images = images + ' <img src="' + data['image'][i]['url'] + '"/>';
+						}
+						$("#image").html(images);
+						$("#title").html(data['title']);
+						$("#sitename").html(data['site_name']);
+						$("#description").html(data['description']);
+						$("#facebookData").removeClass('hide');
+					}
+				});
+				
+				$.ajax({
+					url: 'https://graph.facebook.com/fql?q=SELECT url, normalized_url, share_count, like_count, comment_count, total_count,commentsbox_count, comments_fbid, click_count FROM link_stat WHERE url=\'' + $("#facebookForm input[name=url]").val() + '\'',
+					success: function(data) {
+						$("#likes").html(data['data'][0]['like_count']);
+						$("#shares").html(data['data'][0]['share_count']);
+					}
+				});
+								
+				
+				return false;
+			});
+		});
+	</script>
+{% endblock %}

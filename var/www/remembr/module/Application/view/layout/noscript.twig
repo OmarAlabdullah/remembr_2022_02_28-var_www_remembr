@@ -1,0 +1,21 @@
+<noscript>
+	<div class="swaptobottom cms-page">
+		{% block content %}
+			{{content|raw}}
+		{% endblock content %}
+	</div>
+
+	<div class="swaptotop cms-page">
+		<div class="contentview">
+            <p><img src="/images/merk-logo-large.png" width="180" height="65" alt="Remembr."/> {{'Requires JavaScript to function. Please enable JavaScript.' | trans}}</p>
+
+			<p>
+				{{'Here are the %s instructions how to enable JavaScript in your web browser %s.' | trans |
+				  format('<a href="http://www.enable-javascript.com/" target="_blank">','</a>') |raw }}
+			</p>
+			<p>
+				{{'If you use NoScript or similar plugins, be aware that we also use ajax.googleapis.com and cdnjs.cloudflare.com as content delivery networks for some javascript.' | trans }}
+			</p>
+		</div>
+	</div>
+</noscript>

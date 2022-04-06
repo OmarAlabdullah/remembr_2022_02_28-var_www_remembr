@@ -1,0 +1,126 @@
+<?php
+
+return array(
+    // Specific site settings, used in zfUser
+    'site_settings' => array(
+        'sitename' => 'Remembr', // used in e-mail
+        'noreply' => 'noreply@remembr.com',
+        'email_to' => 'info@remembr.com',
+        'home' => array(// used to redirect user to home page after (in)valid login
+            'route' => 'remembr',
+            'controller' => 'page',
+            'action' => 'index'
+        ),
+    ),
+    'TH' => array(
+        'ZfUser' => array(
+            'login-complete-url' => '/apidemo/index',
+            'logout-url' => '/',
+            'uri' => array(
+                'location' => 'http://www.devcaringly.com', // no / after location url!
+                'twitter' => array(
+                    'user_timeline' => "https://api.twitter.com/1.1/statuses/user_timeline.json"
+                )
+            ),
+            'errormsg' => array(
+                'en' => array(
+                    'provider_not_connected' => 'Unfortunately the social media provider is no longer connected. Please log in again for: ',
+                    'credentials_for_other_user' => 'These account details belong to another user. Please log out and log in again if you want to use these account details for: ',
+                    'access_denied' => 'You already have other log in details for this social media provider. Access denied for: ',
+                    'email_exists' => 'Your account details for this social media provider are not found, but your e-mail address is already known. Please log in with your log in details or with another social media account where this e-mail address belongs to and add this account to your Remembr. account: ',
+                    'common_error' => 'Something went wrong. Please log in again for: ',
+                    'no_connection' => 'We could not establish a connection for: ',
+                    'other' => 'Sorry, something went wrong. Please try again later.',
+                    'cant_get_profile' => 'We cannot connect with this social media provider: '
+                ),
+                'nl' => array(
+                    'provider_not_connected' => 'Helaas is de verbinding met de social mediaprovider verbroken. Log opnieuw in voor: ',
+                    'credentials_for_other_user' => 'Deze inloggegevens horen bij een andere gebruiker. Log uit en log daarna opnieuw in als je deze gegevens wil gebruiken voor:',
+                    'access_denied' => 'Je hebt al andere inloggegevens voor deze social mediaprovider. Toegang geweigerd voor:',
+                    'email_exists' => 'Je account hebben we niet gevonden maar je e-mailadres is al wel bij ons bekend. Log in met je inloggegevens of met een ander social media account waar dit e-mailadres bij hoort en voeg het account toe aan je Remembr. account: ',
+                    'common_error' => 'Er is iets fout gegaan. Log opnieuw in voor: ',
+                    'no_connection' => 'Er kon geen verbinding worden gemaakt voor: ',
+                    'other' => 'Helaas, er is iets fout gegaan. Probeer het later opnieuw.',
+                    'cant_get_profile' => 'We kunnen deze social media provider niet bereiken: '
+                )
+            ),
+            'commonmsg' => array(
+                'en' => array(
+                    'already_restored' => 'Sorry, we can not find this user. Maybe your account is already deleted?',
+                    'restored' => 'Your account is deleted.',
+                    'already_confirmed' => 'Sorry, we cannot find this user or your registration has already been confirmed and you are able to log in now.',
+                    'request_expired' => 'Sorry, your request is expired. Please register again.',
+                    'validated' => 'Your account has been confirmed. You can now log in.',
+                    'already_changed' => 'You have already changed your password.',
+                    'expired' => 'Sorry, your request is expired.',
+                    'password_saved' => 'Your new password has been saved. Please login again.',
+                    'deleted' => 'Your account has been deleted.',
+                ),
+                'nl' => array(
+                    'already_restored' => 'Sorry, we kunnen deze gebruiker niet vinden. Misschien is je account al verwijderd?',
+                    'restored' => 'Je account is verwijderd.',
+                    'already_confirmed' => 'Sorry, we kunnen deze gebruiker niet vinden of je registratie is al bevestigd en kun je inloggen.',
+                    'request_expired' => 'Sorry, je aanvraag is verlopen. Registreer je opnieuw.',
+                    'validated' => 'Je account is bevestigd. Je kunt nu inloggen.',
+                    'already_changed' => 'Je hebt je wachtwoord al aangepast.',
+                    'expired' => 'Sorry, je aanvraag is verlopen.',
+                    'password_saved' => 'Je nieuwe wachtwoord is opgeslagen. Je dient opnieuw in te loggen.',
+                    'deleted' => 'Je gebruikersaccount is verwijdert.',
+                ),
+            ),
+            'newslettermsg' => array(
+                'en' => array(
+                    'confirmed' => 'Thanks. Your newsletter registration has been confirmed.',
+                    'already_confirmed' => 'Your newsletter registration has already been confirmed.',
+                    'not_found' => 'Sorry, we can not find this e-mail address.'
+                ),
+                'nl' => array(
+                    'confirmed' => 'Bedankt. Je inschrijving is bevestigd.',
+                    'already_confirmed' => 'Je inschrijving is al bevestigd.',
+                    'not_found' => 'Sorry, we kunnen dit e-mail adres niet vinden.'
+                )
+            ),
+            'remember_time' => 1209600,
+            'hybridauth' => array(
+                'providers' => array(
+                    'OpenID' => array('enabled' => true),
+                    'Facebook' => array(
+                        'enabled' => true,
+                        'keys' => array(
+                            'id' => '*********',
+                            'secret' => '*********',
+                        ),
+                        'scope' => 'email, user_about_me, user_birthday, user_hometown, publish_actions',
+                        'display' => 'popup',
+                    ),
+                    'Google' => array(
+                        'enabled' => true,
+                        'keys' => array(
+                            'id' => '*********',
+                            'secret' => '*********',
+                        ),
+                        'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+                    ),
+                    'LinkedIn' => array(
+                        'enabled' => true,
+                        'keys' => array(
+                            'key' => '*********',
+                            'secret' => '*********',
+                        ),
+                    ),
+                    'Twitter' => array(
+                        'enabled' => true,
+                        'keys' => array(
+                            'key' => '*********',
+                            'secret' => '*********',
+                        ),
+                    ),
+                ),
+            )
+        )
+    )
+);
+
+
+
+

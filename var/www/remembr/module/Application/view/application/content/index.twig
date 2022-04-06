@@ -1,0 +1,14 @@
+{% extends format != 'tpl' ? 'application/page/index' : 'layout/none' %}
+{% block gridcontent %}
+	{% for memory in memories %}
+		{% if memory.type == 'memory' %}
+			{% include 'application/content/memory-small' with {'memory':memory} %}
+		{% elseif memory.type == 'condolence' %}
+			{% include 'application/content/condolence-small' with {'memory':memory} %}
+		{% elseif memory.type == 'photo' %}
+			{% include 'application/content/photo-small' with {'memory':memory} %}
+		{% elseif memory.type == 'video' %}
+			{% include 'application/content/video-small' with {'memory':memory} %}
+		{% endif %}
+	{% endfor %}
+{% endblock gridcontent %}

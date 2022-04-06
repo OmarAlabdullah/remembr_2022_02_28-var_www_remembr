@@ -1,0 +1,12 @@
+{%set reseturl = url('account', {controller: 'account', action: 'forgotpassword2'}, {force_canonical: true}, true) ~ '/' ~ user.getKey() %}
+
+{{ 'Hi ' | trans }} {{ user.getProfile().getName() }}, <br />
+{{ text }}
+
+<br />
+<a href="{{reseturl}}">{{ resettext }}</a>
+<br/>
+<br/>
+<br />{{ greetz }}
+<br />
+Remembr.

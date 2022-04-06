@@ -1,0 +1,10 @@
+<?php
+
+	return array(
+		'db' => array(
+			'name'	=>	'***',
+			'user'	=>	'***',
+			'pass'	=>	'***'
+		),
+	);
+?>

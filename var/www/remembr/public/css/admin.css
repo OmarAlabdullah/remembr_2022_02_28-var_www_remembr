@@ -1,0 +1,94 @@
+body {
+	padding-top: 50px;
+}
+
+.toolbar ul.nav {
+	background-color: #eee;
+}
+
+.toolbar .nav li a {
+	background-color: #ddd;
+}
+
+
+
+/******************************************************************
+ tabel sort css @author: Target Holding
+*******************************************************************/
+table.tablesorter thead tr {
+    cursor: pointer;
+}
+
+.remove-btn
+{
+    font-size: 24px;
+    line-height: 16px;
+    padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.table label {font-weight:normal;margin:0;}
+
+#adminTable .published {background-color:#dff0d8}
+
+form.form input
+{
+	width: 100%;
+	margin: 5px 0;
+	display: inline-block;
+}
+
+form.form label input[type=radio]
+{
+	width: 30px;
+}
+
+form.form label
+{
+	width: 100%;
+	margin: 5px 0;
+	display: inline-block;
+}
+
+.form button
+{
+	margin-right: 8px;
+	font-size: 12px;
+	line-height: 26px;
+	padding: 0 10px;
+	
+	background-color: #4e69a2;
+	border-color: #435a8b #3c5488 #334c83;
+	
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+	
+	border: 1px solid;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	-webkit-box-sizing: content-box;
+	font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+table.hide { display: none; }
+
+table#facebookData img {
+	max-width: 300px;
+}
+table#facebookData {
+	width: 100%; margin-top: 30px;
+}
+
+table#facebookData tr td:first-child { font-weight: bold; width: 200px; }
+
+
+.no-tinymce { width: 100%; min-height: 200px;}

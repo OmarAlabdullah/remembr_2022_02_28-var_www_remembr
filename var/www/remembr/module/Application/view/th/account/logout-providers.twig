@@ -1,0 +1,26 @@
+{% block headscript %}
+{% do headScript().appendFile(basePath('/js/jquery.colorbox.js')) %}
+{% endblock %}
+
+{% block link %}
+{% do headLink().appendStylesheet(basePath('/css/colorbox.css')) %}
+{% endblock %}
+
+{% if providers %}
+
+<div id="logout">
+    <ul id="providers_logout">
+                    {% for providername, provider in providers %}
+                        {% if providername != 'default' %}
+            <li class="no_border">
+                <img src="/images/icons_small/{{ providername }}.png" style="width:auto; height:20px;" title="{{ providername }}" />
+            </li>
+                        {% endif %}
+                    {% endfor %}
+        </ul>
+        <div class="clear"></div>
+        <div id="edit-profile">
+            <a class="logout" ng-click="sign_out($event)" href="{{url('provider', {controller: 'provider', action: 'logout-provider', provider: 'default' }) }}" title="logout">logout</a>
+        </div>
+    </div>
+{% endif %}

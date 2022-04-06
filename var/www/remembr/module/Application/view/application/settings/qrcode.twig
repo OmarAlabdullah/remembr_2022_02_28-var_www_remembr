@@ -1,0 +1,27 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Create QR code | Remembr.' | trans)%}
+{% block settings %}
+	<div>
+		<div class="publish_page light_container">
+			<div class="inv_friend_lft update_brief"> {# @TODO use sensible class names #}
+				<h5>{{ 'QR code' | trans }}</h5>
+
+				{% set qurl = url('remembr/page', {action:'index', controller:'page', page:page}, {'force_canonical' :true}, 0) %}
+				<p>{{ qrcode(qurl, 250, 10) }}</p>
+
+				<p>{{qurl}}</p>
+
+				<p> <a href="{{ qrcodeurl(qurl, 250, 10)}}?download={{page.url}}.jpg" download="{{page.url}}.jpg" target="_self">Download QR code</a></p>
+
+			</div>
+
+			<div class="help_cont">
+				<h5>{{cms('help_settings_qrcode').title()}}</h5>
+				{{cms('help_settings_qrcode').text() | raw}}
+			</div>
+
+			<div class="clear"></div>
+		</div>
+
+	</div>
+{% endblock settings %}

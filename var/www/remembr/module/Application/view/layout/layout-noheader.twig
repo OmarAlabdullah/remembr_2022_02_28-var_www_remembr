@@ -1,0 +1,94 @@
+{{ doctype() }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="/images/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="/images/favicon/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="/images/favicon/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
+        <link rel="apple-touch-icon" href="/images/favicon/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/images/favicon/favicon-144.png">
+        <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+        
+    {% block title %}
+    {{ headTitle('Remembr.') }}
+    {% endblock %}
+
+    {% block meta %}
+    {% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %}
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap-responsive.min.css')) %}
+		{% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+		{% do headLink().appendStylesheet(basePath('/css/jquery-ui-1.10.3.custom.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/banner.css')) %}
+                {% do headLink().appendStylesheet(basePath('/css/colorbox.css')) %}
+                {% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{{ headLink() }}
+    {% endblock %}
+
+
+    {% block headscript %}
+		{% do headScript().prependFile(basePath('/js/bootstrap.min.js')) %}
+		{% do headScript().prependFile(basePath('/js/html5.js'), null, {'conditional':'lt IE 9'}) %}
+		{% do headScript().prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+		{% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js')) %}
+		{% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js') %}
+                {% do headScript().appendFile(basePath('/js/jquery.colorbox.js')) %}
+                {% do headScript().appendFile(basePath('/js/add-provider.js')) %}
+                {% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js') %}
+		{{ headScript() }}
+    {% endblock %}
+
+    </head>
+
+    <body id="noheader" ng-app="remembr">
+        {# Uncaught exception 'Twig_Error_Syntax' with message 'The function "image" does not exist in "layout/layout-noheader.twig" at line 44'
+{{ image('/images/zf2-logo.png', 'e[t]s[t]w[200]h[200]') }}
+{{ 'now' | date('Y-m-d H:i:s')}} #}
+	{% if constant('APPLICATION_ENV') != 'production' %}
+            <div class="testing-environment"></div>
+	{% endif %}
+
+            <noscript>
+            <div class="nojs">{{'Please enable JavaScript to use Remembr.' |trans}}</div>
+            </noscript>
+
+    {{ content | raw }}
+
+        {% block inlinescript %}
+			{% do inlineScript().appendFile('/js/angular-ui-router.js', null, {'debug':true}) %} {#https://github.com/angular-ui/ui-router/issues/692 #}
+			{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-resource.js') %}
+			{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-animate.js') %}
+			{% do inlineScript().appendFile('/js/angular-masonry.js', null, {'debug':true}) %}
+			{% do inlineScript().appendFile('/js/angular-file-upload/angular-file-upload.min.js') %}
+
+			{% do inlineScript().appendFile('/js/remembr.js', null, {'debug':true}) %}
+			{% do inlineScript().appendFile('/js/remembr-directives.js', null, {'debug':true}) %}
+			{% do inlineScript().appendFile('/js/remembr-states.js', null, {'debug':true}) %}
+			{% do inlineScript().appendFile('/js/remembr-config.js', null, {'debug':true}) %}
+		{{ inlineScript() }}
+	{% endblock %}
+
+        </body>
+    </html>

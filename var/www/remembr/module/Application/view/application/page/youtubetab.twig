@@ -1,0 +1,55 @@
+<li ng-show="currenttab=='memory'" class="video">
+	<a ng-class="{tab_act2 : currentform=='video'}" ng-click="openForm('video')"><span class="pc-only">{{ 'Video' | trans }}</span></a>
+	<span class="mobile-only" ng-click="openForm('video')">{{'Video' |trans}}</span>
+
+	<span class="filed_top_arrow" ng-class="{active_blue : ui.active=='post'}"  ng-show="user.loggedin"></span>
+
+	<div class="tabDetails2" ng-show="user.loggedin">
+
+		<div class="video_section" ng-class="{active_blue : ui.active=='post'}" ng-click="$event.stopPropagation()">
+			<form name="content" novalidate ng-submit="submit()">
+				<span class="select_file" ng-file-drop="onFileSelect($files)">
+					{{ 'Upload a video on YouTube and paste the code here: ' |trans }}
+					<label>
+						<input type="text" ng-model="newContent.videoid" />
+					</label>
+
+					<img ng-show="dataUrl" ng-src="{[{dataUrl}]}">
+
+				</span>
+				<textarea name="text" ng-model="newContent.text" cols="2" rows="2"  ng-focus="ui.active='post'"
+						  placeholder="{{'What would you like to share about this video...' | trans }}"></textarea>
+
+				<div class="text_fold3 slide" ng-if="ui.active=='post'">
+
+					<div class="text_fold_lft">
+						<em>
+							<span ng-show="page.labels.length">{{ 'Select a label' | trans }}</span>
+							<span class="ng-hide" ng-show="user.admin[page.url]">( {{ 'Edit your labels in the settings menu' | trans }} )</span>
+						</em>
+						<ul>
+							{% if format == 'tpl' %}
+								<li ng-repeat="label in page.labels">
+									<label ng-click="$event.stopPropagation()"><input name="labels[{[{label.id}]}]" ng-model="newContent.labels[label.id]" type="checkbox" class="label styled"/><i></i><cite>{[{label.name}]}</cite></label>
+								</li>
+							{% else %}
+								{% for id,label in page.labels %}
+								<li>
+									<label><input name="labels[{{id}}]" ng-model="newContent.labels[{{id}}]" type="checkbox" class="label styled" /><i></i><cite>{{label.getName()}}</cite></label>
+								</li>
+								{% endfor %}
+							{% endif %}
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+					<input name="" type="submit" value="{{'Post' |trans}}" class="post_but" />
+
+					<div class="clear"></div>
+
+				</div>
+			</form>
+		</div>
+		<span class="ng-hide floatright" ng-show="saving">{{ 'One moment please, your post is being saved...' |trans }}</span>
+	</div>
+</li>

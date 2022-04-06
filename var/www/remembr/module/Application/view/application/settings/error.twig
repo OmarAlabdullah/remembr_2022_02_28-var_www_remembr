@@ -1,0 +1,15 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+
+{% block settings %}
+	<div class=" light_container">
+		<div class="inv_friend_lft update_brief">
+			<h5>{{ 'Error' | trans }}</h5>
+
+			<p>
+				{{ 'You need to have admin rights for this page to change the settings' | trans }}
+			</p>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+{% endblock settings %}

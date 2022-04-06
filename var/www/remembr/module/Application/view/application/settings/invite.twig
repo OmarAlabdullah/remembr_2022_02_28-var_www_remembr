@@ -1,0 +1,50 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Send invitations | Remembr.' | trans)%}
+{% block settings %}
+	<div>
+
+		<div class="invite_friend light_container">
+
+			<div class="inv_friend_lft">
+				<h5>{{'Invite friends'| trans }}</h5>
+				<div ng-hide="page.status=='published'" class="by_email">
+					<strong>{{'You need to publish this page before you can invite friends.' | trans }}</strong>
+				</div>
+
+				<div ng-show="page.status=='published'" class="inv_friend_fb">
+					<strong>Facebook</strong>
+					<a ui-sref="root.page.fancybox.setting.invite-facebook" class="connect_fb">{{'Invite with Facebook'| trans }}</a>
+				</div>
+{#
+			<div class="reg_user">
+					<strong>Registered Remembr users</strong>
+					<div class="admin_lft_btm">
+						<span class="dotted_frame"></span>
+						<h6>Send invitation</h6>
+						<span class="admin_txtbox_bg">
+							<input type="text" class="admin_txtbox" placeholder="{{'Specify an e-mail addres'|trans}}" name="">
+						</span>
+						<input type="button" class="add_but" value="add" name="">
+						<div class="clear"></div>
+					</div>
+				</div>#}
+
+				<div ng-show="page.status=='published'" class="by_email">
+					<strong>{{'By e-mail'| trans }}</strong>
+{#					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed porta urn.</p>#}
+					<a  ui-sref="root.page.fancybox.setting.invite-email" class="blue-inline-btn">{{'Compose e-mail'| trans }}</a>
+				</div>
+
+			</div>
+
+			<div class="help_cont">
+				<h5>{{cms('help_settings_invite').title()}}</h5>
+				{{cms('help_settings_invite').text() | raw}}
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div>
+{% endblock settings %}

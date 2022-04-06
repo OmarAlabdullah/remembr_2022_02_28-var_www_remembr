@@ -1,0 +1,22 @@
+{%set editurl   = url('remembr/page/edit-anonymous', { controller: 'page',    action: 'index',            lang: lang, page: page, key: condolence.getModificationKey() }, {force_canonical: true}) %}
+{%set pageurl   = url('remembr/page',                { controller: 'page',    action: 'index',            lang: lang, page: page }, {force_canonical: true}) %}
+<table>
+    <tr>
+        <td valign="top">
+			<p>{{ 'Dear ' | trans }} {{anonymousName}},</p>
+				<br/>
+                <br/>{{ 'You have just posted a condolence message on a memorial page. You can view the page by the clicking the following link:' | trans }}
+				<br/>
+				<br/><a href="{{pageurl}}">{{ 'Visit the memorial page' | trans }}</a>
+				<br/>
+				<br/>{{ 'If you would like to edit or remove the condolence message, please click the following link:' | trans }}
+                <br/>
+				<br/><a href="{{editurl}}">{{ 'Edit or remove the condolence message' | trans }}</a>
+				<br/>
+				<br />{{ 'Kind regards,' | trans }}
+				<br />
+				Remembr.
+			</p>
+		</td>
+	</tr>
+</table>

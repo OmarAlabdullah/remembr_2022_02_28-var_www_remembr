@@ -1,0 +1,112 @@
+{{ doctype() }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+    {% block title %}
+    {{ headTitle('Remembr.') }}
+    {% endblock %}
+
+    {% block meta %}
+    {% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %}
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap.min.css')) %}
+		{% do headLink().appendStylesheet(basePath('/css/bootstrap-responsive.min.css')) %}
+		{% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+		{% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+		{{ headLink() }}
+    {% endblock %}
+
+
+    {% block headscript %}
+		{% do headScript().prependFile(basePath('/js/bootstrap.min.js')) %}
+		{% do headScript().prependFile(basePath('/js/html5.js'), null, {'conditional':'lt IE 9'}) %}
+		{% do headScript().prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+		{% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js')) %}
+		{% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js') %}
+		{{ headScript() }}
+    {% endblock %}
+
+    </head>
+
+    <body id="noheader">
+
+		<noscript>
+			<div class="nojs">{{'Javascript is turned off.' | trans }}</div>
+		</noscript>
+
+
+		<div class="content" id="report"> <!--content start-->
+			<h1>Bug report {%if handled%}<small><b>(afgehandeld: {{handled|date('Y-m-d')}})</b></small>{% endif %}</h1>
+
+			<p>
+				<b>Melder</b>
+				{{data.username}}, <a href="mailto:{{data.email}}">{{data.email}}</a>
+			</p>
+			<p>
+				<b>Probleem</b>
+				{{data.problem}}
+			</p>
+			<p>
+				<b>Verwachte resultaat</b>
+				{{data.expected}}
+			</p>
+			<p>
+				<b>Geconstateerde resultaat</b>
+				{{data.actual}}
+			</p>
+			<p>
+				<b>Opmerkingen</b>
+				{{data.comments}}
+			</p>
+			<p>
+				<b>Remembr. gebruiker</b>
+				{{data.reporter.id}}, {{data.reporter.name}}
+			</p>
+			<p>
+				<b>Useragent</b>
+				{{data.useragent}}
+			</p>
+			<p>
+				<b>Browser features</b>
+				{{data.modernizr}}
+			</p>
+			<p>
+				<b>Flash versie</b>
+				{{data.flashversion}}
+			</p>
+			<p>
+				<b>Hoogte x Breedte</b>
+				{{data.height}} x {{data.width}}
+			</p>
+			<p>
+				<b>Server vars</b>
+				<pre>{{data['$_SERVER'] |json_encode()}}</pre>
+			</p>
+			<p>
+				<b>Cookies</b>
+				<pre>{{data['$_COOKIE'] |json_encode()}}</pre>
+			</p>
+			<p>
+				<b>Sessie informatie</b>
+				<pre>{{data['$_SESSION'] |json_encode()}}</pre>
+			</p>
+
+			<h2> Bijlages </h2>
+			{% for file in files %}
+				{% if file.b64data and file.type[0:5] == 'image' %}
+					<p><img src="data:{{file.type}};base64,{{file.b64data}}" /></p>
+				{% elseif file.b64data %}
+					<p>download: <a href="data:{{file.type}};base64,{{file.b64data}}" target="_blank">{{file.name}}</a></p>
+				{% endif %}
+			{% endfor %}
+		</div>
+
+	</body>
+</html>

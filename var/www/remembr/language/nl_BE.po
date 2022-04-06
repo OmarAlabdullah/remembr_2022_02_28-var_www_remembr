@@ -1,0 +1,2836 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Remembr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-23 15:39+0200\n"
+"PO-Revision-Date: 2016-09-26 13:04+0200\n"
+"Last-Translator: \n"
+"Language-Team: Target Holding <team@target-holding.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate;translatePlural:1,2;inform:1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: ../data/twigcache\n"
+"X-Poedit-SearchPath-1: ../module\n"
+"X-Poedit-SearchPath-2: ../public/js\n"
+
+#: ../public/js/registertranslations.js:6
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:55
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:183
+msgid "comment"
+msgstr "reactie"
+
+#: ../public/js/registertranslations.js:7
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:293
+msgid "condolence"
+msgstr "condoleance"
+
+#: ../public/js/registertranslations.js:8
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:301
+msgid "photo"
+msgstr "afbeelding"
+
+#: ../public/js/registertranslations.js:9
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:297
+msgid "memory"
+msgstr "herinnering"
+
+#: ../public/js/registertranslations.js:10
+msgid "en"
+msgstr "nl"
+
+#: ../public/js/registertranslations.js:11
+#: ../module/TH/src/TH/ZfUser/Controller/AccountController.php:547
+msgid ""
+"Click here to reset your Remembr. password. The link will expire in 7 days."
+msgstr "Klik hier om je wachtwoord te resetten. De link vervalt over 7 dagen."
+
+#: ../public/js/registertranslations.js:12
+#: ../module/TH/src/TH/ZfUser/Controller/AccountController.php:544
+#: ../module/TH/src/TH/ZfUser/Controller/AccountController.php:548
+msgid "Reset your password"
+msgstr "Je wachtwoord opnieuw instellen"
+
+#: ../public/js/registertranslations.js:13
+msgid "Or sign in with:"
+msgstr "Of meld je aan met:"
+
+#: ../public/js/registertranslations.js:14
+msgid "Next"
+msgstr "Volgende"
+
+#: ../public/js/registertranslations.js:15
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../public/js/registertranslations.js:16
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:45
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:40
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:40
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:64
+msgid "View / Comment"
+msgstr "Bekijk / Reageren"
+
+#: ../public/js/registertranslations.js:17
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:26
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:51
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:49
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:51
+#: ../data/twigcache/b8/d0/09bce64e7647b66101f48b8b9ddb93eb48d0f2680ca76744e17a43be1b35.php:52
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:26
+msgid "E-mail address"
+msgstr "E-mailadres"
+
+#: ../public/js/registertranslations.js:18
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:55
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:98
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:30
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:55
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:56
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:55
+#: ../data/twigcache/b8/d0/09bce64e7647b66101f48b8b9ddb93eb48d0f2680ca76744e17a43be1b35.php:56
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:30
+msgid "Enter your e-mail address"
+msgstr "Vul je e-mailadres in"
+
+#: ../public/js/registertranslations.js:19
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:102
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:61
+msgid "Enter a valid e-mail address"
+msgstr "Vul een geldig e-mailadres in"
+
+#: ../public/js/registertranslations.js:20
+#: ../data/twigcache/44/b0/3e3921cc20d9f5601ff37badc73fa04b4aff65dc2fe5d65d385c05c9a9e0.php:41
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:123
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:77
+#: ../data/twigcache/e8/cb/fcdd4fd9d274d60de8a5488f7e3027eaf1b080b1def585ec54e4dde50ecd.php:150
+msgid "Send"
+msgstr "Verstuur"
+
+#: ../public/js/registertranslations.js:21
+msgid "Please enter a new password to secure your account."
+msgstr "Vul een nieuw wachtwoord in om je account mee te beveiligen."
+
+#: ../public/js/registertranslations.js:22
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:65
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:51
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:81
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:134
+msgid "wrote:"
+msgstr "schreef:"
+
+#: ../public/js/registertranslations.js:23
+#, javascript-format
+msgid "It is with heartfelt regret that we say goodbye to %s %s"
+msgstr "Met innig leedwezen nemen wij afscheid van %s %s"
+
+#: ../public/js/registertranslations.js:24
+#: ../public/js/remembr-directives.js:1338
+#, javascript-format
+msgid ""
+"View the memorial page of %s %s and join us in sharing memories and "
+"condolences."
+msgstr ""
+"Bekijk de herdenkingspagina van %s %s en deel ook herinneringen en "
+"condoleances."
+
+#: ../public/js/registertranslations.js:26
+msgid "Please contact us."
+msgstr "Contacteer ons hierover."
+
+#: ../public/js/registertranslations.js:27
+#: ../public/js/registertranslations.js:30
+msgid "contact us and provide the e-mail address."
+msgstr "contacteer ons en meld daarbij uw emailadres"
+
+#: ../public/js/registertranslations.js:28 ../public/js/remembr.js:2104
+msgid ""
+"Your registration has already been confirmed and you are able to log in now."
+msgstr "Je account is al bevestigd. Je kunt nu in loggen."
+
+#: ../public/js/registertranslations.js:29 ../public/js/remembr.js:2090
+msgid ""
+"Sorry, the e-mail address was not found in our database, this is probably "
+"our fault. Please register again or "
+msgstr ""
+"Sorry, we konden dat emailadres niet vinden, dit is waarchijnlijk onze fout. "
+"Registreer nogmaals of"
+
+#: ../public/js/registertranslations.js:31
+msgid "click here to resend the confirmation e-mail."
+msgstr "klik hier om de bevestigingsmail nog een keer te sturen."
+
+#: ../public/js/registertranslations.js:32
+msgid "Forgot your password?"
+msgstr "Wachtwoord vergeten?"
+
+#: ../public/js/registertranslations.js:33
+msgid ""
+"This e-mail address is already in use, but it was not yet confirmed. Check "
+"your e-mail's inbox and spam or "
+msgstr ""
+"Dit e-mailadres is al in gebruik, maar nog niet bevestigd. Controleer je "
+"inbox en spam of "
+
+#: ../public/js/registertranslations.js:34
+msgid "This e-mail address is already in use."
+msgstr "Dit e-mailadres is al in gebruik."
+
+#: ../public/js/registertranslations.js:35
+msgid "Click here to resend the confirmation e-mail."
+msgstr "Klik hier om de bevestigingsmail nog een keer te sturen."
+
+#: ../public/js/registertranslations.js:36
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:112
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:191
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:107
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:94
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:71
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:107
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:77
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:133
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:209
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:133
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:70
+msgid "More..."
+msgstr "Meer..."
+
+#: ../public/js/registertranslations.js:37
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:81
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:91
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:103
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:66
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:92
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:97
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:151
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:81
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:126
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:146
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:97
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:123
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:212
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:181
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:188
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+#: ../public/js/registertranslations.js:38
+#: ../public/js/remembr-directives.js:357
+msgid "The altered message is saved."
+msgstr "De aangepaste tekst is opgeslagen."
+
+#: ../public/js/remembr-directives.js:310
+msgid "The message is deleted."
+msgstr "Het bericht is verwijderd."
+
+#: ../public/js/remembr-directives.js:313
+#: ../public/js/remembr-directives.js:318
+#: ../public/js/remembr-directives.js:366 ../public/js/remembr.js:538
+#: ../public/js/remembr.js:543
+msgid "Sorry, something went wrong."
+msgstr "Sorry, er ging iets niet goed."
+
+#: ../public/js/remembr-directives.js:292 ../public/js/remembr.js:518
+msgid "Are you sure?"
+msgstr "Weet je het zeker?"
+
+#: ../public/js/remembr-directives.js:362
+msgid "Sorry, something went wrong, "
+msgstr "Sorry, er ging iets niet goed,"
+
+#: ../public/js/remembr-directives.js:1017
+msgid "very strong"
+msgstr "zeer sterk"
+
+#: ../public/js/remembr-directives.js:1022
+msgid "strong"
+msgstr "sterk"
+
+#: ../public/js/remembr-directives.js:1027
+msgid "good"
+msgstr "goed"
+
+#: ../public/js/remembr-directives.js:1032
+msgid "weak"
+msgstr "zwak"
+
+#: ../public/js/remembr-directives.js:1037
+msgid "very weak"
+msgstr "zeer zwak"
+
+#: ../public/js/remembr-directives.js:1188
+msgid "Please wait while site is updating."
+msgstr "Moment, je informatie wordt aangepast."
+
+#: ../public/js/remembr-states.js:152 ../public/js/remembr-states.js:171
+msgid "Memorial website and online condolences | Remembr."
+msgstr "Herdenken en condoleren online | Remembr."
+
+#: ../public/js/remembr-states.js:208 ../public/js/remembr-states.js:1182
+msgid "Login | Remembr."
+msgstr "Login | Remembr."
+
+#: ../public/js/remembr-states.js:235
+msgid "Terms and conditions | Remembr."
+msgstr "Algemene voorwaarden | Remembr."
+
+#: ../public/js/remembr-states.js:236
+msgid "Privacy and cookie policy | Remembr."
+msgstr "Privacy- en cookiebeleid | Remembr."
+
+#: ../public/js/remembr-states.js:237
+msgid "Disclaimer | Remembr."
+msgstr "Disclaimer | Remembr."
+
+#: ../public/js/remembr-states.js:238
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:19
+msgid "Contact | Remembr."
+msgstr "Contact | Remembr."
+
+#: ../public/js/remembr-states.js:239 ../public/js/remembr-states.js:336
+msgid "Thank you for your message | Remembr."
+msgstr "Bedankt voor je bericht | Remembr."
+
+#: ../public/js/remembr-states.js:240
+msgid "Report a problem | Remembr."
+msgstr "Probleemmelding | Remembr."
+
+#: ../public/js/remembr-states.js:241
+#: ../data/twigcache/c5/bf/1be141913c9c9c006fc1aa9f070a6902c363abcb9d6d8d902d75a5603540.php:19
+msgid "Frequently asked questions | Remembr."
+msgstr "Veelgestelde vragen | Remembr."
+
+#: ../public/js/remembr-states.js:242
+msgid "This feature is not yet available | Remembr."
+msgstr "Deze functie is nog niet beschikbaar | Remembr."
+
+#: ../public/js/remembr-states.js:271 ../public/js/remembr-states.js:308
+msgid "Find a memorial page | Remembr."
+msgstr "Herdenkingspagina of condoleanceregister zoeken | Remembr."
+
+#: ../public/js/remembr-states.js:317
+msgid "Notifications | Remembr."
+msgstr "Meldingen | Remembr."
+
+#: ../public/js/remembr-states.js:344
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:20
+msgid "Dashboard | Remembr."
+msgstr "Jouw gegevens | Remembr."
+
+#: ../public/js/remembr-states.js:418
+msgid "Account settings | Remembr."
+msgstr "Accountinstellingen | Remembr."
+
+#: ../public/js/remembr-states.js:464
+msgid "Messages | Remembr."
+msgstr "Berichten | Remembr."
+
+#: ../public/js/remembr-states.js:484
+msgid "Send a new message | Remembr."
+msgstr "Nieuw bericht sturen | Remembr."
+
+#: ../public/js/remembr-states.js:500 ../public/js/remembr-states.js:559
+#, javascript-format
+msgid "%s %s remembrance page and online condolences"
+msgstr "%s %s herdenkingspagina en condoleanceregister"
+
+#: ../public/js/remembr-states.js:572
+msgid "Please log in to view the page. New to Remembr? Please sign up first."
+msgstr ""
+"Log in voordat je deze pagina kunt bekijken. Heb je geen Remembr. account? "
+"Registreer jezelf dan eerst"
+
+#: ../public/js/remembr-states.js:929
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:23
+msgid "Create a memorial page step 1 | Remembr."
+msgstr "Herdenkingspagina maken stap 1 | Remembr."
+
+#: ../public/js/remembr-states.js:968
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:23
+msgid "Create a memorial page step 2 | Remembr."
+msgstr "Herdenkingspagina maken stap 2 | Remembr."
+
+#: ../public/js/remembr-states.js:988
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:23
+msgid "Create a memorial page step 3 | Remembr."
+msgstr "Herdenkingspagina maken stap 3 | Remembr."
+
+#: ../public/js/remembr-states.js:1049
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:23
+msgid "Create a memorial page step 4 | Remembr."
+msgstr "Herdenkingspagina maken stap 4 | Remembr."
+
+#: ../public/js/remembr-states.js:1099
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:23
+msgid "Create a memorial page step 5 | Remembr."
+msgstr "Herdenkingspagina maken stap 5 | Remembr."
+
+#: ../public/js/remembr-states.js:1137
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:23
+msgid "Create a memorial page step 5 e-mail | Remembr."
+msgstr "Herdenkingspagina maken stap 5 e-mail | Remembr."
+
+#: ../public/js/remembr-states.js:1148
+msgid "Your email invitation will be sent in the final step."
+msgstr "Je e-mail uitnodiging wordt in de laatste stap verzonden."
+
+#: ../public/js/remembr-states.js:1160
+#: ../data/twigcache/4d/66/0f4f3847dbc127eebaa73892e7ce686bd9f703e11b3808fc91c962b9c1bd.php:23
+msgid "Create a memorial page step 6 | Remembr."
+msgstr "Herdenkingspagina maken stap 6 | Remembr."
+
+#: ../public/js/remembr-states.js:1221
+msgid "Your condolence message has been updated"
+msgstr "Je condoleance is gewijzigd"
+
+#: ../public/js/remembr-states.js:1225
+msgid "Your condolence message may not be empty."
+msgstr "Je condoleance mag niet leeg zijn."
+
+#: ../public/js/remembr-states.js:1227 ../public/js/remembr-states.js:1238
+msgid "Your condolence message was not found."
+msgstr "We konden je condoleance niet vinden."
+
+#: ../public/js/remembr-states.js:1234
+msgid "Your condolence message has been removed"
+msgstr "Je condoleance is verwijderd"
+
+#: ../public/js/remembr-states.js:1292
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:23
+msgid "Change page details | Remembr."
+msgstr "Gegevens aanpassen | Remembr."
+
+#: ../public/js/remembr-states.js:1440
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:23
+msgid "Change privacy | Remembr."
+msgstr "Privacygegevens aanpassen | Remembr."
+
+#: ../public/js/remembr-states.js:1493
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:23
+msgid "Publish memorial page | Remembr."
+msgstr "Herdenkingspagina publiceren | Remembr."
+
+#: ../public/js/remembr-states.js:1520
+msgid ""
+"An email has been sent to your email address to confirm permanent removal of "
+"this page"
+msgstr ""
+"Er is een e-mail naar het opgegeven adres gestuurd voor de bevestiging van "
+"het verwijderen van deze pagina."
+
+#: ../public/js/remembr-states.js:1572
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:23
+msgid "Create labels | Remembr."
+msgstr "Rubrieken aanmaken | Remembr."
+
+#: ../public/js/remembr-states.js:1637
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:23
+msgid "Send invitations | Remembr."
+msgstr "Uitnodigingen versturen | Remembr."
+
+#: ../public/js/remembr-states.js:1656
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:23
+msgid "Send invitations via e-mail | Remembr."
+msgstr "Uitnodigingen per e-mail versturen | Remembr."
+
+#: ../public/js/remembr-states.js:1687
+msgid "Your email invitation has been sent."
+msgstr "Je bericht is verstuurd."
+
+#: ../public/js/remembr-states.js:1703
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:23
+msgid "Send invitations via Facebook | Remembr."
+msgstr "Uitnodigingen versturen met Facebook | Remembr."
+
+#: ../public/js/remembr-states.js:1762
+#: ../data/twigcache/c3/ad/ab2736a70d60d8b5fdcf2db3458443f0ec55fbad1373635c89806bf1f383.php:23
+msgid "Create QR code | Remembr."
+msgstr "QR-code aanmaken | Remembr."
+
+#: ../public/js/remembr-states.js:1790
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:19
+#, php-format, javascript-format
+msgid "%s %s memory | Remembr."
+msgstr "%s %s herinnering | Remembr."
+
+#: ../public/js/remembr-states.js:1805
+msgid "You need to log in before you can confirm removal of this remembr page"
+msgstr ""
+"Je moet inloggen voordat je het verwijderen van deze Remembr. pagina kunt "
+"bevestigen."
+
+#: ../public/js/remembr-states.js:1825
+msgid "The page has been removed."
+msgstr "De pagina is verwijderd."
+
+#: ../public/js/remembr-states.js:1833
+msgid ""
+"Your request to remove the page has expired because the setting of the page "
+"has in the meanwhile been changed to \"deactivated\"."
+msgstr ""
+"Je verzoek om de pagina te verwijderen is verouderd omdat de status van de "
+"pagina daarna is gewijzigd in \"gedeactiveerd\"."
+
+#: ../public/js/remembr-states.js:1837
+msgid ""
+"Your request to remove the page has expired because the setting of the page "
+"has in the meanwhile been changed to \"published\"."
+msgstr ""
+"Je verzoek om de pagina te verwijderen is verouderd omdat de status van de "
+"pagina daarna is gewijzigd in \"gepubliceerd\"."
+
+#: ../public/js/remembr-states.js:1841
+msgid "An error occurred while trying to remove the page"
+msgstr "Er is een fout opgetreden bij het verwijderen van de pagina."
+
+#: ../public/js/remembr-states.js:1855
+msgid "Send an access request | Remembr."
+msgstr "Uitnodigingsverzoek sturen | Remembr."
+
+#: ../public/js/remembr-states.js:1877 ../public/js/remembr-states.js:1912
+msgid "Please log in to send a request to the administrator"
+msgstr "Log in om een bericht naar de beheerder te kunnen versturen"
+
+#: ../public/js/remembr-states.js:1885 ../public/js/remembr-states.js:1919
+msgid "Your request has been sent to the administrator"
+msgstr "Je verzoek is naar de beheerder verstuurd"
+
+#: ../public/js/remembr.js:109
+msgid "An error occurred retrieving this memory"
+msgstr "Er is een fout opgetreden bij het ontvangen van deze herinnering"
+
+#: ../public/js/remembr.js:535
+msgid "The comment is deleted."
+msgstr "De reactie is verwijderd."
+
+#: ../public/js/remembr.js:566
+msgid ""
+"Your internet browser is outdated en is not supported by Remembr. For a "
+"better experience we recommend you to update your browser to a newer version."
+msgstr ""
+"Je internet browser is verouderd en wordt niet door Remembr. ondersteund. "
+"Hierdoor kan het komen dat de website niet goed wordt weergegeven. We raden "
+"je aan om een nieuwere versie te gebruiken."
+
+#: ../public/js/remembr.js:665 ../public/js/remembr.js:669
+msgid "We could not delete this e-mail."
+msgstr "We konden deze e-mail niet verwijderen."
+
+#: ../public/js/remembr.js:700 ../public/js/remembr.js:726
+msgid "Your message has been sent."
+msgstr "Je bericht is verstuurd."
+
+#: ../public/js/remembr.js:705
+msgid "We could not send your message."
+msgstr "Het is niet gelukt je bericht te versturen."
+
+#: ../public/js/remembr.js:732
+msgid "We could not send this message."
+msgstr "Het is niet gelukt je bericht te versturen."
+
+#: ../public/js/remembr.js:746
+msgid "The invation has been granted"
+msgstr "De uitnodiging is geaccepteerd"
+
+#: ../public/js/remembr.js:748
+msgid "An error occured trying to grant the invitation"
+msgstr "Er is een fout opgetreden bij het accepteren van de uitnodiging."
+
+#: ../public/js/remembr.js:935
+msgid "Please select an image."
+msgstr "Selecteer een afbeelding."
+
+#: ../public/js/remembr.js:940
+msgid "Please enter a username."
+msgstr "Vul aub een naam in."
+
+#: ../public/js/remembr.js:950
+msgid ""
+"Please enter your email address so you can edit or remove your condolence "
+"message."
+msgstr ""
+"Het is verplicht een e-mailadres op te geven zodat je de condoleance kan "
+"wijzigen of verwijderen."
+
+#: ../public/js/remembr.js:952
+msgid "Please enter a valid email address."
+msgstr "Geef alsjeblieft een geldig e-mailadres op."
+
+#: ../public/js/remembr.js:1004
+msgid "There was an error while uploading the image."
+msgstr ""
+"Er trad een onverwachtse fout op tijdens het uploaden van de afbeelding."
+
+#: ../public/js/remembr.js:1587
+msgid ""
+"Thank you for subscribing to our newsletter. Please check your e-mail to "
+"confirm your subscription."
+msgstr ""
+"Leuk dat je onze nieuwsbrief wilt ontvangen. We sturen je een e-mail met een "
+"link waarmee je je aanmelding kunt bevestigen. "
+
+#: ../public/js/remembr.js:1590
+msgid "This e-mail address is already registered."
+msgstr "Dit e-mailadres is al in gebruik."
+
+#: ../public/js/remembr.js:1593
+msgid "We could not add your e-mail address."
+msgstr "We konden je e-mailadres niet toevoegen."
+
+#: ../public/js/remembr.js:1650
+msgid "Sorry, this file is to big, it must be smaller then 5Mb"
+msgstr "Sorry, de afbeelding is te groot. Hij moet kleiner dan 5Mb zijn."
+
+#: ../public/js/remembr.js:1733 ../public/js/remembr.js:1769
+msgid "One moment please, your details are being updated..."
+msgstr "Een ogenblikje, je gegevens worden aangepast..."
+
+#: ../public/js/remembr.js:1744
+msgid "Your account will be removed when removal is confirmed."
+msgstr "Dit account wordt verwijderd zodra er een bevestiging is ontvangen."
+
+#: ../public/js/remembr.js:1730
+msgid "Are you sure you want to delete your account?"
+msgstr "Weet je zeker dat je je account wil verwijderen?"
+
+#: ../public/js/remembr.js:1776
+msgid "Your new password has been saved; please log in again."
+msgstr "Je nieuwe wachtwoord is opgeslagen. Je dient opnieuw in te loggen."
+
+#: ../public/js/remembr.js:1784 ../public/js/remembr.js:1819
+#: ../public/js/remembr.js:1858 ../public/js/remembr.js:2126
+#: ../public/js/remembr.js:2267
+msgid "Please make sure all fields are filled out."
+msgstr "Zorg ervoor dat alle vereiste velden zijn ingevuld."
+
+#: ../public/js/remembr.js:1801
+msgid "One moment please, your data is being updated..."
+msgstr "Een ogenblikje, je gegevens worden aangepast..."
+
+#: ../public/js/remembr.js:1805
+msgid "Your new e-mail address has been saved; please log in again."
+msgstr "Je nieuwe e-mailadres is opgeslagen. Je dient opnieuw in te loggen."
+
+#: ../public/js/remembr.js:1809
+msgid "This e-mail is already in use."
+msgstr "Sorry, dit e-mailadres is al in gebruik."
+
+#: ../public/js/remembr.js:1849
+msgid "Your personal details have been saved."
+msgstr "Je persoonlijke gegevens zijn opgeslagen."
+
+#: ../public/js/remembr.js:1882
+msgid "Your settings have been updated."
+msgstr "Je settings zijn opgeslagen."
+
+#: ../public/js/remembr.js:1967
+msgid "Please fill out all required fields."
+msgstr "Zorg ervoor dat alle vereiste velden juist zijn ingevuld."
+
+#: ../public/js/remembr.js:1988
+msgid "Unfortunately we could not find your account with these details."
+msgstr "Sorry, we kunnen je account met deze gegevens niet vinden."
+
+#: ../public/js/remembr.js:2024 ../public/js/remembr.js:2032
+#: ../public/js/remembr.js:2148
+msgid "One moment please, we process your data..."
+msgstr "Een ogenblikje, we verwerken je gegevens..."
+
+#: ../public/js/remembr.js:2047
+msgid "We have sent you an e-mail with a link to reset your password."
+msgstr ""
+"We hebben je een e-mail gestuurd met een link waarmee je je wachtwoord "
+"opnieuw kan instellen. "
+
+#: ../public/js/remembr.js:2051
+msgid "This e-mail address is not yet registered."
+msgstr "Dit e-mailadres is bij ons niet bekend."
+
+#: ../public/js/remembr.js:2055
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:34
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:59
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:59
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:34
+msgid "Enter a valid e-mail address."
+msgstr "Vul een geldig e-mailadres in"
+
+#: ../public/js/remembr.js:2069
+msgid "A valid e-mail address is required."
+msgstr "Geef een geldig emailadres."
+
+#: ../public/js/remembr.js:2086 ../public/js/remembr.js:2247
+msgid "Please confirm your registration by clicking the link in the e-mail."
+msgstr "Je hebt je registratie nog niet bevestigd via de link in de e-mail."
+
+#: ../public/js/remembr.js:2108
+msgid "Sorry, some unknown error occured."
+msgstr "Er is een fout opgetreden."
+
+#: ../public/js/remembr.js:2142
+msgid ""
+"To register at Remembr. you need to accept the terms and conditions and "
+"privacy and cookie policy."
+msgstr ""
+"Om je bij Remembr. te registreren moet je akkoord gaan met de algemene "
+"voorwaarden en het privacy- en cookiebeleid"
+
+#: ../public/js/remembr.js:2169
+msgid "This e-mail address is already in use"
+msgstr "Dit e-mailadres is al in gebruik."
+
+#: ../public/js/remembr.js:2194
+msgid "Please check your e-mail to confirm your registration."
+msgstr ""
+"We sturen je een e-mail met daarin een link waarmee je je registratie kunt "
+"bevestigen."
+
+#: ../public/js/remembr.js:2199
+msgid "These details are not correct."
+msgstr "Deze gegevens zijn niet juist."
+
+#: ../public/js/remembr.js:2211
+msgid "Passwords do not match."
+msgstr "Wachtwoorden komen niet overeen"
+
+#: ../public/js/remembr.js:2219
+msgid "Please make sure all required fields are filled out."
+msgstr "Zorg ervoor dat alle vereiste velden juist zijn ingevuld."
+
+#: ../public/js/remembr.js:2257
+msgid "You have entered an incorrect e-mail address or password."
+msgstr "Je hebt een verkeerd e-mailadres of wachtwoord opgegeven."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:20
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:45
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:20
+msgid "Sorry, this page does not exist or has been moved or deleted."
+msgstr "Sorry, deze pagina bestaat niet, of is verplaatst of verwijderd."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:28
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:30
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:30
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:49
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:28
+msgid ""
+"Are you looking for something specific? Use the search box at the top of "
+"this page to find a memorial page or look at the menu in the footer to find "
+"your specific subject."
+msgstr ""
+"Zoek je iets specifieks? Gebruik de zoekfunctie bovenaan de pagina voor het "
+"vinden van een herinneringspagina of kijk in het menu onderaan de pagina of "
+"het onderwerp dat je zoekt erbij staat."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:36
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:36
+#: ../module/FileUploads/view/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr "De opgevraagde controller kon deze aanvraag niet verwerken."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:42
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:42
+#: ../module/FileUploads/view/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr "Er is geen mapping beschikbaar voor de opgevraagde controller."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:48
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:48
+#: ../module/FileUploads/view/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr "De opgevraagde controller is niet bruikbaar (dispatchable)."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:54
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:54
+#: ../module/FileUploads/view/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr "Er is geen route gevonden die overeenkomt met de opgevraagde URL."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:60
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:60
+#: ../module/FileUploads/view/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+"We kunnen op dit moment niet achterhalen waarom de pagina niet kon worden "
+"gevonden."
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:71
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:71
+#: ../module/FileUploads/view/404.phtml:34
+msgid "Controller"
+msgstr "Controller"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:82
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:82
+#: ../module/FileUploads/view/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr "verwijst naar %s"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:106
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:63
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:63
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:106
+#: ../module/FileUploads/view/404.phtml:53
+#: ../module/FileUploads/view/error.phtml:8
+msgid "Additional information"
+msgstr "Additionele informatie"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:115
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:175
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:72
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:132
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:72
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:132
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:115
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:175
+#: ../module/FileUploads/view/404.phtml:56
+#: ../module/FileUploads/view/404.phtml:80
+#: ../module/FileUploads/view/error.phtml:11
+#: ../module/FileUploads/view/error.phtml:35
+msgid "File"
+msgstr "Bestand"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:127
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:187
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:84
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:144
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:84
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:144
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:127
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:187
+#: ../module/FileUploads/view/404.phtml:60
+#: ../module/FileUploads/view/404.phtml:84
+#: ../module/FileUploads/view/error.phtml:15
+#: ../module/FileUploads/view/error.phtml:39
+msgid "Message"
+msgstr "Bericht"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:137
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:197
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:94
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:154
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:94
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:154
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:137
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:197
+#: ../module/FileUploads/view/404.phtml:64
+#: ../module/FileUploads/view/404.phtml:88
+#: ../module/FileUploads/view/error.phtml:19
+#: ../module/FileUploads/view/error.phtml:43
+msgid "Stack trace"
+msgstr "Stack trace"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:158
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:115
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:115
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:158
+#: ../module/FileUploads/view/404.phtml:74
+#: ../module/FileUploads/view/error.phtml:29
+msgid "Previous exceptions"
+msgstr "Vorige uitzonderingen"
+
+#: ../data/twigcache/01/d6/e3230f1e69c1ef313ae6773833bc5accac916c529d55389b9607c69ece08.php:225
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:181
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:181
+#: ../data/twigcache/df/d1/ba805432ad81cb4a357ed8029f6428a2b38dd549f735ddac323be75112f6.php:225
+msgid "No Exceptions available"
+msgstr "Geen uitzonderingen beschikbaar"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:37
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:45
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:38
+msgid "Invite friends"
+msgstr "Nodig vrienden uit"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:52
+msgid "This feature will be available in the future"
+msgstr "Deze feature zal in de toekomst beschikbaar komen"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:57
+msgid "Connect with Facebook"
+msgstr "Maak verbinding met facebook"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:67
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:60
+msgid "By e-mail"
+msgstr "Per e-mail"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:72
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:65
+msgid "Compose e-mail"
+msgstr "E-mail opstellen"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:82
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:74
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:90
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:72
+msgid "Previous step"
+msgstr "Vorige stap"
+
+#: ../data/twigcache/03/3d/ec10b2239bb761b3eb7e0303370fcc6a8d1d3505784c459611b1dacbe7c0.php:86
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:82
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:67
+msgid "Create page"
+msgstr "Maak pagina"
+
+#: ../data/twigcache/03/9d/6c9e1454baab81ab9b07e57deee60adb67fe2702aeedbfb428ec7718536b.php:27
+msgid "Success"
+msgstr "Success"
+
+#: ../data/twigcache/03/9d/6c9e1454baab81ab9b07e57deee60adb67fe2702aeedbfb428ec7718536b.php:31
+msgid "Your account has been confirmed. You can now log in."
+msgstr "Je account is bevestigd. Je kunt nu in loggen."
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:38
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:38
+msgid "Send invitations by e-mail"
+msgstr "Uitnodigingen sturen per e-mail"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:40
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:72
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:40
+#: ../data/twigcache/f0/25/cb5d8387f0af02f508e701816562b7bc5f996bbdb481227535dbb28cdebd.php:38
+msgid "Back to main page \"Send invitations\""
+msgstr "Terug naar hoofdpagina \"Uitnodigingen sturen\""
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:47
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:47
+msgid "E-mail address(es)"
+msgstr "E-mailadres(sen)"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:55
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:55
+msgid "E-mail subject"
+msgstr "E-mailonderwerp"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:60
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:60
+msgid "Memorial page for"
+msgstr "Herinneringspagina voor"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:69
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:69
+msgid "Dear family and friends,"
+msgstr "Beste familie en vrienden,"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:74
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:74
+#, php-format
+msgid "I have created a memorial page for %s on Remembr.com."
+msgstr "Ik heb een herinneringspagina gemaakt voor %s op Remembr.com"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:78
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:78
+msgid "You are invited to view this page and add and share memories."
+msgstr ""
+"Ik nodig je uit om deze pagina te bekijken en herinneringen toe te voegen en "
+"te delen."
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:83
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:59
+#: ../data/twigcache/66/ff/a8a952c96c5324558fbb0ec7c602c4995fecbe2ab1d6842c4ae5b4360cdb.php:47
+#: ../data/twigcache/8d/b9/3fc6003f026bf3848bf4bdd57babf134387558f9595cb10663259c1dc7e6.php:62
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:83
+#: ../data/twigcache/c2/dc/0c427cc672764ce07857af379bb11dcbc7b40302c1c5a672fef7e63b493a.php:35
+#: ../module/TH/src/TH/ZfUser/Controller/AccountController.php:549
+msgid "Kind regards,"
+msgstr "Met vriendelijke groet,"
+
+#: ../data/twigcache/06/e8/f61c3ad2dd27694c9f1b8a10861868fe277ecf44368985f9ff932b3221fe.php:92
+#: ../data/twigcache/ba/51/f8427ca2f9cd816d03b586bdc698efe778561fff600eef000c04d023bd58.php:91
+msgid "Send e-mail"
+msgstr "E-mail versturen"
+
+#: ../data/twigcache/07/4f/8edd6d1b975345aa494181504dba64d4124e2038336e564c42722f8e5e4f.php:32
+msgid "Requires JavaScript to function. Please enable JavaScript."
+msgstr "Vereist JavaScript. Zet JavaScript aan."
+
+#: ../data/twigcache/07/4f/8edd6d1b975345aa494181504dba64d4124e2038336e564c42722f8e5e4f.php:38
+#, php-format
+msgid ""
+"Here are the %s instructions how to enable JavaScript in your web browser %s."
+msgstr ""
+"Hier zijn de %s instructies om JavaScript in je webbrowser aan te zetten %s."
+
+#: ../data/twigcache/07/4f/8edd6d1b975345aa494181504dba64d4124e2038336e564c42722f8e5e4f.php:45
+msgid ""
+"If you use NoScript or similar plugins, be aware that we also use ajax."
+"googleapis.com and cdnjs.cloudflare.com as content delivery networks for "
+"some javascript."
+msgstr ""
+"Als je NoScript of soortgelijke plugins gebruikt, houdt er dan rekening mee "
+"dat we ook  ajax.googleapis.com en cdnjs.cloudflare.com als content delivery "
+"netwerken gebruiken voor sommige javascript."
+
+#: ../data/twigcache/08/68/7f15fe8a7bef69e658db8d2f0085f6543939bed8afc8fd75658cde3c6fc0.php:24
+#: ../data/twigcache/44/b0/3e3921cc20d9f5601ff37badc73fa04b4aff65dc2fe5d65d385c05c9a9e0.php:32
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: ../data/twigcache/08/68/7f15fe8a7bef69e658db8d2f0085f6543939bed8afc8fd75658cde3c6fc0.php:58
+#, php-format
+msgid "This e-mail is sent by Remembr. on behalf of %s"
+msgstr "Deze email is verzonden door Remembr. namens %s"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:43
+msgid "Provide your e-mail address"
+msgstr "Vul je e-mailadres in"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:50
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:51
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:63
+msgid "Confirm your e-mail"
+msgstr "Bevestig je e-mail"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:68
+#: ../data/twigcache/66/ff/a8a952c96c5324558fbb0ec7c602c4995fecbe2ab1d6842c4ae5b4360cdb.php:37
+#: ../data/twigcache/c2/dc/0c427cc672764ce07857af379bb11dcbc7b40302c1c5a672fef7e63b493a.php:30
+#: ../module/TH/src/TH/ZfUser/Controller/AccountController.php:239
+msgid "Confirm your e-mail address"
+msgstr "Bevestig je e-mailadres"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:74
+msgid "E-mail addresses do not match"
+msgstr "E-mailadressen komen niet overeen"
+
+#: ../data/twigcache/08/da/50d619347597d00e9590ed3998088f640c3c7e244bf42bdd93859eb028e2.php:85
+#: ../data/twigcache/32/b5/ee83cd5177e6f7b9b2846c39a44f3703d59092b900b0a2810ceaf6abcc0e.php:42
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:96
+#: ../data/twigcache/44/b0/3e3921cc20d9f5601ff37badc73fa04b4aff65dc2fe5d65d385c05c9a9e0.php:45
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:62
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:97
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:226
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:98
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:85
+#: ../data/twigcache/93/0e/cf9a4619105e64b4821d722f14a4e3a307681d97c13e2ca1481dfe7228f4.php:37
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:107
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:131
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:150
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:217
+#: ../data/twigcache/f0/25/cb5d8387f0af02f508e701816562b7bc5f996bbdb481227535dbb28cdebd.php:78
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:186
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:192
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../data/twigcache/0b/7d/99aa7341fb9045d9ddd1b48ebe4cf9135884a862e9c4e7252209b72b9cb3.php:60
+#: ../data/twigcache/2c/71/28a37bb30fc98e58aa64e11087dfc13ba6005f9e5e3939e6f5078832d265.php:60
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:60
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:60
+#: ../data/twigcache/63/c3/d0cb8b59cc7acf8a55496f478755d5749e65b35b493ac8f34b63fecbe27b.php:60
+msgid "Javascript is turned off."
+msgstr "Javascript staat uit."
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:36
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:79
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:79
+msgid "Create a memorial page"
+msgstr "Maak een herinneringspagina"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:40
+msgid "ideasandadvice"
+msgstr "ideeenenadvies"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:42
+msgid "Ideas and advice"
+msgstr "Ideëen en advies"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:46
+msgid "news"
+msgstr "nieuws"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:48
+msgid "News"
+msgstr "Nieuws"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:54
+msgid "Customer service"
+msgstr "Klantenservice"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:59
+msgid "Terms and conditions"
+msgstr "Algemene voorwaarden"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:63
+msgid "Privacy & cookie policy"
+msgstr "Privacy & cookiebeleid"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:67
+msgid "Disclaimer"
+msgstr "Disclaimer"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:71
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:177
+msgid "Contact"
+msgstr "Contact"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:75
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:173
+msgid "FAQ"
+msgstr "Veelgestelde vragen"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:83
+msgid "Follow us"
+msgstr "Volg ons"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:93
+msgid "Sign up for our newsletter"
+msgstr "Meld je aan voor onze nieuwsbrief"
+
+#: ../data/twigcache/0f/ba/b278d72e8b0eb921b1c38694f5ab117c22875eac5a73df7606c2f133e4e6.php:106
+msgid "Sign up"
+msgstr "Meld je aan"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:22
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:22
+msgid "Account"
+msgstr "Account"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:27
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:27
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:32
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:88
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:149
+msgid "Register"
+msgstr "Registreren"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:32
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:67
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:32
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:156
+#: ../data/twigcache/b8/d0/09bce64e7647b66101f48b8b9ddb93eb48d0f2680ca76744e17a43be1b35.php:76
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:67
+msgid "Log in"
+msgstr "Inloggen"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:39
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:39
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:79
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:127
+msgid "Personal details"
+msgstr "Persoonsgegevens"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:43
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:43
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:131
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:76
+msgid "Dashboard"
+msgstr "Jouw gegevens"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:47
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:47
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:135
+msgid "Account settings"
+msgstr "Accountinstellingen"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:51
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:51
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:139
+msgid "Log out"
+msgstr ""
+"Uitloggen\n"
+"\t"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:57
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:57
+msgid "Memorial pages"
+msgstr "Herdenkingspagina's"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:61
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:61
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:191
+msgid "memorialpages"
+msgstr "herdenkingspagina's"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:63
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:63
+msgid "Search a memorial page"
+msgstr "Zoek een herdenkingspagina"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:67
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:67
+msgid "vips"
+msgstr "vips"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:69
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:69
+msgid "Celebrities"
+msgstr "Beroemdheden"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:73
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:73
+msgid "pets"
+msgstr "huisdieren"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:75
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:75
+msgid "Pets"
+msgstr "Huisdieren"
+
+#: ../data/twigcache/10/5a/765df41cc1d1f3f0052bc2a58702e5320eacdff8a3710a15a9a2c03aef91.php:83
+#: ../data/twigcache/1f/b9/5e302f8c8dc5129218ceebb48a7e0a98053484b2dcd77724463415aa9465.php:83
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:181
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:106
+msgid "Language"
+msgstr "Taal"
+
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:43
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:66
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:61
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:50
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:66
+#: ../data/twigcache/b8/d0/09bce64e7647b66101f48b8b9ddb93eb48d0f2680ca76744e17a43be1b35.php:65
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:53
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:65
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:43
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:55
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:47
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:51
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:70
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:55
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:70
+#: ../data/twigcache/b8/d0/09bce64e7647b66101f48b8b9ddb93eb48d0f2680ca76744e17a43be1b35.php:69
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:69
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:47
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:51
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:60
+msgid "Enter your password"
+msgstr "Vul je wachtwoord in"
+
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:59
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:59
+msgid "Remember me"
+msgstr "Onthoud mij"
+
+#: ../data/twigcache/11/34/85055ebc80a6c3277b521bf13f3987b7afec6ae7a50d5901f44997b63932.php:74
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:65
+#: ../data/twigcache/ea/a9/4a8b8527905d8fcd9299815cd966ab6bf10b64236e256a8bc993e2c4f8a7.php:74
+msgid "Forgot password?"
+msgstr "Wachtwoord vergeten?"
+
+#: ../data/twigcache/11/66/1cf35078196172bf76074b28bfc4d2e15df77cf3af101da31f3f196493fc.php:171
+#: ../data/twigcache/11/66/1cf35078196172bf76074b28bfc4d2e15df77cf3af101da31f3f196493fc.php:190
+#: ../data/twigcache/2f/d6/1a200df4b8963fae797ebd773da7808de0329eabab19f745596da2a9889a.php:171
+#: ../data/twigcache/2f/d6/1a200df4b8963fae797ebd773da7808de0329eabab19f745596da2a9889a.php:190
+msgid "Remembr. | The memorial website to share memories of loved ones"
+msgstr "Remembr. | De herdenkingssite om samen herinneringen te delen"
+
+#: ../data/twigcache/11/66/1cf35078196172bf76074b28bfc4d2e15df77cf3af101da31f3f196493fc.php:171
+#: ../data/twigcache/2f/d6/1a200df4b8963fae797ebd773da7808de0329eabab19f745596da2a9889a.php:171
+msgid ""
+"Remember, remembering, remembrance, memory, memories, memorial, memorial "
+"site, legacy, obituary, condolances, in memoriam, monument, deceased, "
+"precious, lost ones, funeral, obituaries, tribute, in memory, online "
+"memorial, grief, death, memorial website, loved ones, funaral services, "
+"mourn, words of sympathy, words of comfort, words of condolance, "
+"bereavement, lamentation, cremation, burial"
+msgstr ""
+"Herdenken, herdenking, herdenkingssite, herdenkings website, "
+"herdenkingspagina, herdenkingscommunity, gedenken, herinnering, overledenen, "
+"overlijden, overlijdensadvertenties, condoleances, condoleanceregister, "
+"condoleanceberichten, condoleren, dierbaren, uitvaart, rouw, medeleven, "
+"deelneming, steunbetuiging, rouwverwerking, in memoriam, familiebericht, "
+"uitvaartwensen, monument, crematie, begrafenis"
+
+#: ../data/twigcache/11/66/1cf35078196172bf76074b28bfc4d2e15df77cf3af101da31f3f196493fc.php:181
+#: ../data/twigcache/2f/d6/1a200df4b8963fae797ebd773da7808de0329eabab19f745596da2a9889a.php:181
+msgid ""
+"Remembr. | Create a free memorial page to share memories of lost ones by "
+"sharing stories, images, movies and music. Invite family and friends to co-"
+"create. Login with Facebook."
+msgstr ""
+"Remembr. | Maak een gratis herdenkingspagina waar je met elkaar verhalen, "
+"foto's, filmpjes en muziek deelt van dierbare overledenen. Login met "
+"Facebook."
+
+#: ../data/twigcache/11/66/1cf35078196172bf76074b28bfc4d2e15df77cf3af101da31f3f196493fc.php:190
+#: ../data/twigcache/2f/d6/1a200df4b8963fae797ebd773da7808de0329eabab19f745596da2a9889a.php:190
+msgid ""
+"Create a free memorial page to share memories of lost ones by sharing "
+"stories, images, movies and music. Invite family and friends to co-create."
+msgstr ""
+"Maak een gratis herdenkingspagina waar je met elkaar verhalen, foto's, "
+"filmpjes en muziek deelt van dierbare overledenen."
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:22
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:26
+msgid "Video"
+msgstr "Video"
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:38
+msgid "Upload a video on YouTube and paste the code here: "
+msgstr "Plaats een video op YouTube en plak de code hier:"
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:50
+msgid "What would you like to share about this video..."
+msgstr "Wat zou je willen delen over deze video..."
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:59
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:70
+msgid "Select a label"
+msgstr "Geef rubriek"
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:63
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:56
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:74
+msgid "Edit your labels in the settings menu"
+msgstr "Pas je rubrieken aan in het instellingenmenu"
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:107
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:61
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:103
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:118
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:147
+msgid "Post"
+msgstr "Plaatsen"
+
+#: ../data/twigcache/11/f3/f85e77f7c5d2cd4b5d15e1a8ae8942e60acf4943072270d43d7f5f2a0444.php:117
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:67
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:112
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:128
+msgid "One moment please, your post is being saved..."
+msgstr "Een ogenblikje, je bericht wordt opgeslagen..."
+
+#: ../data/twigcache/12/5f/da627b20421e6ad5699ec08eca6eb11ea56dab059d835ed2e56c82365f4b.php:26
+#: ../data/twigcache/78/35/7c17766db2fe68cb287b82a9ec551342323382ea4238212d98b337eb7b89.php:26
+msgid "Sorry, an error occurred."
+msgstr "Er is een fout opgetreden"
+
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:36
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:37
+msgid "Publish your page"
+msgstr "Publiceer je pagina"
+
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:52
+msgid "Publish now"
+msgstr "Publiceer nu"
+
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:58
+msgid "Publish later"
+msgstr "Publiceer later"
+
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:65
+msgid "You need to publish the page before you send invitations."
+msgstr ""
+"Je moet eerst je pagina publiceren voordat je uitnodigingen kan versturen. "
+
+#: ../data/twigcache/12/b8/794000ae3101797e2e8e89df70a3f4adaef744d5ded0a07a0fe505f88f3b.php:78
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:94
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:157
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:76
+msgid "Next step"
+msgstr "Volgende stap"
+
+#: ../data/twigcache/1b/e9/e430fe3d5921508b300ac0ef41d7785c991c5da3c75a96791203a7a37fd3.php:41
+msgid "Log in with"
+msgstr "Log in met"
+
+#: ../data/twigcache/20/f8/cfd9311a9ab83e2e6373fa88c18b2628ea90fcf7b2bd4efdb31f5bf2945d.php:24
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:24
+#: ../data/twigcache/ee/96/0932e4dbd2ae5b0240fd269740c2ab6fc1afa838d77e913d2a40f4e04a05.php:24
+#, php-format
+msgid "Hi %s %s"
+msgstr "Beste %s %s"
+
+#: ../data/twigcache/20/f8/cfd9311a9ab83e2e6373fa88c18b2628ea90fcf7b2bd4efdb31f5bf2945d.php:33
+#: ../data/twigcache/ee/96/0932e4dbd2ae5b0240fd269740c2ab6fc1afa838d77e913d2a40f4e04a05.php:33
+msgid "1 new message"
+msgid_plural "%number% new messages"
+msgstr[0] "1 nieuw bericht"
+msgstr[1] "%number% nieuw berichten"
+
+#: ../data/twigcache/20/f8/cfd9311a9ab83e2e6373fa88c18b2628ea90fcf7b2bd4efdb31f5bf2945d.php:57
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:46
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:45
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:112
+#: ../module/Application/src/Application/Controller/PageController.php:999
+msgid "Invitation"
+msgstr "Uitnodiging"
+
+#: ../data/twigcache/20/f8/cfd9311a9ab83e2e6373fa88c18b2628ea90fcf7b2bd4efdb31f5bf2945d.php:63
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:50
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:49
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:116
+#: ../module/Application/src/Application/Controller/PageController.php:926
+msgid "Request for invite"
+msgstr "Verzoek tot uitnodiging"
+
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:28
+msgid "Dear "
+msgstr "Beste "
+
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:35
+msgid ""
+"You have just posted a condolence message on a memorial page. You can view "
+"the page by the clicking the following link:"
+msgstr ""
+"Je hebt zojuist een condoleance geplaatst op een herdenkingspagina. Via de "
+"volgende link kan je de herdenkingspagina bekijken:"
+
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:42
+msgid "Visit the memorial page"
+msgstr "Bezoek de herdenkingspagina"
+
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:47
+msgid ""
+"If you would like to edit or remove the condolence message, please click the "
+"following link:"
+msgstr ""
+"Wil je je condoleance wijzigen of verwijderen, klik dan op de volgende link:"
+
+#: ../data/twigcache/21/73/8c30e3435d21c57a321e5fd4e5d1ccb7bdf307e43d13cec58152bb6cf3f0.php:54
+msgid "Edit or remove the condolence message"
+msgstr "Wijzig of verwijder de condoleance"
+
+#: ../data/twigcache/28/43/5b32e6e2eaec242cadee4b72f6aaa9da1c4e7983476d41525eec4c09b278.php:67
+#: ../data/twigcache/9a/3a/bb1463ef8abd627e09e4dfafe9ef958cc15d8ef28e6f27caf11d820468d9.php:90
+#: ../data/twigcache/f3/27/d826a53820cca3d639852043fc9a2d61a3f2cebc080d3b749361c2acc226.php:68
+msgid "Please enable JavaScript to use Remembr."
+msgstr "Schakel JavaScript in om Remembr. te kunnen gebruiken"
+
+#: ../data/twigcache/28/43/5b32e6e2eaec242cadee4b72f6aaa9da1c4e7983476d41525eec4c09b278.php:78
+msgid "An error occurred. Sorry for the inconvenience."
+msgstr "Er is een fout opgetreden. Sorry voor het ongemak."
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:22
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:28
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:22
+msgid "New to Remembr? Sign up here:"
+msgstr "Nieuw op Remembr? Meld je hier aan:"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:29
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:33
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:71
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:29
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:33
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:127
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:57
+msgid "First name"
+msgstr "Voornaam"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:40
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:44
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:81
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:40
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:44
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:135
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:67
+msgid "Last name"
+msgstr "Achternaam"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:81
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:85
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:63
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:68
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:81
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:85
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:81
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:85
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:68
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:73
+msgid "Confirm your password"
+msgstr "Bevestig je wachtwoord"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:89
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:89
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:89
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:79
+msgid "The passwords do not match"
+msgstr "Wachtwoorden komen niet overeen"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:98
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:98
+#, php-format
+msgid ""
+"I accept the %s terms and conditions %s and %s privacy and cookie policy %s"
+msgstr ""
+"Ik accepteer %s de algemene voorwaarden %s en %s het privacy- en "
+"cookiebeleid %s"
+
+#: ../data/twigcache/2d/61/66d7eefb29d5444d00bd1080c87f2d55c5111a34649fd404cce09378454f.php:108
+#: ../data/twigcache/a7/a0/03e91a013ec070fea1e3379fe0494a1a8daa7d038495b49ecb23c14018cc.php:108
+msgid "Create account"
+msgstr "Account maken"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:37
+msgid "Create a unique page name and web address"
+msgstr "Creëer een unieke paginanaam en internetadres"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:54
+msgid "Name of the page"
+msgstr "Naam van de pagina"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:58
+msgid "You are required to enter a pagename"
+msgstr "Je bent verplicht een paginanaam op te geven"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:62
+msgid "Connection failed while trying to check availability"
+msgstr ""
+"Verbinden met de server mislukte bij het controleren van de beschikbaarheid"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:66
+msgid "This name is no longer available"
+msgstr "Deze pagina is niet meer beschikbaar."
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:75
+msgid "Suggestion"
+msgstr "Suggestie"
+
+#: ../data/twigcache/2e/8a/30031848a7ef1c80be5391fb81a98db1f91e342f386b585e0b1c5766ee4d.php:81
+msgid "select"
+msgstr "selecteer"
+
+#: ../data/twigcache/32/b5/ee83cd5177e6f7b9b2846c39a44f3703d59092b900b0a2810ceaf6abcc0e.php:27
+#: ../data/twigcache/44/b0/3e3921cc20d9f5601ff37badc73fa04b4aff65dc2fe5d65d385c05c9a9e0.php:27
+msgid "To: "
+msgstr "Aan: "
+
+#: ../data/twigcache/32/b5/ee83cd5177e6f7b9b2846c39a44f3703d59092b900b0a2810ceaf6abcc0e.php:38
+msgid "Reply"
+msgstr "Beantwoord"
+
+#: ../data/twigcache/34/1b/a4cb2a131f18ff7487dcb56625d838f73b4d46dedb0a08deef907b2ac6e6.php:27
+msgid "Choose password"
+msgstr "Kies wachtwoord"
+
+#: ../data/twigcache/34/1b/a4cb2a131f18ff7487dcb56625d838f73b4d46dedb0a08deef907b2ac6e6.php:31
+msgid "Please enter a password to secure your account."
+msgstr "Vul een wachtwoord in om je account mee te beveiligen."
+
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:36
+msgid "Block users"
+msgstr "Gebruikers blokkeren"
+
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:42
+msgid "Block a user"
+msgstr "Blokkeer een gebuiker"
+
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:47
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:56
+msgid "Specify a new label"
+msgstr "Geef een nieuwe rubrieknaam op"
+
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:52
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:95
+msgid "Add"
+msgstr "Toevoegen"
+
+#: ../data/twigcache/3f/4d/1210db6b8ec351f13f0da71b693b890b7d6c1d0a0cd43085cb64aaba6e0e.php:60
+msgid "Restricted and blocked users"
+msgstr "Beperkte en geblokkeerde gebruikers"
+
+#: ../data/twigcache/42/b0/5d97a7924992fbd1b833bad950b80a12b39fda6299a6273be3cda74ad016.php:20
+msgid "No provider chosen"
+msgstr "Geen provider gekozen"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:74
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:71
+msgid "Bug report form"
+msgstr "Probleemmelding formulier"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:84
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:77
+msgid "Name / Email"
+msgstr "Naam / E-mail"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:96
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:87
+msgid "Problem"
+msgstr "Probleem"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:106
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:94
+msgid "Expected result"
+msgstr "Verwachte resultaat"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:116
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:101
+msgid "Actual result"
+msgstr "Geconstateerde resultaat"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:126
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:108
+msgid "Other remarks"
+msgstr "Overige opmerkingen"
+
+#: ../data/twigcache/43/52/b639e717711de3b49b62c10fcd2bd13f7f3cfde5d23abc71f6d88a867765.php:137
+msgid "Update"
+msgstr "Aanpassen"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:39
+msgid "Who will the memorial page be about?"
+msgstr "Over wie gaat jouw herinneringspagina?"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:43
+msgid "Saving..."
+msgstr "Bezig met opslaan"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:47
+msgid "Saved"
+msgstr "Opgeslagen"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:57
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:182
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:125
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:43
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:96
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:167
+msgid "Male"
+msgstr "Man"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:63
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:191
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:131
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:49
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:100
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:173
+msgid "Female"
+msgstr "Vrouw"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:91
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:299
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:101
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:77
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:143
+msgid "Date of birth"
+msgstr "Geboortedatum"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:101
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:87
+msgid "Date of death (if applicable)"
+msgstr "Overlijdensdatum (indien van toepassing)"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:117
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:122
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:143
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:89
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:148
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:153
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:131
+msgid "City"
+msgstr "Woonplaats"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:130
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:136
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:152
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:110
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:161
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:167
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:152
+msgid "Country"
+msgstr "Land"
+
+#: ../data/twigcache/43/5e/18fad8742d61d22c771d1669707a6129988b0840aaefd78dd88e2351bc62.php:147
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:137
+msgid "Short description of the person"
+msgstr "Korte beschrijving van de persoon"
+
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:115
+msgid "Attachments / Screenshots"
+msgstr "Bijlages / Screenshots"
+
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:131
+msgid "Browser information"
+msgstr "Browser informatie"
+
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:142
+msgid "Flash version"
+msgstr "Flash versie"
+
+#: ../data/twigcache/44/fa/3e340b513941da912dedb48243a7c21182e4951f9d36f22b60ef0b3ccf58.php:148
+msgid "Height x Width"
+msgstr "Hoogte x Breedte"
+
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:63
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:57
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:57
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:83
+msgid "Send a message to"
+msgstr "Stuur een bericht aan"
+
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:67
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:71
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:87
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:91
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:61
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:65
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:81
+#: ../data/twigcache/68/b5/e04228a02ffb5589e537baaca83073629fb0ad10fdaf274256a49d70d69d.php:85
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:65
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:81
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:85
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:87
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:91
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:107
+#: ../data/twigcache/d5/48/28ceac62a76ea105089fb6ba81c75664e27f51a75ad278e394dd27004533.php:111
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:186
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:213
+msgid "Anonymous user"
+msgstr "Anonieme gebruiker"
+
+#: ../data/twigcache/45/03/51a7eaca4ece15bfd4c8debf759f6e2d4743d8944e06f02a82fe463c44fa.php:121
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:145
+msgid "Pin to top, make hero"
+msgstr "Plaats als grote foto bovenaan"
+
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:37
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:83
+msgid "Login"
+msgstr "Log in"
+
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:46
+msgid "You need to login before you can continue"
+msgstr "Je moet inloggen voordat je verder kunt gaan"
+
+#: ../data/twigcache/48/15/553be22a45a75ccded05b2dc48a91e6033092625ad7f7e6989e7a4ba5b39.php:79
+msgid "Already member? Log in here:"
+msgstr "Ben je al lid? Log hier in:"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:33
+msgid "You have"
+msgstr "U heeft"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:40
+msgid "1 new memory"
+msgid_plural "%nmemories% new memories"
+msgstr[0] "1 nieuwe herinnering"
+msgstr[1] "%nmemories% nieuwe herinneringen"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:57
+msgid "1 new photo"
+msgid_plural "%nphotos% new photos"
+msgstr[0] "1 nieuwe afbeelding"
+msgstr[1] "%nphotos% nieuwe fotos"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:74
+msgid "1 new video"
+msgid_plural "%nvideos% new videos"
+msgstr[0] "1 nieuwe video"
+msgstr[1] "%nvideos% nieuwe videos"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:87
+msgid "1 new condolence"
+msgid_plural "%ncondolences% new condolences"
+msgstr[0] "1 nieuwe condoleance"
+msgstr[1] "%ncondolences% nieuwe condoleances"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:173
+msgid "New image"
+msgstr "Nieuwe afbeelding"
+
+#: ../data/twigcache/4a/8c/14cb8d3c5f45627c098fe4812aebd533da9cb161dc9023ca23e725e79a93.php:199
+msgid "New video"
+msgstr "Nieuwe video"
+
+#: ../data/twigcache/4c/14/dce80a2d981dc908a21128d1e08df2dc1bc2fc3b116c10054759d29a072b.php:32
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:147
+msgid "Messages"
+msgstr "Berichten"
+
+#: ../data/twigcache/4c/14/dce80a2d981dc908a21128d1e08df2dc1bc2fc3b116c10054759d29a072b.php:40
+msgid "Inbox"
+msgstr "Inbox"
+
+#: ../data/twigcache/4c/14/dce80a2d981dc908a21128d1e08df2dc1bc2fc3b116c10054759d29a072b.php:48
+msgid "Outbox"
+msgstr "Outbox"
+
+#: ../data/twigcache/4c/14/dce80a2d981dc908a21128d1e08df2dc1bc2fc3b116c10054759d29a072b.php:56
+msgid "New message"
+msgstr "Nieuw bericht"
+
+#: ../data/twigcache/4d/66/0f4f3847dbc127eebaa73892e7ce686bd9f703e11b3808fc91c962b9c1bd.php:50
+#: ../data/twigcache/6e/b1/a07235aa44d2d8af406af672546a9897b5a517e8145ddec0eda6cb62cbc4.php:33
+msgid "View page"
+msgstr "Bekijk pagina"
+
+#: ../data/twigcache/4f/7a/57c9f9a2b5eecabc26a067ae6c090e289ab37c9a4b2278ade2e841fed1a9.php:34
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:75
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:110
+msgid "Notifications"
+msgstr "Meldingen"
+
+#: ../data/twigcache/4f/7a/57c9f9a2b5eecabc26a067ae6c090e289ab37c9a4b2278ade2e841fed1a9.php:48
+#, php-format
+msgid "%s has deleted the %s on %s"
+msgstr "%s heeft de %s op %s verwijderd"
+
+#: ../data/twigcache/4f/7a/57c9f9a2b5eecabc26a067ae6c090e289ab37c9a4b2278ade2e841fed1a9.php:55
+#, php-format
+msgid "%s has shared a %s on %s"
+msgstr "%s heeft een %s gedeeld op %s"
+
+#: ../data/twigcache/4f/7a/57c9f9a2b5eecabc26a067ae6c090e289ab37c9a4b2278ade2e841fed1a9.php:75
+msgid "You don't have notifications"
+msgstr "Je hebt geen meldingen"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:40
+#: ../data/twigcache/9e/8e/b9d9792a352460708fe67ddab17fed6e0a81b31134eec25d263772e26dcb.php:40
+msgid "Logged in as:"
+msgstr "Ingelogd als:"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:48
+#: ../data/twigcache/9e/8e/b9d9792a352460708fe67ddab17fed6e0a81b31134eec25d263772e26dcb.php:48
+msgid "(administrator)"
+msgstr "(beheerder)"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:55
+msgid "Page settings for:"
+msgstr "Pagina instellingen voor:"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:84
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:38
+msgid "Privacy settings"
+msgstr "Privacy instellingen"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:88
+msgid "Send invitations"
+msgstr "Uitnodigingen sturen"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:92
+msgid "Define labels"
+msgstr "Rubrieken maken"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:97
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:36
+msgid "Publish page"
+msgstr "Pagina publiceren"
+
+#: ../data/twigcache/51/81/36df04d04006e34347c621c049466f029b19bfbc5bc044c257396e83263a.php:102
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:49
+#: ../data/twigcache/c3/ad/ab2736a70d60d8b5fdcf2db3458443f0ec55fbad1373635c89806bf1f383.php:36
+msgid "QR code"
+msgstr "QR code"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:43
+#: ../data/twigcache/72/f8/b5367d3b2a68027e56a52090cb717c18f46e4acadcb131f6b458d5d2a631.php:35
+#: ../data/twigcache/72/f8/b5367d3b2a68027e56a52090cb717c18f46e4acadcb131f6b458d5d2a631.php:78
+#: ../data/twigcache/7d/df/9d747c7565e296f3ca96add5bad672b5b8ff047ab22db51dd36b2ce1f351.php:35
+#: ../data/twigcache/7d/df/9d747c7565e296f3ca96add5bad672b5b8ff047ab22db51dd36b2ce1f351.php:78
+msgid "Watch the video"
+msgstr "Bekijk de video"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:65
+msgid "/images/easy-6-steps_en.jpg"
+msgstr "/images/easy-6-steps_nl.jpg"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:67
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:69
+msgid "6 easy steps"
+msgstr "6 simpele stappen"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:82
+msgid "Start here"
+msgstr "Begin hier"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:104
+msgid "Find a page"
+msgstr "Zoek een pagina"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:112
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:37
+msgid "Recent pages"
+msgstr "Recente pagina's"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:148
+msgid "Change your personal details"
+msgstr "Wijzig je persoonlijke gegevens"
+
+#: ../data/twigcache/55/02/026d97e31863930b619882103f664e8640ea726275dfbc31c56f4f7bf17b.php:158
+msgid "Change your account settings"
+msgstr "Wijzig je accountinstellingen"
+
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:34
+msgid "We could not find the condolence message you are looking for."
+msgstr "We konden de condoleance die u zoekt niet vinden."
+
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:38
+msgid "Sorry, this condolence message does not exist or has been deleted."
+msgstr "Deze condoleance bestaat niet of is verwijderd."
+
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:46
+msgid "Edit the condolence message for "
+msgstr "Wijzig de condoleance voor "
+
+#: ../data/twigcache/56/bf/0dd17598b450c0cf90477d3d27c0fde3ee2e8bd837edc4d61309adf65001.php:58
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:75
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:53
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:71
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:68
+#: ../data/twigcache/61/10/66ddaea14e98c7bca9c83de776a30b6bcc9d64e75fe776685f79c5a626bd.php:45
+msgid "You can access this memorial page by invitation only."
+msgstr "Je hebt alleen toegang tot de pagina als je bent uitgenodigd."
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:72
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:33
+msgid "You do not have sufficient access rights to view this page."
+msgstr "Je hebt onvoldoende toegangsrechten om deze pagina te bekijken."
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:78
+msgid "This memorial page is no longer available"
+msgstr "Deze herinneringspagina is niet meer beschikbaar"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:82
+msgid "This memorial page has not been published yet."
+msgstr "Deze herinneringspagina is nog niet gepubliceerd"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:86
+msgid "This memorial page is not available."
+msgstr "Deze herinneringspagina is niet  beschikbaar"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:91
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:59
+msgid "Some unspecified error has occurred."
+msgstr "Er is een fout opgetreden"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:103
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:26
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:30
+msgid "Memories"
+msgstr "Herinneringen"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:113
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:213
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:217
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:26
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:30
+msgid "Condolences"
+msgstr "Condoleances"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:149
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:209
+msgid "deactivated"
+msgstr "gedeactivereerd"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:173
+msgid "The administrator of this page is"
+msgstr "De beheerder van de pagina is"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:177
+msgid "Send a message"
+msgstr "Stuur een bericht"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:195
+msgid "Less..."
+msgstr "Minder..."
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:257
+msgid "Filter:"
+msgstr "Filter:"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:261
+msgid "Show all labels"
+msgstr "Toon alle rubrieken"
+
+#: ../data/twigcache/59/8d/88fd9a4f6a72b2f015f3e3901cbbbaf9cd653a0b27b3678f83604e9f8aa1.php:305
+msgid "video"
+msgstr "video"
+
+#: ../data/twigcache/5a/a9/6940cf5cf0b72e804ac42dbbf66de6bb8eac5803d41cfb436437f2a838f1.php:20
+msgid "We need some extra data"
+msgstr "We hebben wat extra data nodig"
+
+#: ../data/twigcache/61/10/66ddaea14e98c7bca9c83de776a30b6bcc9d64e75fe776685f79c5a626bd.php:32
+msgid "Request access"
+msgstr "Verzoek om toegang"
+
+#: ../data/twigcache/61/10/66ddaea14e98c7bca9c83de776a30b6bcc9d64e75fe776685f79c5a626bd.php:56
+msgid "Invite me"
+msgstr "Nodig mij uit"
+
+#: ../data/twigcache/63/c3/d0cb8b59cc7acf8a55496f478755d5749e65b35b493ac8f34b63fecbe27b.php:79
+msgid "Thanks for the report."
+msgstr "Bedankt voor de melding."
+
+#: ../data/twigcache/63/c3/d0cb8b59cc7acf8a55496f478755d5749e65b35b493ac8f34b63fecbe27b.php:84
+msgid "Click here to make another report."
+msgstr "Klik hier om nog een probleem te melden."
+
+#: ../data/twigcache/66/ff/a8a952c96c5324558fbb0ec7c602c4995fecbe2ab1d6842c4ae5b4360cdb.php:25
+msgid ""
+"Thank you for registering for our newsletter. To complete your registration, "
+"please confirm your e-mail address."
+msgstr ""
+"Leuk dat je onze nieuwsbrief wilt ontvangen. Klik op onderstaande link om je "
+"aanmelding te bevestigen. "
+
+#: ../data/twigcache/66/ff/a8a952c96c5324558fbb0ec7c602c4995fecbe2ab1d6842c4ae5b4360cdb.php:51
+msgid "Remembr."
+msgstr "Remembr."
+
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:46
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:208
+msgid "Open"
+msgstr "Openbaar"
+
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:50
+msgid "Anyone can view the page and add memories"
+msgstr "Iedereen kan de pagina bekijken en herinneringen toevoegen "
+
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:59
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:217
+msgid "Private"
+msgstr "Privé"
+
+#: ../data/twigcache/67/6d/2066e0b563b866b741f1f02c0beb7889672597bc3807db13ed10a0427893.php:63
+msgid "Only invitees can view the page and add memories"
+msgstr "Alleen genodigden kunnen de pagina bekijken en herinneringen toevoegen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:22
+msgid "Page settings"
+msgstr "Pagina instellingen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:26
+msgid "Edit info"
+msgstr "Bewerk info"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:31
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:200
+msgid "Privacy"
+msgstr "Privacy instellingen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:41
+msgid "Add labels"
+msgstr "Labels toevoegen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:54
+msgid "Pages"
+msgstr "Pagina's"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:80
+msgid "Deleted"
+msgstr "Verwijderd"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:82
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:90
+msgid "at"
+msgstr "op"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:88
+msgid "New"
+msgstr "Nieuwe"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:99
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:120
+msgid "See all"
+msgstr "Toon alles"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:103
+msgid "Mark as read"
+msgstr "Markeer als gelezen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:114
+msgid "No new notifications"
+msgstr "Geen nieuwe meldingen"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:162
+msgid "View all messages"
+msgstr "Bekijk alle berichten"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:169
+msgid "Need Help?"
+msgstr "Hulp nodig?"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:187
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:271
+msgid "Search"
+msgstr "Zoek pagina"
+
+#: ../data/twigcache/6b/b7/2234e4c69ccbbd2996c18329dc0676203b6e9ca2fcf2f310f40b06b60aa4.php:193
+msgid "Search memorial page..."
+msgstr "Zoek herinneringspagina..."
+
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:43
+msgid "Your name"
+msgstr "Je naam"
+
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:49
+msgid "Email address (will not be displayed)"
+msgstr "E-mailadres (wordt niet weergegeven)"
+
+#: ../data/twigcache/6c/41/602e5022ddeac25179449970122af402023ef53e6f1d75bc8e08bc7fed03.php:56
+msgid "Express your condolences here..."
+msgstr "Schrijf hier je condoleance..."
+
+#: ../data/twigcache/6e/b1/a07235aa44d2d8af406af672546a9897b5a517e8145ddec0eda6cb62cbc4.php:70
+#, php-format
+msgid ""
+"This e-mail is sent by [[remembr]] on behalf of %s, for the memorial page of "
+"[[profileurl]]"
+msgstr ""
+"Deze e-mail is verzonden door [[remembr]] namens %s, voor de "
+"herinneringspagina van [[profileurl]]"
+
+#: ../data/twigcache/72/f8/b5367d3b2a68027e56a52090cb717c18f46e4acadcb131f6b458d5d2a631.php:19
+#: ../data/twigcache/7d/df/9d747c7565e296f3ca96add5bad672b5b8ff047ab22db51dd36b2ce1f351.php:19
+msgid "Online memorials and obituaries | Remembr."
+msgstr "Online gedenkplaats en condoleanceregister | Remembr."
+
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:43
+msgid "You need to publish this page before you can invite friends."
+msgstr "Je moet de pagina publiceren voordat je uitnodigingen kunt versturen. "
+
+#: ../data/twigcache/74/3e/d2f427c3550126f95b9d5d547e2a5004b301e18300bb28ad3357965d1fa6.php:51
+msgid "Invite with Facebook"
+msgstr "Nodig uit via Facebook"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:43
+msgid "Login details"
+msgstr "Inloggegevens"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:55
+msgid "Change your e-mail address..."
+msgstr "Verander je e-mailadres"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:65
+msgid "Change your password..."
+msgstr "Wijzig je wachtwoord..."
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:73
+msgid "E-mail notices"
+msgstr "E-mailmeldingen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:80
+msgid "Receive an e-mail when someone"
+msgstr "Ontvang een e-mail als iemand"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:87
+msgid "posts a message on the memorial pages that you manage"
+msgstr "een bericht plaatst op herdenkingspagina's waar jij beheerder van bent"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:91
+msgid "comments on your shared memories"
+msgstr "een reactie plaatst op de door jou gedeelde herinneringen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:95
+msgid "sends you a personal message"
+msgstr "een privébericht naar je stuurt"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:103
+msgid "Send these e-mails"
+msgstr "Verstuur deze e-mails"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:112
+msgid "when they happen"
+msgstr "direct"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:118
+msgid "once a day"
+msgstr "1x per dag"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:124
+msgid "once a week"
+msgstr "1x per week"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:132
+msgid "Also receive e-mails with"
+msgstr "Ook e-mails ontvangen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:139
+msgid "new features and updates"
+msgstr "bij nieuwe functies en updates"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:143
+msgid "tips to get more out of Remembr."
+msgstr "met tips om meer uit Remembr. te halen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:158
+msgid "Social networks"
+msgstr "Sociale netwerken"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:171
+msgid "You can use your "
+msgstr "Je kunt je"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:173
+msgid " account to log in"
+msgstr "account gebruiken om in te loggen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:179
+msgid "Connected to "
+msgstr "Verbonden met"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:190
+msgid "Add your "
+msgstr "Voeg je"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:192
+msgid " account for log in"
+msgstr "account toe om in te loggen"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:198
+msgid "Not connected to "
+msgstr "Niet verbonden met"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:209
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:222
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:71
+msgid "Deactivate"
+msgstr "Deactiveren"
+
+#: ../data/twigcache/7d/80/38025907b810e25517ac7778868836d0ffcfa8315b8798bea16af83bd468.php:216
+msgid "Deactivate your account"
+msgstr "Deactiveer je account"
+
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:43
+#, php-format
+msgid "What memories do you want to share about %s %s..."
+msgstr "Welke herinneringen wil je delen over %s %s ..."
+
+#: ../data/twigcache/80/09/afeff0f97737838470d96d672ccf68a158bc0725a01151523e6c8d273421.php:52
+msgid "Select a label that is applicable to this image:"
+msgstr "Selecteer een rubriek die van toepassing is op deze afbeelding:"
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:44
+msgid "This page is not yet published"
+msgstr "Deze pagina is nog niet gepubliceerd"
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:48
+msgid "This page has been deactivated"
+msgstr "Deze pagina is gedeactiveerd"
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:52
+msgid "This page will be removed when removal is confirmed"
+msgstr "Deze pagina wordt verwijderd zodra er een bevestiging is ontvangen."
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:56
+msgid "This page is published"
+msgstr "Deze pagina is gepubliceerd"
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:60
+msgid "This page has been removed."
+msgstr "De pagina is verwijderd."
+
+#: ../data/twigcache/80/0c/1a9201ecc4fadcd4aeb5a6bbb7a6dd3864252e8028b8c61ec9b2e13bc9b6.php:67
+msgid "Publish"
+msgstr "Publiceer nu"
+
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:43
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:41
+msgid "Choose a new password"
+msgstr "Kies wachtwoord"
+
+#: ../data/twigcache/87/60/81d83b8c2683c3b434d95688754263f62b831d4411af2b516d9383ba9fa0.php:74
+msgid "Passwords do not match"
+msgstr "De wachtwoorden komen niet overeen"
+
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:35
+msgid "Choose an image"
+msgstr "Kies een foto"
+
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:51
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:117
+msgid "To attach an image drag & drop it here or"
+msgstr "Sleep een afbeelding om hier te plaatsen of "
+
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:55
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:49
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:54
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:121
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:55
+msgid "select a file from your computer"
+msgstr "selecteer een bestand van je computer..."
+
+#: ../data/twigcache/88/f6/10b131e57b261688fb920f509c7380083cea7a9820c7562fe74522c20658.php:60
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:126
+msgid "I would like to select another file"
+msgstr "Ik wil een ander bestand selecteren"
+
+#: ../data/twigcache/8d/b9/3fc6003f026bf3848bf4bdd57babf134387558f9595cb10663259c1dc7e6.php:24
+#: ../data/twigcache/93/16/d7e258a3706d9a46693fcfff7a73d9a9afeed1c52a65d1ca72acae8142e2.php:24
+#: ../data/twigcache/c5/fb/5b7a1a61892aaf175ec500edca511bdabbd647438dd988ab3cb32bb2e94e.php:24
+msgid "Hi "
+msgstr "Beste"
+
+#: ../data/twigcache/8d/b9/3fc6003f026bf3848bf4bdd57babf134387558f9595cb10663259c1dc7e6.php:31
+msgid ""
+"Click the link below to delete the memorial page of [[profileurl]] "
+"permanently."
+msgstr ""
+"Klik op onderstaande link om de herinneringspagina van [[profileurl]] "
+"definitief te verwijderen."
+
+#: ../data/twigcache/8d/b9/3fc6003f026bf3848bf4bdd57babf134387558f9595cb10663259c1dc7e6.php:40
+msgid "Delete memorial page"
+msgstr "Verwijder herinneringspagina"
+
+#: ../data/twigcache/93/0e/cf9a4619105e64b4821d722f14a4e3a307681d97c13e2ca1481dfe7228f4.php:25
+msgid "Are you sure you want to permanently remove this remembr-profile?"
+msgstr ""
+"Weet je zeker dat je deze herinneringspagina definitief wilt verwijderen?"
+
+#: ../data/twigcache/93/0e/cf9a4619105e64b4821d722f14a4e3a307681d97c13e2ca1481dfe7228f4.php:32
+msgid "Confirm removal"
+msgstr "Bevestig verwijdering"
+
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:23
+msgid "Remembr. uses cookies to optimise your website experience. "
+msgstr ""
+"Remembr. maakt gebruikt van cookies om je website-ervaring te optimaliseren."
+
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:25
+msgid "Click here for more information."
+msgstr "Klik hier voor meer informatie."
+
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:29
+msgid " I understand"
+msgstr "Ik begrijp het"
+
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:64
+msgid "Your"
+msgstr "Jouw"
+
+#: ../data/twigcache/93/91/07d90137cdc7e0ae860049841e8d6bbb540efb36a81496d4ddd011c14cf3.php:70
+msgid "memorial pages"
+msgstr "herinneringspagina\\'s"
+
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:70
+#: ../data/twigcache/f0/25/cb5d8387f0af02f508e701816562b7bc5f996bbdb481227535dbb28cdebd.php:36
+msgid "Invite family and friends through Facebook"
+msgstr "Nodig facebook vrienden uit "
+
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:96
+msgid "I have created a memorial page on Remembr.com."
+msgstr "Ik heb een herinneringspagina aangemaakt op Remembr.com."
+
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:100
+msgid "Visit this page"
+msgstr "Bezoek deze pagina"
+
+#: ../data/twigcache/96/e7/9170f88ed885917295f4e61bffc3309e357566368c84b3d6bccf8f8a2884.php:102
+#: ../data/twigcache/f0/25/cb5d8387f0af02f508e701816562b7bc5f996bbdb481227535dbb28cdebd.php:73
+msgid "Send invitation"
+msgstr "Stuur uitnodiging"
+
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:22
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:26
+msgid "Image"
+msgstr "Afbeelding"
+
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:40
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:46
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:47
+msgid "To attach an image drag & drop it here or "
+msgstr "Sleep een afbeelding om hier te plaatsen of"
+
+#: ../data/twigcache/97/28/8fffd700cfad7d94f5ef4470563b5571e5b7272946bfea03ac77a32ef377.php:61
+msgid "What would you like to share about this image..."
+msgstr "Wat wil je delen over deze afbeelding..."
+
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:38
+msgid "Labels"
+msgstr "Labels"
+
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:44
+msgid "Enable labels to categorize shared memories"
+msgstr "Maak gebruik van rubrieken om herinneringen in te delen"
+
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:51
+msgid "Add new labels"
+msgstr "Rubrieken toevoegen"
+
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:61
+msgid "add"
+msgstr "toevoegen"
+
+#: ../data/twigcache/9e/8b/95d5a3c31ef988bfde0bbbea21069472ff6de4b0182a7b2b4c3ae1168e20.php:75
+msgid "Current labels"
+msgstr "Ingestelde rubrieken"
+
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:39
+#: ../data/twigcache/9e/8e/f842f12ff8e1816894ec1c42e978a2188e72df22ab3a9311759a9faba1b3.php:55
+msgid "This page is no longer available."
+msgstr "Deze naam is niet langer beschikbaar"
+
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:38
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:77
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:32
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:119
+msgid "Name"
+msgstr "Naam"
+
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:43
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:82
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:36
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:124
+msgid "Enter your name"
+msgstr "Vul je naam in"
+
+#: ../data/twigcache/a0/48/1fcdf7d7c14ae4b42a43accee6df6ea7a42046a96105a181310552a911ff.php:69
+msgid "Comment"
+msgstr "Reactie"
+
+#: ../data/twigcache/a0/c5/3a574de713e836eb70063c5be5cede84f1a423f0ba23685c3a3e4caf5044.php:87
+msgid "Follow us: "
+msgstr "Volg ons op:"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:162
+msgid "Year of birth"
+msgstr "Geboortejaar"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:172
+msgid "Year of death"
+msgstr "Overlijdensjaar"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:226
+msgid "Type page"
+msgstr "Type pagina"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:234
+msgid "All people"
+msgstr "Alle personen"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:243
+msgid "Only famous people"
+msgstr "Alleen bekende personen"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:252
+msgid "Only pets"
+msgstr "Alleen huisdieren"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:262
+msgid "Reset filters"
+msgstr "Filters resetten"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:288
+msgid "Sort"
+msgstr "Sorteren"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:295
+msgid "Alphabetical order"
+msgstr "Alfabetische volgorde"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:303
+msgid "Date of death"
+msgstr "Overlijdensdatum"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:316
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:325
+msgid "Search results for"
+msgstr "Zoek resultaten voor"
+
+#: ../data/twigcache/ad/2e/50df987466fc8f51f4ac5d85341a1787ae778ec8e3d01a80a8b730d55906.php:320
+msgid "Search results"
+msgstr "Zoek resultaten"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:25
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:25
+msgid "Loading messages"
+msgstr "Berichten ophalen"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:31
+msgid "You have no messages in your outbox"
+msgstr "Je hebt geen berichten in je outbox"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:57
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:114
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:56
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:126
+#: ../module/Application/src/Application/Controller/PageController.php:1000
+#, php-format
+msgid "You've been invited to %s"
+msgstr "Je bent uitgenodigd voor %s"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:63
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:120
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:62
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:132
+#: ../module/Application/src/Application/Controller/PageController.php:927
+#, php-format
+msgid "%s would like an invitation for %s"
+msgstr "%s wil graag een uitnodiging voor %s"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:95
+msgid "Request sent"
+msgstr "Verzoek verstuurd"
+
+#: ../data/twigcache/b0/64/ce4c02fe73d7cb71643c134e4e83a2889373a396f05b3f9578e1614356da.php:101
+msgid "Invitation received"
+msgstr "Uitnodiging ontvangen"
+
+#: ../data/twigcache/b2/6e/db45b15efb4c2aa0d27120088140a432f1dbac5786bd8a42e6402d1b33a0.php:29
+msgid "not found"
+msgstr "niet gevonden"
+
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:29
+msgid "Welcome at Remembr."
+msgstr "Welkom bij Remembr."
+
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:34
+msgid "Please fill in your personal details:"
+msgstr "Vul je persoonlijke gegevens aan:"
+
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:63
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:64
+msgid "One moment please, your image is being saved..."
+msgstr "Een ogenblikje, de afbeelding wordt opgeslagen..."
+
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:94
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:136
+msgid "Enter your city..."
+msgstr "Vul je woonplaats in..."
+
+#: ../data/twigcache/b6/f1/77b1312fc95ac853812af77d5136d552c23a26dafc05bf81d217d6dae297.php:115
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:157
+msgid "Enter your country..."
+msgstr "Vul je land in..."
+
+#: ../data/twigcache/bb/47/9d7d22bcd9d54096376a7249cbe1cd094799f8b94a9b3f9b057f4048777e.php:33
+msgid "Error"
+msgstr "Error"
+
+#: ../data/twigcache/bb/47/9d7d22bcd9d54096376a7249cbe1cd094799f8b94a9b3f9b057f4048777e.php:39
+msgid "You need to have admin rights for this page to change the settings"
+msgstr ""
+"Je hebt admin rechten nodig om de settings van deze pagina aan te passen"
+
+#: ../data/twigcache/bb/87/a4242f213ad3e0d330b674dacaea2d6a2ed1d3a353bb143062aa634aaeb0.php:61
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: ../data/twigcache/c2/dc/0c427cc672764ce07857af379bb11dcbc7b40302c1c5a672fef7e63b493a.php:19
+msgid ""
+"Thank you for using Remembr. To complete your registration, please confirm "
+"your e-mail address. "
+msgstr ""
+"Hartelijk dank voor je aanmelding bij Remembr. Je hoeft alleen nog op de "
+"onderstaande link te klikken om de aanmelding definitief te maken: "
+
+#: ../data/twigcache/c5/fb/5b7a1a61892aaf175ec500edca511bdabbd647438dd988ab3cb32bb2e94e.php:34
+msgid "Click the link below to delete your Remembr. account permanently."
+msgstr ""
+"Klik op onderstaande link om je Remembr. account definitief te verwijderen."
+
+#: ../data/twigcache/c5/fb/5b7a1a61892aaf175ec500edca511bdabbd647438dd988ab3cb32bb2e94e.php:41
+msgid "Delete account"
+msgstr "Account verwijderen"
+
+#: ../data/twigcache/c5/fb/5b7a1a61892aaf175ec500edca511bdabbd647438dd988ab3cb32bb2e94e.php:46
+msgid "Best regards,"
+msgstr "Met vriendelijke groet,"
+
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:53
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:181
+msgid "view"
+msgstr "bekijk"
+
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:121
+#: ../data/twigcache/c6/41/d599ac34c699bf00899275625e4f45d756ea8e36ad19d8848acc87444556.php:197
+msgid "wrote"
+msgstr "schreef"
+
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:20
+msgid "General settings"
+msgstr "Instellingen herinneringspagina"
+
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:24
+msgid "Update your personal details here."
+msgstr "Pas hier je persoonlijke gegevens aan."
+
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:45
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:97
+msgid "Save settings"
+msgstr "Instellingen opslaan"
+
+#: ../data/twigcache/ce/5b/85f211789046a5da9ff2c302cf797bfd333967c4908900a12b3065648475.php:57
+msgid "You can change your password here."
+msgstr "Je kunt hier je wachtwoord aanpassen."
+
+#: ../data/twigcache/d2/f4/f418705e9ce5ec53a4916e05feaca2d9b04b452903c56ede60f1885e8654.php:23
+#: ../data/twigcache/d2/f4/f418705e9ce5ec53a4916e05feaca2d9b04b452903c56ede60f1885e8654.php:25
+msgid "your logins"
+msgstr "je logins"
+
+#: ../data/twigcache/d2/f4/f418705e9ce5ec53a4916e05feaca2d9b04b452903c56ede60f1885e8654.php:31
+#: ../data/twigcache/d2/f4/f418705e9ce5ec53a4916e05feaca2d9b04b452903c56ede60f1885e8654.php:33
+msgid "edit profile"
+msgstr "bewerk profiel"
+
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:31
+msgid "You have no messages in your inbox"
+msgstr "Je hebt geen berichten in je inbox"
+
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:93
+msgid "Grant invite"
+msgstr "Stuur uitnodiging"
+
+#: ../data/twigcache/dc/4c/64eea52adac7fcf871f9e5b7fa52dabc7861f0c96d2e11a0ab0635c5631a.php:99
+msgid "Request granted"
+msgstr "Toegang verleend"
+
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:158
+msgid "Comments"
+msgstr "Reacties"
+
+#: ../data/twigcache/e2/bd/4565f7b3dc0ac9ee3a88e61515fdfd3a96fad8dec4ad99e6984baf10d649.php:220
+msgid "No comments."
+msgstr "Geen reacties."
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:36
+msgid "Set the page theme"
+msgstr "Pagina thema instellen"
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:45
+msgid "Default"
+msgstr "Default"
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:49
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:68
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:87
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:106
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:125
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:144
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:163
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:182
+msgid "Version 1.0"
+msgstr "Versie 1.0"
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:53
+msgid "Active"
+msgstr "Actief"
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:64
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:83
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:102
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:121
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:140
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:159
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:178
+msgid "Theme name"
+msgstr "Thema naam"
+
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:72
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:91
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:110
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:129
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:148
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:167
+#: ../data/twigcache/ee/6c/91f14814ea3e71116adda74305b54b21aae70b5d1a9274efa49b06a01b5d.php:186
+msgid "Activate"
+msgstr "Activeren"
+
+#: ../data/twigcache/f0/25/cb5d8387f0af02f508e701816562b7bc5f996bbdb481227535dbb28cdebd.php:45
+msgid "Search all friends"
+msgstr "Zoek alle vrienden"
+
+#: ../data/twigcache/f2/a2/3aec2afaf8f527f7d00150dc9d8412b2dfd8edf63aefcd91b3a106afda6d.php:98
+msgid "Web address (not adjustable)"
+msgstr "Internetadres (niet aanpasbaar)"
+
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:38
+msgid "Manage administrators"
+msgstr "Beheerders toewijzen"
+
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:49
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:67
+msgid "can manage admin roles, send messages and manage and create posts"
+msgstr ""
+"kan admin rollen beheren, berichten verzenden en posts beheren en maken"
+
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:85
+msgid "Add an administrator"
+msgstr "Beheerder toevoegen"
+
+#: ../data/twigcache/f4/75/3b8f4c407f1f831178f62efab92f6e8cd2e663dfac942d622631ce2b7048.php:90
+msgid "Enter an e-mail address"
+msgstr "Geef een emailadres"
+
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:78
+msgid "change"
+msgstr "wijzigen"
+
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:200
+msgid "Your Remembr. pages"
+msgstr "Jouw Remembr. pagina's"
+
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:223
+msgid "Create new memorial page"
+msgstr "Nieuwe herinneringspagina maken"
+
+#: ../data/twigcache/f5/fc/f7a80dc0db277d1c066c85934101679ef178a21f2fc5e2c6005136fd4a2f.php:233
+msgid "Your shared memories"
+msgstr "Jouw gedeelde herinneringen"
+
+#: ../data/twigcache/fe/1d/80b8f561b16b91f8a223124acd941b15f143fdf3f36f5344ec18b09d5e40.php:23
+msgid "Name..."
+msgstr "Naam..."
+
+#: ../data/twigcache/fe/1d/80b8f561b16b91f8a223124acd941b15f143fdf3f36f5344ec18b09d5e40.php:27
+msgid "Searchbuttontop"
+msgstr "Zoek"
+
+#: ../data/twigcache/fe/b4/b0b058fa5448c05674f1b54ad0f87a965ab6d16b5e32deedb741801f9f53.php:86
+msgid "Change your password"
+msgstr "Wijzig je wachtwoord"
+
+#: ../module/Application/src/Application/Controller/AjaxController.php:99
+msgid "Newsletter registration"
+msgstr "Aanmelding nieuwsbrief"
+
+#: ../module/Application/src/Application/Controller/ContentController.php:132
+msgid "Your condolence message has been posted"
+msgstr "Je condoleance is geplaatst"
+
+#: ../module/Application/src/Application/Controller/DashboardController.php:164
+msgid "Confirm removal Remembr. account"
+msgstr "Bevestig verwijdering Remembr. account"
+
+#: ../module/Application/src/Application/Controller/PageController.php:508
+msgid "Confirm removal memorial page"
+msgstr "Bevestig verwijdering herinneringspagina\r"
+
+#: ../module/Cron/src/Cron/Controller/SendCommentMessagesRemindersController.php:19
+msgid "You have received new comments at Remembr."
+msgstr "Er zijn nieuwe reacties op je pagina op Remembr."
+
+#: ../module/Cron/src/Cron/Controller/SendCommentMessagesRemindersController.php:20
+msgid "New comment messages on Remembr."
+msgstr "Nieuwe reacties op Remembr."
+
+#: ../module/Cron/src/Cron/Controller/SendPageMessagesRemindersController.php:19
+msgid "You have received new page messages at Remembr."
+msgstr "Er zijn nieuwe herinneringen toegevoegd op je pagina op Remembr."
+
+#: ../module/Cron/src/Cron/Controller/SendPageMessagesRemindersController.php:20
+msgid "New page messages on Remembr."
+msgstr "Nieuwe herinneringen op Remembr."
+
+#: ../module/Cron/src/Cron/Controller/SendPrivateMessagesRemindersController.php:19
+msgid "You have received new private messages at Remembr."
+msgstr "Je hebt nieuwe priveberichten ontvangen op Remembr."
+
+#: ../module/Cron/src/Cron/Controller/SendPrivateMessagesRemindersController.php:20
+msgid "New private messages on Remembr."
+msgstr "Nieuwe priveberichten op  Remembr."
+
+#: ../module/FileUploads/view/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../module/FileUploads/view/404.phtml:103
+#: ../module/FileUploads/view/error.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: ../module/FileUploads/view/error.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#~ msgid "Sign in"
+#~ msgstr "Aanmelden"
+
+#~ msgid "Your memorial wish list"
+#~ msgstr "Jouw herdenkingswensenlijst"
+
+#~ msgid "Save your own memories"
+#~ msgstr "Bewaar je eigen herinneringen"
+
+#~ msgid "Read more"
+#~ msgstr "Lees meer"
+
+#~ msgid "date_comma"
+#~ msgstr " "
+
+#~ msgid "memorialpage_dateformat"
+#~ msgstr "dd MMMM"
+
+#~ msgid "memorialpage_yearformat"
+#~ msgstr "yyyy"
+
+#~ msgid "Name of deceased ..."
+#~ msgstr "Naam van de overledene ..."
+
+#~ msgid "Report an issue"
+#~ msgstr "Meld een probleem"
+
+#~ msgid "Your condolence was not found."
+#~ msgstr "We konden uw condoleance niet vinden."
+
+#~ msgid "Name: "
+#~ msgstr "Naam:"
+
+#~ msgid "your name"
+#~ msgstr "jouw naam"
+
+#~ msgid "Express your condolence here..."
+#~ msgstr "Schrijf hier je condoleance..."
+
+#~ msgid "Save"
+#~ msgstr "Opslaan"
+
+#~ msgid "Alternative addresses"
+#~ msgstr "Alternatieve adressen"
+
+#~ msgid ""
+#~ "Unable to find your confirmation e-mail? Fill in your e-mail address, and "
+#~ "we will send it again."
+#~ msgstr ""
+#~ "Bent u de bevestigings-mail kwijt? Vul hier uw e-mailadres in en we "
+#~ "sturen hem nog een keer."
+
+#~ msgid "Resend confirmation"
+#~ msgstr "Bevestigingsmail opnieuw versturen"
+
+#~ msgid "preview"
+#~ msgstr "voorbeeld"
+
+#~ msgid "Please log in to add memories to this page"
+#~ msgstr "Log in om een herinnering aan deze pagina toe te kunnen voegen"
+
+#~ msgid "Please provide a search term."
+#~ msgstr "Geef een zoekterm op."
+
+#~ msgid "%s %s memorial page"
+#~ msgstr "%s %s herdenkingspagina"
+
+#~ msgid "It is with heartfelt regret that we say goodbye to"
+#~ msgstr "Met innig leedwezen nemen wij afscheid van"
+
+#~ msgid "Residence"
+#~ msgstr "Woonplaats"
+
+#~ msgid "I accept the "
+#~ msgstr "Ik accepteer de"
+
+#~ msgid "terms and conditions"
+#~ msgstr "Algemene voorwaarden"
+
+#~ msgid " and "
+#~ msgstr " en "
+
+#~ msgid "Search a page"
+#~ msgstr "Zoek een pagina"
+
+#~ msgid "Change your personal settings"
+#~ msgstr "Wijzig je persoonlijke gegevens"
+
+#~ msgid ""
+#~ "Sorry, your browser is not fully supported; please update your browser."
+#~ msgstr ""
+#~ "Sorry, je browser wordt niet volledig ondersteund. Update je browser."
+
+#~ msgid "Personal settings"
+#~ msgstr "Persoonlijke instellingen"
+
+#~ msgid "Change password"
+#~ msgstr "Je wachtwoord wijzigen"
+
+#~ msgid "Confirm your e-mail address "
+#~ msgstr "Bevestig je e-mailadres"
+
+#~ msgid "new message(s)"
+#~ msgstr "nieuw(e) bericht(en)"

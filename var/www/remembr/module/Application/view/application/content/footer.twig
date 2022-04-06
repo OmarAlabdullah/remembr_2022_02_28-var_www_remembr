@@ -1,0 +1,52 @@
+<div id="footer" ng-controller="footerCtrl">
+    <div id="footer-content-top">
+        <div id="footer-language">
+            <ul>
+                {#<li><a ng-click="totop()" ui-rel-sref=".({lang:'nl-be'})">Vlaams</a></li>#}
+                <li><a class="first" ng-click="totop()" ui-rel-sref=".({lang:'nl'})">Nederlands</a></li>
+                <li><a ng-click="totop()" ui-rel-sref=".({lang:'en'})">English</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer-content-bottom">
+        <ul id="footer-menu">
+            <li><h4>Remembr.</h4>
+                <ul>
+                    <li ng-click="totop()"><a ui-rel-sref=".fancybox.createpage.info">{{ 'Create a memorial page' | trans}}</a></li>
+                    <li ng-click="totop()"><a ui-sref="root.cms({slug:'{{'ideasandadvice' | trans}}'})">{{ 'Ideas and advice' | trans }}</a></li>
+                    <li ng-click="totop()"><a ui-sref="root.cms({slug:'{{'news' | trans}}'})">{{ 'News' | trans }}</a></li>
+                </ul>
+            </li>
+            <li><h4>{{ 'Customer service' | trans }}</h4>
+                <ul>
+                    <li><a ng-click="totop()" ui-sref="root.cms({slug:'conditions'})">{{ 'Terms and conditions' | trans }}</a></li>
+                    <li><a ng-click="totop()" ui-sref="root.cms({slug:'privacy'})">{{ 'Privacy & cookie policy' | trans }}</a></li>
+                    <li><a ng-click="totop()" ui-sref="root.cms({slug:'disclaimer'})">{{ 'Disclaimer' | trans }}</a></li>
+                    <li><a ng-click="totop()" ui-sref="root.cms({slug:'contact'})">{{'Contact' | trans}}</a></li>
+                    <li><a ng-click="totop()" ui-sref="root.cms({slug:'faq'})">{{'FAQ' | trans}}</a></li>
+                    {# <li><a href="/report" target="_self">{{'Report an issue' | trans}}</a></li> #}
+                </ul>
+            </li>
+            <li><h4>{{ 'Follow us' | trans }} </h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/remembr.nl" target="_blank" title="Facebook"><img class="icon" src="/images/icons/facebook32.png" alt="Facebook"></a>&nbsp;
+                        <a href="https://twitter.com/Remembr_com" target="_blank" title="Twitter"><img class="icon" src="/images/icons/twitter32.png" alt="Twitter"></a>
+                    </li>
+                    <li ng-class="{invalid : newsletterForm.email.$invalid && newsletterForm.email.$dirty}">
+                        <p>{{ 'Sign up for our newsletter' | trans }}</p>
+                        <form method="post" name="newsletterForm" id="contactForm" ng-submit="submitNewsletterForm(newsletterForm.$valid)" novalidate>
+                            <input ng-model="newsletter.email" name="email" type="email" class="light_txtbox"  required ng-blur="newsletterForm.email.$dirty=true" placeholder="{{ 'Enter your e-mail address' | trans }}" />
+                        <p class="signup-error" ng-show="newsletterForm.email.$invalid && !newsletterForm.email.$pristine">{{ 'Enter a valid e-mail address' | trans }}</p>
+                        <input scroll-on-click href=".wrapper" type="submit" value="{{ 'Sign up' | trans }}" class="submit save_changes" ng-class="{disabled:newsletterForm.$invalid || !newsletterForm.$dirty}">
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <div class="copyright">
+            <p>&copy; 2016 Remembr. BV</p>
+        </div>
+    </div>
+</div>

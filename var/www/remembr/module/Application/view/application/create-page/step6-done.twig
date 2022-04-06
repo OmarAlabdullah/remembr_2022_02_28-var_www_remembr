@@ -1,0 +1,23 @@
+{% extends format == 'tpl' ? 'application/create-page/tpl' : 'application/create-page/index' %}
+{% do headTitle('Create a memorial page step 6 | Remembr.' | trans)%}
+{% block step %}
+	<div>
+
+		<div class="light_container">
+
+			<h5>{{cms('page_created').title()}} </h5>
+
+			<div class="create_done">
+				{{cms('page_created').text() |raw}}
+
+				<div class="clear"></div>
+
+					<button ng-click="viewPage()" class="save_changes floatleft">{{'View page' | trans }}</button>
+
+				<div class="clear"></div>
+			</div>
+
+		</div>
+
+	</div>
+{% endblock step %}

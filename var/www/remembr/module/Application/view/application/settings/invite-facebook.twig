@@ -1,0 +1,82 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Send invitations via Facebook | Remembr.' | trans)%}
+{% block settings %}
+<script>
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+			appId: {{ appId }}, // App ID from the app dashboard
+			channelUrl: 'http://remembr.tgho.nl/channel.html', // Channel file for x-domain comms
+			cookie: true, // enable cookies to allow the server to access the session
+			status: true, // Check Facebook Login status
+			xfbml: true   // Look for social plugins on the page
+		});
+	};
+
+	// Load the SDK asynchronously
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {
+			return;
+		}
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "//connect.facebook.net/nl_NL/all.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	function callback(response) {
+		console.log(response);
+	}
+	</script>
+
+
+	<div>
+		<div class="inv_friend_fb2 light_container">
+
+			<div class="inv_friend_lft">
+				<h5>{{ 'Invite family and friends through Facebook' | trans }} <a  ui-sref="root.page.fancybox.setting.invite" class="back_to_invite">{{'Back to main page \"Send invitations\"' |trans}}</a></h5>
+
+				<div class="inv_fri_fb_box">
+
+					{#
+					<span class="email_txtb_bg">
+						<input name="" type="text" class="email_txtb" placeholder="{{'Search all friends'|trans}}" />
+					</span>
+					<input name="" type="button" class="micky_but">
+					<div class="clear"></div>
+#}
+				</div>
+
+				<div class="fb_input">
+					{#
+					<form id="mfsForm">
+						<ul id="facebook-friends">
+							<li ng-repeat="friend in friends">
+								<input type="checkbox" name="friends" value="{[{ friend.uid }]}" /><img src="{[{ friend.pict }]}" />{[{ friend.name }]}
+							</li>
+						</ul>
+					</form>#}
+				</div>
+
+			</div>
+
+			{#
+			<div class="help_cont">
+				<h5>{{cms('help_settings_facebookinvite').title()}}</h5>
+				{{cms('help_settings_facebookinvite').text() | raw}}
+			</div>#}
+
+			<div class="clear"></div>
+
+
+			<input name="" type="button" ng-click="sendRequest('{{ 'I have created a memorial page on Remembr.com.' | trans }}', '{{ baseurl }}', '{{ 'Visit this page' | trans }}');" value="{{'Send invitation' |trans}}" class="save_changes">
+
+			<input name="" ui-sref="root.page.fancybox.setting.invite" type="button" value="{{'Cancel' |trans}}" class="cancel_but">
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div>
+{% endblock settings %}

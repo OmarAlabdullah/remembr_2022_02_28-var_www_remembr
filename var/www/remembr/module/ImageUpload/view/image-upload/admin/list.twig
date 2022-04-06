@@ -1,0 +1,28 @@
+{% if files is defined and files|length > 0 %}
+	<form action="/admin/image-upload/save-slugs" method="POST">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Source</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for file in files %}
+					<tr>
+						<td>{{ file.getBasename() }}</td>
+						{# <td>{{ file.getExtension() }}</td>
+						<td>{{ file.getSize() }}</td> #}
+						<td><a href="/minify?files=/uploads/cms/{{ file.getBasename() }}">/minify?files=/uploads/cms/{{ file.getBasename() }}</a></td>
+						<td><img src="/minify?files=/uploads/cms/{{ file.getBasename() }}" height="50px"/></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</form>
+{% else %}
+	<div class="alert alert-warning text-center">
+			Files dir is empty
+	</div>
+{% endif %}

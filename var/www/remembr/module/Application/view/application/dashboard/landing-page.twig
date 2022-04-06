@@ -1,0 +1,92 @@
+{% block content %}
+<div class="content"> <!--content start-->
+
+    <div class="container">
+
+		<div id="header">
+			<div class="contentview-lp">
+				<div class="text">
+					<h5>{{cms('landingpage').title()}}</h5>
+					<p>{{cms('landingpage').text() | raw}}</p>
+					<p><a ng-click="startVideo()">{{ 'Watch the video' | trans }} >></a></p>
+				</div>
+
+				<div class="video-container">
+					<div class="table">
+						<div class="video">
+							{% include '/application/video/index' %}
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div id="easy">
+			<div class="contentview-lp">
+				<img src="{{'/images/easy-6-steps_en.jpg' |trans }}" width="244" height="158" alt="{{ '6 easy steps' | trans }}" title="{{ '6 easy steps' | trans }}">
+				<div class="text">
+					<h5>{{cms('easy-6-steps').title()}}</h5>
+					<p>{{cms('easy-6-steps').text() | raw}}</p>
+					<p style="font-weight:bold"><a ui-rel-sref=".fancybox.createpage.info">{{ 'Start here' | trans }} >></a></p>
+				</div>
+			<div class="clear"></div>
+			</div>
+		</div>
+
+		<div id="search-recent">
+			<div class="contentview-lp">
+				<div class="table">
+					<div class="left">
+							<div class="text">
+							<h5>{{cms('search').title()}}</h5>
+							<p>{{cms('search').text() | raw}}</p>
+							<p style="font-weight:bold"><a ui-rel-sref="root.search" totop>{{ 'Find a page' | trans }} >></a></p>
+						</div>
+					</div>
+					<div class="right">
+						<div class="recent-list">
+							<h5>{{ 'Recent pages' | trans }}</h5>
+							<table>
+								<tr ng-repeat="(idx, item) in $root.recent.pages">
+									<td class="recent-img">
+										<a ui-rel-sref="root.page({page:'{[{item.photo.location}]}'})" totop>
+											<img ng-src="{[{imgresize(item.photo.url,35,35)}]}"
+                                                 onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[35]h[35]f[true]'"
+                                                 width="35" height="35" alt="{[{item.firstname}]} {[{item.lastname}]}">
+										</a>
+									</td>
+									<td class="recent-text">
+										<p><a ui-rel-sref="root.page({page:'{[{item.url}]}'})" totop>{[{item.firstname}]} {[{item.lastname}]}</a></p>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="update">
+			<div class="contentview-lp">
+				<img style="float: left;" src="/images/landingpage-face.jpg" alt="" width="232" height="315">
+				<div class="text">
+					<h5>{{cms('personal-settings').title()}}</h5>
+					<p>{{cms('personal-settings').text() | raw}}</p>
+					<p style="font-weight:bold"><a ui-sref="root.dashboard" totop>{{ 'Change your personal details' | trans }} >></a></p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>{{cms('account-settings').text() | raw}}</p>
+					<p style="font-weight:bold"><a ui-sref="root.usersettings" totop>{{ 'Change your account settings' | trans }} >></a></p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	</div>
+	<div class="clear"></div>
+
+</div> <!--content end-->
+{% endblock content %}

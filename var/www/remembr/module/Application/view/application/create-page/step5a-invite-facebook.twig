@@ -1,0 +1,41 @@
+{% extends format == 'tpl' ? 'settings/tpl' : 'setting/index' %}
+
+{% block step %}
+	<div>
+
+		<div class="inv_friend_fb2 light_container">
+
+			<div class="inv_friend_lft">
+				<h5>{{'Invite family and friends through Facebook' |trans}} <a  class="back_to_invite">{{'Back to main page \"Send invitations\"' |trans}}</a></h5>
+
+				<div class="inv_fri_fb_box">
+					<span class="email_txtb_bg">
+						<input name="" type="text" class="email_txtb" placeholder="{{ 'Search all friends' |trans }}" />
+					</span>
+					<input name="" type="button" class="micky_but">
+					<div class="clear"></div>
+				</div>
+
+				<div class="fb_input">
+					<img src="/images/fb_input.jpg" width="529" height="322" alt="">
+				</div>
+
+			</div>
+
+			<div class="help_cont">
+				<h5>{{cms('help_settings_facebookinvite').title()}}</h5>
+				{{cms('help_settings_facebookinvite').text() | raw}}
+			</div>
+
+			<div class="clear"></div>
+
+			<input name="" type="button" value="{{'Send invitation' |trans}}" class="save_changes">
+
+			<input name="" type="button" value="{{'Cancel' |trans}}" class="cancel_but">
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div>
+{% endblock step %}

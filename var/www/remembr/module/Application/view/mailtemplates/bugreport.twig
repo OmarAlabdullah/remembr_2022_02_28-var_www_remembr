@@ -1,0 +1,47 @@
+<h1> <a href="{{url('remembr/generic/wildcard', {controller: 'report', action: 'bug', id : id}, {force_canonical: true})}}"> Bugreport</a> </h2>
+
+<table>
+	{% if username or email %}
+    <tr>
+        <td valign="top">
+			Van:
+		</td>
+		<td>
+			{{username}} {{email}}
+        </td>
+    </tr>
+	{% endif %}
+    <tr>
+        <td valign="top">
+			Probleem:
+		</td>
+		<td>
+			{{problem}}
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+			Verwachte resultaat:
+		</td>
+		<td>
+			{{expected}}
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+			Geconstateerde resultaat:
+		</td>
+		<td>
+			{{actual}}
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+			Overige opmerkingen:
+		</td>
+		<td>
+			{{comments}}
+        </td>
+    </tr>
+</table>
+<hr />

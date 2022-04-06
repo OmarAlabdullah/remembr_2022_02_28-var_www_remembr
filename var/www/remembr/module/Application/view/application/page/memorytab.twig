@@ -1,0 +1,47 @@
+{% if format == 'tpl' %}{% set firstname = '{[{page.firstname}]}' %}{% set lastname = '{[{page.lastname}]}' %}{% endif %}<li ng-show="currenttab=='memory'" class="herinneringen">
+	<a ng-class="{tab_act2 : currentform=='memory'}" ng-click="openForm('memory')"><span class="pc-only">{{'Memories' |trans}}</span></a>
+	<span class="mobile-only" ng-click="openForm('memory')">{{'Memories' |trans}}</span>
+
+	<span class="filed_top_arrow" ng-class="{active_blue : ui.active=='post'}"  ng-show="user.loggedin"></span>
+
+	<div class="tabDetails2" ng-show="user.loggedin">
+
+		<div class="txtarea_field" ng-class="{active_blue : ui.active=='post'}"  ng-click="$event.stopPropagation()">
+			<form name="content" novalidate ng-submit="submit()">
+
+				<textarea name="text" ng-model="newContent.text" cols="2" rows="2"  ng-focus="ui.active='post'" required
+						  placeholder="{{ 'What memories do you want to share about %s %s...' | trans | format(firstname, lastname) }}"></textarea>
+
+				<div class="text_fold3 slide" ng-if="ui.active=='post'">
+
+					<div class="text_fold_lft">
+						<em>
+							<span ng-show="page.labels.length">{{ 'Select a label that is applicable to this image:' | trans }}</span>
+							<span class="ng-hide" ng-show="user.admin[page.url]">( {{ 'Edit your labels in the settings menu' | trans }} )</span>
+						</em>
+						<ul>
+							{% if format == 'tpl' %}
+								<li ng-repeat="label in page.labels">
+									<label ng-click="$event.stopPropagation()"><input name="labels[{[{label.id}]}]" ng-model="newContent.labels[label.id]" type="checkbox" class="label styled"/><i></i><cite>{[{label.name}]}</cite></label>
+								</li>
+							{% else %}
+								{% set labels = ['Label one','Label two','Label three','Label long name example','Label four','Label five'] %}
+								{% for id,label in labels %}
+								<li>
+									<label><input name="labels[{{id}}]" ng-model="newContent.labels[{{id}}]" type="checkbox" class="label styled" /><i></i><cite>{{label.getName()}}</cite></label>
+								</li>
+								{% endfor %}
+							{% endif %}
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+					<input name="" type="submit" value="{{'Post' |trans}}" class="post_but">
+
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+		<span class="ng-hide floatright" ng-show="saving">{{'One moment please, your post is being saved...' |trans}}</span>
+	</div>
+</li>

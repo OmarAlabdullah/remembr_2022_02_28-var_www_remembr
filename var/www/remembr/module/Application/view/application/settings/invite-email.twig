@@ -1,0 +1,54 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Send invitations via e-mail | Remembr.' | trans)%}
+{% block settings %}
+<div>
+
+    <div class="invite_friend light_container">
+        <div class="inv_friend_lft" ng-class="{loader:loading}">
+            <form name="inviteemail" novalidate ng-submit="send()">
+                <h5>{{'Send invitations by e-mail'|trans}} <a  ui-sref="root.page.fancybox.setting.invite" class="back_to_invite">{{'Back to main page \"Send invitations\"'|trans}}</a></h5>
+
+                <div class="inv_friend_email">
+
+                    <label>{{'E-mail address(es)'|trans}}</label>
+                    <span class="email_txtb_bg" ng-class="{invalid : inviteemail.recipients.$invalid && inviteemail.recipients.$dirty}">
+                        <input ng-model="invite.recipients" space2semicolon name="recipients" required class="email_txtb" />
+                    </span>
+
+                    <label>{{'E-mail subject'|trans}}</label>
+                    <span class="email_txtb_bg" ng-class="{invalid : inviteemail.subject.$invalid && inviteemail.subject.$dirty}">
+                        <input ng-model="invite.subject" name="subject" type="text" required class="email_txtb" set-default="{{'Memorial page for' | trans }} {[{ page.firstname }]} {[{ page.lastname }]}" />
+                    </span>
+
+
+                    <span class="email_txtareab_bg" ng-class="{invalid : inviteemail.text.$invalid && inviteemail.text.$dirty}">
+                        <textarea name="text" ng-model="invite.text" cols="2" rows="2" required class="email_txtareab"
+                                placeholderedit="{{'Dear family and friends,'|trans }}
+
+{{'I have created a memorial page for %s on Remembr.com.'| trans | format('{[{ page.firstname }]} {[{ page.lastname }]}') }}
+{{'You are invited to view this page and add and share memories.'| trans}}
+
+{{'Kind regards,'|trans}}
+{[{$root.user.name}]}" set-default>
+
+
+                        </textarea>
+                     </span>
+                    <input name="" type="submit" value="{{'Send e-mail'|trans}}" class="send_email" ng-class="{disabled:inviteemail.$invalid || !inviteemail.$dirty}">
+                    <div class="clear"></div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="help_cont">
+            <h5>{{cms('help_settings_emailinvite').title()}}</h5>
+				{{cms('help_settings_emailinvite').text() | raw}}
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+</div>
+{% endblock settings %}

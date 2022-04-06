@@ -1,0 +1,46 @@
+<h4><span>{{'General settings' | trans}}</span></h4>
+<p>{{ 'Update your personal details here.' | trans }}</p>
+
+<form method="post" name="accountForm" id="accountForm" ng-submit="submitEditAccountForm(accountForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : accountForm.name.$invalid && !accountForm.name.$pristine }">
+        <label>
+            <span>{{ 'Name' | trans }}</span>
+            <input type="text" ng-model="user.name" required="true" autocomplete="off" size="30" placeholder="{{ 'Enter your name' | trans }}" name="name" />
+        </label>
+    </div>
+
+    <label>
+        <span> </span>
+        <input name="submit" type="submit" class="css-button orange" value="{{ 'Save settings' | trans }}">
+    </label>
+</form>
+
+<div class="divider"></div>
+<h4><span>{{'Password' | trans}}</span></h4>
+<p>{{ 'You can change your password here.' | trans }}</p>
+
+<form method="post" name="pwdForm" id="pwdForm" ng-submit="submitEditPwdForm(pwdForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : pwdForm.password.$invalid && !pwdForm.password.$pristine }">
+        <label>
+            <span>{{ 'Password' | trans }}</span>
+            <input type="password" name="password" required="true" placeholder="{{ 'Enter your password' | trans }}" ng-model="user.pw1" pw-check="pw1">
+            <div class="pwmeter" style="width: 208px; display: none;">
+                <span class="pwrating">weak</span>
+                <div class="pwgauge"></div>
+            </div>
+        </label>
+    </div>
+
+    <label>
+        <span>{{ 'Confirm your password' | trans }}</span>
+        <input data-password-verify="user.pw1" name="password2" ng-model="user.pw2" required="true" type="password" size="30" autocomplete="off" class="password2" placeholder="{{ 'Confirm your password' | trans }}" value="">
+        <p class="signup-error" ng-show="pwdForm.password2.$error.passwordVerify">{{ 'The passwords do not match' | trans }}</p>
+    </label>
+
+    <label>
+        <span> </span>
+        <input name="submit" type="submit" class="css-button orange" value="{{ 'Save settings' | trans }}">
+    </label>
+</form>
+
+<div class="clear"></div>

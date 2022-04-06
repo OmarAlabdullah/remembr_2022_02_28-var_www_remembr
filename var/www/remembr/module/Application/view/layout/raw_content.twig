@@ -1,0 +1,143 @@
+{{ doctype('HTML4_LOOSE') }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+		{% block meta %}
+			{% do headMeta().appendHttpEquiv('X-UA-Compatible','IE=edge')
+					.appendHttpEquiv('Content-Type','text/html; charset=utf-8')
+					.appendName('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0') %}
+			{{ headMeta() }}
+		{% endblock %}
+
+		{% block title %}
+			{{ headTitle('Remembr.') }}
+		{% endblock %}
+
+
+		{% block link %}
+			{% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+			{% do headLink().appendStylesheet(basePath('/css/style.css')) %}
+			{% do headLink().appendStylesheet(basePath('/css/responsive.css')) %}
+			{% do headLink().appendStylesheet(basePath('/css/form_css.css')) %}
+			{% do headLink().appendStylesheet(basePath('/css/jquery.fancybox.css')) %}
+
+			{% do headLink().appendStylesheet(basePath('/css/demos.css')) %}
+{#			{% do headLink().appendStylesheet(basePath('/css/base/jquery.ui.all.css')) %}#}
+{#			{% do headLink().appendStylesheet(basePath('/css/jquery-ui-1.8.16.custom.css')) %}#}
+			{% do headLink().appendStylesheet(basePath('/css/jquery-ui-1.10.3.custom.min.css')) %}
+			{% do headLink().appendStylesheet(basePath('/css/banner.css')) %}
+                        {% do headLink().appendStylesheet(basePath('/css/colorbox.css')) %}
+			{{ headLink() }}
+		{% endblock %}
+
+
+		{% block headscript %}
+			{#{% do headScript().appendFile(basePath('/js/jquery-1.6.3.min.js')) %} #}
+{#			{% do headScript().appendFile(basePath('/js/jquery-1.10.2.min.js')) %}#}
+			{% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') %}
+			{% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js') %}
+			{% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js') %}
+			{% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js')) %}
+			{% do headScript().appendFile(basePath('/js/jquery.colorbox.js')) %}
+			{% do headScript().appendFile(basePath('/js/add-provider.js')) %}
+{#			{% do headScript().appendFile(basePath('/js/angular.min.js')) %}#}
+
+
+			{% do headScript().appendFile(basePath('/js/sort.js')) %}
+			{% do headScript().appendFile(basePath('/js/custom_jquery.js')) %}
+			{% do headScript().appendFile(basePath('/js/tab.js')) %}
+{#			{% do headScript().appendFile(basePath('/js/custom-form-elements.js')) %}		#}
+			{% do headScript().appendFile(basePath('/js/jquery.hoverIntent.js')) %} {# not used, but might be usefull #}
+
+			{% do headScript().appendFile(basePath('/js/jquery-ui-datepicker-1.10.3.custom.min.js')) %}
+			{% do headScript().appendFile(basePath('/js/sprintf.js')) %}
+			
+			{{ headScript() }}
+		{% endblock %}
+    </head>
+
+    <body ng-app="remembr" ng-controller="test">
+
+        <div class="wrapper">
+
+            <!--header start-->
+		{% include 'layout/header' %}
+            <!--header2 end-->
+
+            <div class="container">
+                    {% if flashMessenger().hasMessages() %}
+                    <div class="alert">
+                        {% for message in flashMessenger().getMessages() %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+            </div>
+
+{#		<div class="contentview" ui-view> <!-- attaching events need a fix first. -->#}
+			{% block content %}
+				{{content|raw}}
+			{% endblock content %}
+{#		</div>#}
+
+
+
+
+	{% block inlinescript %}
+			{% do inlineScript().appendFile('/js/jquery.fancybox.js') %}
+			{% do inlineScript().appendFile('/js/angular-ui-router.js') %} {#https://github.com/angular-ui/ui-router/issues/692 #}
+	{#		{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js') %}#}
+			{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js') %}
+			{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js') %}
+			{% do inlineScript().appendFile('/js/angular-masonry.js') %}
+			{% do inlineScript().appendFile('/js/remembr.js') %}
+
+	{#	<script type="text/ng-template" id="template/modal/window.html">
+			<div class="modal fade {[{ windowClass }]}" ng-class="{in: animate}" ng-style="{'z-index': 1050 + index*10}" ng-transclude></div>
+		</script>
+
+		<script type="text/ng-template" id="template/modal/backdrop.html">
+			<div class="modal-backdrop fade" ng-class="{in: animate}" ng-style="{'z-index': 1040 + index*10}" ng-click="close($event)"></div>
+		</script>#}
+		{% do inlineScript().captureStart() %}
+            $(document).ready(function(){
+            $('.fancybox').fancybox({
+            scrolling: 'auto' // 'auto', 'yes' or 'no'
+            autoSize: true,
+            minWidth: 300,
+            });
+            $("a.fancybox2").each(function() {
+            var tthis = this;
+            $(this).fancybox({
+            scrolling: 'auto',
+            autoSize: true,
+            minWidth: 300,
+            beforeShow : function() {
+            $('.light_thumb_nav a[name='+tthis.name+']').click();
+            },
+            afterShow : function() {
+            $('.light_thumb_nav a[name='+tthis.name+']').click();
+            },
+            //						beforeShow : function(){$('body').css('overflow-y', 'hidden').css('margin-right', '13px'); },
+            //						beforeClose : function(){$('body').css('overflow-y', 'scroll').css('margin-right', '0'); }
+            //						beforeShow : function(){$('body').css('overflow-y', 'hidden'); $('body > .wrapper').css('overflow-y', 'scroll'); },
+            //						beforeClose : function(){$('body').css('overflow-y', 'scroll'); $('body > .wrapper').css('overflow-y', 'hidden'); }
+            });
+            });
+            });
+		{% do inlineScript().captureEnd() %}
+		{{ inlineScript() }}
+	{% endblock %}
+
+        </body>
+
+    </html>

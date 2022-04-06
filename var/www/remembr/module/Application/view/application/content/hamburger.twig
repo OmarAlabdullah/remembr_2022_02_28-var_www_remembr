@@ -1,0 +1,23 @@
+<div ng-if="user && ! user.loggedin">
+    <h4><span>{{'Account' |trans}}</span></h4>
+    <p><a class="register" ng-click="ui.active='register';ui.mouseover=false;$event.stopPropagation()"
+       ng-mouseenter="ui.active='register';ui.mouseover=true;$event.stopPropagation()">{{'Register' | trans}}</a></p>
+    <p><a class="sign_in" ng-click="ui.active='signup';ui.mouseover=false;$event.stopPropagation()"
+          ng-mouseenter="ui.active='signup';ui.mouseover=true;$event.stopPropagation()">{{'Log in' | trans}}</a></p>
+</div>
+<div ng-if="user.loggedin">    
+    <div ng-controller="managementCtrl">
+        <h4><span>{{'Personal details' |trans}}</span></h4>
+        <p><a ng-click="ui.active=''" ui-sref="root.dashboard">{{'Dashboard' | trans}}</a></p>
+        <p><a ng-click="ui.active=''" ui-sref="root.usersettings">{{'Account settings' | trans}}</a></p>
+        <p><a ng-click="ui.active=''; sign_out($event)">{{'Log out' | trans}}</a></p>
+    </div>
+</div>
+<h4><span>{{'Memorial pages' | trans}}</span></h4>
+<p><a ng-click="ui.active=''" ui-rel-sref="root.search({search: '{{'memorialpages' | trans }}'})">{{ 'Search a memorial page' | trans }}</a></p>
+<p><a ng-click="ui.active=''" ui-rel-sref="root.search({search: '{{'vips' | trans }}'})">{{ 'Celebrities' | trans }}</a></p>
+<p><a ng-click="ui.active=''" ui-rel-sref="root.search({search: '{{'pets' | trans }}'})">{{ 'Pets' | trans }}</a></p>
+<p><a ng-click="ui.active=''" ui-rel-sref=".fancybox.createpage.info" ng-click="ui.active=''">{{ 'Create a memorial page' | trans }}</a></p>
+<h4><span>{{'Language' | trans}}</span></h4>
+<p><a ng-click="ui.active=''" ui-rel-sref=".({lang:'nl'})">Nederlands</a></p>
+<p><a ng-click="ui.active=''" ui-rel-sref=".({lang:'en'})">English</a></p>

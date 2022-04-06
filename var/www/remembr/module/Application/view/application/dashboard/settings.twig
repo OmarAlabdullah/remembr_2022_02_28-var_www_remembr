@@ -1,0 +1,126 @@
+{% block content %}
+<div class="content"> <!--content start-->
+
+    <div class="container" ng-controller="dashboardCtrl" id="managementCtrl-div" {# ng-class="{loader: page.url == undefined}" @TODO: is not working all the time #}>
+        {[{ reload }]}
+        <div id="plain_light" class="ng-scope">
+            <div id="useraccount" class="settings">
+                <div class="">
+                    <div class="update_info_lft">
+                        <span><img ng-src="{[{imgresize(user.profilephoto,160,160)}]}" width="160" height="160" alt="{[{user.firstname}]} {[{user.lastname}]}"></span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="update_info_rht">
+                        <h5 class="no_border fc">{{ "Login details" | trans }}</h5>
+                        <ul>
+                            <li  class="li_left">
+                                <label>{{ 'E-mail address' | trans }} : {{ email }}</label>
+                                <a ui-sref="root.usersettings.email">{{ 'Change your e-mail address...' | trans }}</a>
+                            </li>
+                            <li>
+                                <label>{{ 'Password' | trans }}</label>
+                                <a ui-sref="root.usersettings.password">{{ 'Change your password...' | trans }}</a>
+                            </li>
+
+                        </ul>
+                        <div class="clear"></div>
+                        <h5 class="clear">{{ "E-mail notices" | trans }}</h5>
+                        <form method="post" name="settingsForm" id="settingsForm" ng-submit="submitSettingsForm(settingsForm.$valid)" novalidate>
+                            <ul class="two-column">
+                                <li class="li_left">
+                                    <label>{{ 'Receive an e-mail when someone' | trans }}</label>
+                                </li>
+                                <li>
+                                    <div class="no_border">
+                                        <label><input ng-model="usersettings.receivePageMessages" name="receivePageMessages" type="checkbox"><i></i>{{ 'posts a message on the memorial pages that you manage' | trans }}</label>
+                                        <label><input ng-model="usersettings.receiveCommentMessages" name="receiveCommentMessages" type="checkbox"><i></i>{{ 'comments on your shared memories' | trans }}</label>
+                                        <label><input ng-model="usersettings.receivePrivateMessages" name="receivePrivateMessages" type="checkbox"><i></i>{{ 'sends you a personal message' | trans }}</label>
+                                    </div>
+                                </li>
+
+                                <li class="li_left">
+                                    <label>{{ 'Send these e-mails' | trans }}</label>
+                                </li>
+                                <li>
+                                    {# @TODO: maybe there is a better way? ng-model of these 3 checkboxes is not used because they function as "radio" button. But we need to have a "model" to know if the fomr is pristine #}
+                                    <div class="no_border label_box2">
+                                        <label><input ng-model="direct" ng-checked="usersettings.mailFrequency=='direct'" ng-click="usersettings.mailFrequency='direct'" type="checkbox"><i></i>{{ 'when they happen' | trans }}</label>
+                                    </div>
+                                    <div class="no_border label_box2">
+                                        <label><input ng-model="daily" ng-checked="usersettings.mailFrequency=='daily'" ng-click="usersettings.mailFrequency='daily'" type="checkbox"><i></i>{{ 'once a day' | trans }}</label>
+                                    </div>
+                                    <div class="no_border label_box2">
+                                        <label><input ng-model="weekly" ng-checked="usersettings.mailFrequency=='weekly'" ng-click="usersettings.mailFrequency='weekly'" type="checkbox"><i></i>{{ 'once a week' | trans }}</label>
+                                    </div>
+                                </li>
+
+                                <li class="li_left">
+                                    <label>{{ 'Also receive e-mails with' | trans }}</label>
+                                </li>
+                                <li>
+                                    <div class="no_border">
+                                        <label><input ng-model="usersettings.receiveUpdates" name="receiveUpdates"  type="checkbox"><i></i>{{ 'new features and updates' | trans }}</label>
+                                        <label><input ng-model="usersettings.receiveTips" name="receiveTips"  type="checkbox"><i></i>{{ 'tips to get more out of Remembr.' | trans }}</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                            <input ng-class="{disabled:settingsForm.$pristine}" ng-disabled="settingsForm.$pristine" type="submit" value="{{ 'Save changes' | trans }}" class="save_changes" />
+
+                        </form>
+                        <div class="clear"></div>
+                        <h5 class="clear">{{ "Social networks" | trans }}</h5>
+                        <div id="social-login">
+                            <div id="idps" ng-controller="LoginCtrl">
+
+                                <table width="100%" border="0" id="social-media" >
+                                    <tr ng-repeat="provider in socialmedia.connected">
+                                        <td>
+                                            <img src="/images/loading.gif" ng-src="/images/icons/{[{ provider }]}.png" title="{[{ provider }]}" />
+                                        </td>
+                                        <td>
+                                            <p>{{ 'You can use your ' | trans }} {[{provider }]}{{ ' account to log in' | trans }}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{ 'Connected to ' | trans }} {[{provider }]}</p>
+                                        </td>
+                                    </tr>
+                                    <tr ng-repeat="provider in socialmedia.non_connected">
+                                        <td>
+                                            <img src="/images/loading.gif" class="idpico" ng-click="providerlogin(provider);$event.stopPropagation()" idp="{[{ provider }]}" ng-src="/images/icons/{[{ provider }]}-grey.png" title="{[{ provider }]}" />
+                                        </td>
+                                        <td>
+                                            <p><a ng-click="providerlogin(provider);$event.stopPropagation()" idp="{[{ provider }]}">{{ 'Add your ' | trans }} {[{provider }]} {{ ' account for log in' | trans }}</a></p>
+                                        </td>
+                                        <td>
+                                            <p>{{ 'Not connected to ' | trans }} {[{provider }]}</p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <h5 class="clear">{{ "Deactivate" | trans }}</h5>
+                        <form method="post" name="deleteForm" id="deleteForm" ng-submit="submitDeleteForm(deleteForm.$valid)" novalidate>
+                            <ul>
+                                <li>
+                                    <label><input ng-model="user.deleted" name="deleteaccount" type="checkbox"><i></i>{{ 'Deactivate your account' | trans }}</label>
+                                </li>
+                            </ul>
+                            <input type="submit" value="{{ 'Deactivate' | trans }}" class="save_changes disabled" ng-disabled="!user.deleted" ng-class="{disabled:deleteForm.$invalid || !deleteForm.$dirty || !user.deleted}" />
+                            <input type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ng-click="cancelDeleteAccount()" />
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div> <!--content end-->
+{% endblock content %}

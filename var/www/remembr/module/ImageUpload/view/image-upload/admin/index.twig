@@ -1,0 +1,16 @@
+{% block content %}
+	<script src="/js/acelaya-file-uploads.js"></script>
+	<fieldset>
+		<legend>Files list</legend>
+		<div id="files" data-content-url="/admin/image-upload/list">
+			{% include 'image-upload/admin/list.twig' %}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Upload new files</legend>
+		<form name="uploadFiles" id="uploadFiles" method="post" action="/admin/image-upload/upload" enctype="multipart/form-data">
+			<input type="file" name="files[]" multiple>
+			<button type="submit" class="btn btn-primary" style="margin-top: 8px;">Upload files</button>
+		</form>
+	</fieldset>
+{% endblock %}

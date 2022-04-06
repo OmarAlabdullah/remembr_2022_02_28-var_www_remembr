@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <td valign="top">
+            <p>{{ 'Hi %s %s' | trans | format(firstname, lastname) }}</p>
+            <p>{{ title | trans }}</p>
+            <p>
+				{% trans %}
+					1 new message
+				{% plural number %}
+					{{ number }} new messages
+				{% endtrans %}
+            <ul>
+                {% for message in messages %}
+                    <li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{message.comment.memory.page.url}}/{{message.comment.memory.id}}">
+						{% set cmttext = message.comment.text %}
+                        {{ cmttext|length > 50 ? cmttext[:50] ~ '...' : cmttext }}
+                    </a></li>
+                {% endfor %}
+            </ul>
+        </td>
+
+    </tr>
+</table>

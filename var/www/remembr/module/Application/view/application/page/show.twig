@@ -1,0 +1,104 @@
+{% do headTitle('%s %s memory | Remembr.' | trans |format(memory.page.firstname, memory.page.lastname)) %}
+
+<div id="inline1">
+    <div class="light_box">
+
+        <div class="light_box_lft {% if memory.type != 'memory' %}rm-responsive-video-box{% endif %}" style="min-width: 300px;">
+            <div ng-switch="memory.type" class="content_large">
+                <div class="memory {% if memory.type != 'memory' %}ng-cloak{% endif %}" ng-switch-when="memory">
+                    <h4>
+                        <a ng-bind="memory.user.firstname + ' ' + memory.user.lastname">{{memory.user.profile.firstname}} {{memory.user.profile.lastname}}</a>
+						<span ng-bind="memory.creationdate | date:'dd-MM yyyy HH:mm'">{{memory.creationdate | date('d-m Y H:i') }}</span>
+						{{'wrote:' |trans }}
+                    </h4>
+
+                    <p>
+                        <span ng-bind="memory.text">{{memory.text}}</span>
+                    </p>
+                </div>
+                <div class="memory {% if memory.type != 'condolence' %}ng-cloak{% endif %}" ng-switch-when="condolence">
+                    <h4>
+                        <a ng-bind="memory.user.firstname + ' ' + memory.user.lastname">{{memory.user.profile.firstname}} {{memory.user.profile.lastname}}</a>
+						<span ng-bind="memory.creationdate | date:'dd-MM yyyy HH:mm'">{{memory.creationdate | date('d-m Y H:i') }}</span>
+						{{'wrote:' |trans }}
+                    </h4>
+
+                    <p>
+                        <span ng-bind="memory.text">{{memory.text}}</span>
+                    </p>
+                </div>
+                <div class="photo {% if memory.type != 'photo' %}ng-cloak{% endif %}" ng-switch-when="photo">
+                    <img src="{{'/minify?files=' ~ memory.photoid ~ '&resize=w[640]h[640]f[true]'}}" ng-src="{[{imgresize(memory.photoid,640,640)}]}" width="640" height="640" alt="">
+                </div>
+                <div class="video {% if memory.type != 'video' %}ng-cloak{% endif %}" ng-switch-when="video">
+                    <div class="rm-responsive-video">
+                        <div youtubevideo="{[{memory.videoid}]}">
+                            {% if memory.videoid %}<img src="//img.youtube.com/vi/{{memory.videoid}}/sddefault.jpg" ng-src="//img.youtube.com/vi/{[{memory.videoid}]}/sddefault.jpg" style="width: 100%;" alt="">{% endif %}
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="light_box_rht">
+			<div class="light_top ng-cloak" ng-show="memory.type != 'memory' && memory.type != 'condolence' && memory.text">
+				<div>
+					<span class="blue_arrow"></span>
+					<p>
+						<a >{[{memory.user.firstname}]} {[{memory.user.lastname}]}</a>
+						<span ng-bind="memory.creationdate | date:'dd-MM yyyy HH:mm'"></span>
+					{{'wrote:' |trans }}
+						<span ng-bind="memory.text"></span>
+					</p>
+				</div>
+			</div>
+			<div class="light_ctr ng-cloak">
+				<div>
+					<div ng-show="$root.user.loggedin" class="light_comment">
+						<span class="gray_arrow ng-cloak" ng-class="{left : memory.type=='memory' || !memory.text}"></span>
+						<textarea ng-model="comment" cols="2" rows="2" class="txtarea1"></textarea>
+						<button ng-click="create()"class="post_but2">{{'Post' |trans}}</button>
+					</div>
+				</div>
+			</div>
+			<div class="light_btm">
+				<div>
+					<div>
+						<div class="light_comment_post">
+							<h4>{{'Comments' |trans}} (<span ng-bind="comments.length">{{memory.comments|length}}</span>)</h4>
+							<ul ng-controller="commentsCtrl">
+								{% if format=='html'%}
+									{% for comment in memory.comments %}
+										<li>
+											{% if comment.user %}
+											<span><a>{{comment.user.profile.firstname}} {{comment.user.profile.lastname}}</a></span>
+											{% else %}
+											<span>{{'Anonymous user' | trans }}</span>
+											{% endif %}
+											<span>{{comment.creationdate | date('d-m Y H:i') }}</span>
+											<p>{{comment.text}}</p>
+										</li>
+									{% endfor %}
+								{%	else %}
+								<li ng-repeat="cmt in comments | orderBy:'-createDate'" class="repeat-animation">
+									<a class="delete-comment" ng-if="cmt.user.id == $root.user.id || $root.page.user.id == $root.user.id" ng-click="deletecmt(cmt)"><img src="/images/trash.png" alt="delete" title="delete" width="11" height="15" /></a>
+									<span ng-show="cmt.user"><a >{[{cmt.user.firstname}]} {[{cmt.user.lastname}]}</a></span>
+									<span ng-show="!cmt.user">{{'Anonymous user' | trans }}</span>
+									<span ng-bind="cmt.createDate | date:'dd-MM yyyy HH:mm'"></span>
+									<p ng-bind="cmt.text"></p>
+								</li>
+								<li ng-hide="comments.length">{{'No comments.' | trans }}</li>
+								{% endif %}
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</div>

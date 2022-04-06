@@ -1,0 +1,21 @@
+<div id="new-msg" ng-show="currenttab=='new'" class="message-tab">
+    <div class="reply-user">
+        <img class="user-photo" ng-src="{[{imgresize(newto.photoid,65,65)}]}" width="65" height="65" alt="">
+    </div>
+    <div class="clear"></div>
+    <form id="replyForm" name="newMsgForm" novalidate ng-submit="submitNewMsgForm()">
+         <p class="user-name">{{ 'To: ' | trans }}{[{newto.firstname}]} {[{newto.lastname}]}</p>
+        <span class="light_txtbox_bg">
+            <input ng-model="newto.title" name="title" type="text" class="light_txtbox" placeholder="{{ 'Subject' | trans }}">
+        </span>
+
+        <textarea id="tinymce" ui-tinymce ng-model="newto.content"></textarea>
+
+        <div class="reply-btns">
+            <input name="" type="submit" value="{{ 'Send' | trans }}" class="save_changes">
+            <input name="" type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ng-click="cancelReplyForm()">
+        </div>
+        <div class="clear"></div>
+    </form>
+</div>
+

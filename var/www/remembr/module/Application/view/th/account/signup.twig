@@ -1,0 +1,53 @@
+<div class="box register_box">
+    <h4><span>{{'New to Remembr? Sign up here:' | trans}}</span></h4>
+
+    <form method="post" name="signupForm" id="signup" ng-submit="submitSignUpForm(signupForm.$valid)" novalidate>
+        <label>
+            <span>{{ 'First name' | trans }}</span>
+            <input name="firstname" class="firstname" ng-model="user.firstname" type="text" size="30" autocomplete="off" class="firstname" placeholder="{{ 'First name' | trans }}" value="">
+        </label>
+
+        <label>
+            <span>{{ 'Last name' | trans }}</span>
+            <input name="lastname" class="lastname" ng-model="user.lastname" type="text" size="30" autocomplete="off" class="lastname" placeholder="{{ 'Last name' | trans }}" value="">
+        </label>
+
+        <label>
+            <span>{{ 'E-mail address' | trans }}</span>
+            <input type="email" ng-model="user.email" required="true" autocomplete="off" size="25" placeholder="{{ 'Enter your e-mail address' | trans }}" name="email" />
+            <p class="signup-error" ng-show="signupForm.email.$invalid && !signupForm.email.$pristine">{{ 'Enter a valid e-mail address.' | trans }}</p>
+        </label>
+
+        <label>
+            <span>{{ 'Password' | trans }}</span>
+            <input type="password" name="password" required="true" placeholder="{{ 'Enter your password' | trans }}" ng-model="user.pw1" pw-check="pw1">
+            <div class="pwmeter" style="width: 208px; display: none;">
+                <span class="pwrating">weak</span>
+                <div class="pwgauge"></div>
+            </div>
+        </label>
+
+        <label>
+            <span>{{ 'Confirm your password' | trans }}</span>
+            <input data-password-verify="user.pw1" name="password2" ng-model="user.pw2" required="true" type="password" size="30" autocomplete="off" class="password2" placeholder="{{ 'Confirm your password' | trans }}" value="">
+            <p class="signup-error" ng-show="signupForm.password2.$error.passwordVerify">{{ 'The passwords do not match' | trans }}</p>
+        </label>
+
+        <label>
+            <span class="termscheck"><input type="checkbox" class="styled" ng-model="user.terms" name="terms" /><i></i></span>
+            <span class="terms">
+				{{ 'I accept the %s terms and conditions %s and %s privacy and cookie policy %s'
+					| trans
+					| format('<a ui-sref="root.cms({slug:\'conditions\'})">','</a>',
+							 '<a ui-sref="root.cms({slug:\'privacy\'})">','</a>') 
+					| raw }}
+			</span>
+        </label>
+
+        <label>
+            <span> </span>
+            <input name="submit" type="submit" class="css-button orange" value="{{ 'Create account' | trans }}">
+        </label>
+    </form>
+</div>
+<div class="divider"></div>

@@ -1,0 +1,35 @@
+{% block headscript %}
+    {% do headScript().appendFile(('//tinymce.cachefly.net/4.0/tinymce.min.js')) %}
+    {% do headScript().appendFile(('/js/tinymce-config.js')) %}
+    {{ headScript() }}
+{% endblock %}
+
+{% block content %}
+
+{% do form.setAttribute('class', 'form-horizontal form-box') %}
+{% do form.setAttribute('action', url(null, [], true)) %}
+{% do form.prepare() %}
+{#{ form().openTag(form)|raw }#}
+{{ formTwb(form, formType) }}
+{#{ form().closeTag()|raw }#}
+{% endblock %}
+
+{% do inlineScript().captureStart() %}
+var items = [
+	$('#cgroup-content'),
+	$('#cgroup-image')
+]
+
+$('#controls-type input:not(:checked)').each(function(i, el) {
+	items[el.value].hide();
+});
+$('#controls-type input').click(function(e) {
+	for (var i = 0; i < items.length; i++) {
+		if (e.delegateTarget.value == i) {
+			items[i].show('blind', {}, 250);
+		} else {
+			items[i].hide('blind', {}, 250);
+		}
+	}
+});
+{% do inlineScript().captureEnd() %}

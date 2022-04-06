@@ -1,0 +1,8 @@
+{{ 'Thank you for using Remembr. To complete your registration, please confirm your e-mail address. ' | trans }}
+<br/>{%set confirmurl = url('account', {controller: 'account', action: 'confirm-signup'}, {force_canonical: true}) ~ '?key=' ~ user.getKey() %}
+
+<br/><a href="{{confirmurl}}">{{  'Confirm your e-mail address' | trans }}</a>
+<br/>
+<br />{{ 'Kind regards,' | trans }}
+<br />
+Remembr.

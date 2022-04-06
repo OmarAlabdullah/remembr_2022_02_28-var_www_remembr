@@ -1,0 +1,135 @@
+
+/* allow content to have the full width of the window, whioch is not needed in most views/states */
+
+.search_box.search_strech { margin: 0 auto; float: none; display: block !important; width: 80% !important; overflow: hidden; text-align: right;
+                            max-width: 460px; }
+.search_box.search_strech .search_pages { width: auto !important; } 
+.search_box.search_strech .txtbox1 { width: 58% !important; padding: 0 5% !important;} 
+.search_box.search_strech .search_but { width: 30% !important; padding: 0 5% !important; } 
+
+body.full-width .contentview.contentview.contentview { width: 100%; max-width: none;}
+
+.rm-row { width: 100%; padding: 20px 0 40px 0; }
+.rm-row > .rm-row-inner {
+    max-width: 960px; margin: 0 auto; display: flex; padding: 0 2%;
+    justify-content: space-between;
+}
+
+.rm-row:nth-child(2n + 1) { background-color: #514641; color: #fff;
+                        background-image: url(/images/bottom-arrow0.png); background-repeat: no-repeat; background-position: bottom center; }
+.rm-row:nth-child(2n    ) { background-color: #fff; color: #514641;
+                       background-image: url(/images/bottom-arrow1.png); background-repeat: no-repeat; background-position: bottom center; }
+.rm-row.rm-row.rm-row:first-child {
+    background-image: url(/images/bottom-arrow0.png), url(/images/landingpage-bg-slightly-darker.jpg); background-repeat: no-repeat, no-repeat; background-position: bottom center, top center; background-size: auto auto, cover}
+
+.rm-row.rm-row.rm-row.rm-row:last-child { background-image: none; }
+
+.rm-row h1, .rm-row h1, .rm-row h2 {
+    text-align: center; margin-bottom: 10px; font-family: 'Houschka Rounded', sans-serif; padding: 0; font-weight: bold; }
+.rm-row h1 {
+    font-size: 22pt; line-height: 30pt; margin: 40px 0;}
+.rm-row.rm-how-it-works h1 {
+    font-size: 22pt; line-height: 30pt; margin: 40px 0 50px 0;}
+.rm-row h2 {
+    font-size: 18pt; line-height: 20pt; margin: 40px 0; font-family: Arial, sans-serif; }
+.rm-row p {
+    font-size: 14pt; line-height: 18pt; margin: 40px 0; text-align: center; }
+
+.rm-row p {
+    font-size: 14pt; line-height: 18pt; margin: 20px 0; text-align: center; }
+
+.rm-play-video p { color: /* #ed6d8a */ #fff;  font-size: 12pt; line-height: 15pt; margin-top: 30px; font-weight: bold; }
+.rm-play-video { margin: 40px auto 40px auto; display: block; width: 150px; text-decoration: none; text-align: center; }
+.rm-play-video:hover { text-decoration: none; }
+
+
+.rm-cute { color: #ed6d8a; }
+
+.rm-landing-button { background: #ed6d8a; display: inline-block; padding: 20px; margin: 10px auto;
+                     width: auto; color: #fff; text-decoration: none; font-weight: bold; }
+.rm-landing-button:hover { text-decoration: none; }
+
+
+@media (min-width: 800px) {
+    .rm-col1 { width: 100%; display: inline-block; margin: 0; padding: 0; border: 0; }
+    .rm-col2 { width: 47%; display: inline-block; margin: 0; padding: 0; border: 0; }
+    .rm-col3 { width: 31%; display: inline-block; margin: 0; padding: 0; border: 0; }
+    .rm-col5 { width: 18%; display: inline-block; margin: 0; padding: 0; border: 0; }
+
+
+    .rm-mobile-only.rm-mobile-only.rm-mobile-only.rm-mobile-only.rm-mobile-only { display: none; }
+
+    .rm-step > div { margin-left: -70px; }
+    .rm-step-last > div { margin-left: auto; margin-right: auto; }
+    .rm-step-last > div, .rm-step > div {
+        border: 0; 
+        background-color: #514641;
+        height: 140px; width: 140px;
+        border: 0; border-radius: 50%;
+        text-align: center; font-size: 50pt; line-height: 140px;
+        font-family: 'Houschka Rounded', sans-serif; font-weight: 900; color: #fff;
+        font-weight: bold;
+    }
+    
+    .rm-step {
+        margin-left: 50%; width: 100%; height: 65px; margin-bottom: 120px;
+        border-bottom: 10px solid #514641;
+    }
+    .rm-step-last { margin-bottom: 55px; }
+    
+    .rm-circle { width: 170px; height: 170px; border-radius: 50%; margin: 10px auto;  }
+    .rm-circle > p { height: 100%; line-height: 170px; font-size: 35pt; width: 100%; text-align: center;
+                     font-family: 'Houschka Rounded', sans-serif; padding: 0; color: #fff; font-weight: bold; }
+    
+    .rm-circle > p > img { height: 35pt; width: auto;  display: inline-block; vertical-align: middle; }
+    
+    .rm-offering-light-green {background-color: #b8d97e; }
+    .rm-offering-dark-green {background-color: #7ecaae; }
+    .rm-offering-blue{background-color: #8bb4dc; }
+    .rm-offering-top { margin-top: 40px; }
+    .rm-row.rm-row.rm-row .rm-offering h2 { margin-bottom: 10px; font-weight: normal; font-style: normal; font-weight: bold; }
+    .rm-customer-response blockquote { padding: 0 50px; height: 60pt; overflow: hidden; }
+}
+
+@media(max-width: 799px) {
+    .rm-row-inner .rm-offering:nth-child(2) img {
+        height: 50px;
+        width: auto;
+        margin: 6px auto;
+    }
+}
+
+@media(min-width: 800px) {
+    .rm-row-inner .rm-offering:nth-child(2) img {
+        height: 90px;
+    }
+}
+    
+.rm-profile { text-align: center; margin-bottom: 25px; }
+.rm-profile img { margin-bottom: 20px; }
+.rm-profile a { text-decoration: none; }
+.rm-profile a { 
+    color: #fff; text-decoration: none; height: 40pt; overflow: hidden;
+    font-size: 12pt; line-height: 18pt; text-align: center;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+.rm-customer-response footer { font-size: 9pt; line-height: 14pt; text-align: center; }
+.rm-customer-response blockquote { font-size: 14pt; line-height: 20pt; text-align: center; quotes: inherit; font-style: italic; }
+.rm-customer-response blockquote:before { content: open-quote; }
+.rm-customer-response blockquote:after { content: close-quote; }
+.rm-control p { font-size: 20pt; line-height: 30px; height: 30px; width: 30px;
+                vertical-align: middle; margin: 0; padding: 0; }
+.rm-control { border: solid 2px #fff; border-radius: 50%; text-align: center; width: 30px; height: 30px;
+              cursor: pointer; margin-top: 23px; }
+
+.rm-news.rm-news.rm-news.rm-news h2 { font-size: 14pt; line-height: 20pt; text-align: left;}
+.rm-news.rm-news.rm-news.rm-news a { color: #ed6d8a; }
+.rm-news.rm-news.rm-news.rm-news p, .rm-news.rm-news.rm-news.rm-news h1, .rm-news.rm-news.rm-news.rm-news a {
+    text-align: justify; text-align-last: left; font-family: Arial, sans-serif;
+}
+
+.rm-row.rm-row .rm-customer-responses { margin-top: 10px; margin-bottom: 50px; }

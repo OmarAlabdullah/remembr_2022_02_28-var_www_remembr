@@ -1,0 +1,21 @@
+<div id="reply-msg" ng-show="currenttab=='reply'" class="message-tab">
+    <div class="reply-user">
+        <img class="user-photo" ng-src="{[{imgresize(reply.from_photo,65,65)}]}" width="65" height="65" alt="">
+    </div>
+    <div class="clear"></div>
+    <form id="replyForm" name="replyForm" novalidate ng-submit="submitReplyForm()">
+       <p class="user-name">{{ 'To: ' | trans }}{[{reply.from_firstname}]} {[{reply.from_lastname}]}</p>
+        <span class="light_txtbox_bg">
+            <input ng-model="reply.title" name="title" type="text" class="light_txtbox">
+        </span>
+
+        <textarea  ui-tinymce ng-model="reply.content"></textarea>
+
+        <div class="reply-btns">
+            <input name="" type="submit" value="{{ 'Reply' | trans }}" class="save_changes">
+            <input name="" type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ng-click="cancelReplyForm()">
+        </div>
+        <div class="clear"></div>
+    </form>
+</div>
+

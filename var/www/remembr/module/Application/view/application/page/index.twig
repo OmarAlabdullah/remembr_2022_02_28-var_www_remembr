@@ -1,0 +1,185 @@
+{#{% extends 'layout/layout' %}#}
+
+{{ addglobal('isMemorialPage', true) }}
+{% do headTitle('%s %s remembrance page and online condolences' | translateinto("nl_NL") |format(firstname, lastname)) %}
+
+{% set image_url = baseurl ~ ('minify?files=' ~ photo ~ '&resize=w[320]h[320]e[true]') | default('/images/top_info_img.jpg') %}
+
+{% do headMeta()
+	.appendProperty('og:title'             , '%s %s memorial page' | translateinto(explicitLocale |default(detectedLocale)) | format(firstname, lastname))
+  .appendProperty('og:description'       , introtext )
+	.appendProperty('og:type'              , 'profile')
+	.appendProperty('og:url'               , canonicalurl | format('/' ~ (lang | default(detectedLanguage))))
+	.appendProperty('og:image'             , image_url )
+	.appendProperty('profile:first_name'   , firstname)
+	.appendProperty('profile:last_name'    , lastname)
+%}
+
+{% do headLink({'rel': 'canonical', 'href': canonicalurl | format('')}) %}
+
+{% if gender == 'male' or gender == 'female' %}
+{%   do headMeta().appendProperty('profile:gender', gender) %}
+{% endif %}
+
+{% block content %}
+<div class="content"> <!--content start-->
+    <div class="container">
+		<div class="ng-cloak error-msg" ng-show="page.error">
+			 <div ng-switch on="page.error">
+				<div ng-switch-when="forbidden">
+					<p ng-if="page.extra.data.private">{{ 'You can access this memorial page by invitation only.' | trans }}</p>
+					<p ng-if="!page.extra.data.private">{{ 'You do not have sufficient access rights to view this page.' | trans }}</p>
+				</div>
+				<div ng-switch-when="gone">
+					<p ng-if="page.extra.suberror=='nolongeravailable'">{{ 'This memorial page is no longer available' | trans }}</p>
+					<p ng-if="page.extra.suberror=='notyetavailable'">{{ 'This memorial page has not been published yet.' | trans }}</p>
+					<p ng-if="!page.extra.suberror">{{ 'This memorial page is not available.' | trans }}</p>
+				</div>
+				<p ng-switch-default>{{ 'Some unspecified error has occurred.' | trans }}</p>
+			</div>
+		</div>
+		<div class="top_info_box" ng-controller="CreateContentCtrl" ng-class="{loader: page.url == undefined}" ng-hide="page.error">
+			
+			<div class="top_info_tab ng-cloak">
+			<ul>
+				<li>
+				<a ng-click="openTab('memory')" ng-class="{tab_act : currenttab=='memory'}">
+					{{'Memories' | trans}}
+					(<span ng-bind="($root.page.memories | filter:{type : '!condolence'} ).length"></span>) {# @TODO get total count from DB  #}
+				</a>
+				</li>
+				<li>
+				<a ng-click="openTab('condolence')" ng-class="{tab_act : currenttab=='condolence' }">
+					{{'Condolences' | trans}}
+					(<span ng-bind="($root.page.memories | filter:{type : 'condolence'} ).length"></span>)
+				</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			</div>
+			<div class="top_info_tabcont" ng-class="{allow_overflow: ui.active=='post' || user.loggedin}">
+
+				<div class="tabDetails" id="tabCont_1">
+
+					<div class="info_main_cont">
+					<div class="info_main_photo">
+                        <img src="{{('/minify?files=' ~ photo ~ '&resize=w[320]h[320]f[true]') |default('/images/top_info_img.jpg')}}" ng-src="{[{imgcrop(page.photo || '/images/top_info_img.jpg', page.roi, 320, 320)}]}" width="320" height="320" alt="">
+					</div>
+
+					<div class="info_main_rht" ng-class="{full: !showLess}">
+
+						<span class="white_arrow2"></span>
+						<div class="info_main_txt_cont">
+						<div class="info_main_box1">
+							<h3>
+							<span initdata ng-bind="page.firstname">{{firstname}}</span>
+							<span initdata ng-bind="page.lastname">{{lastname}}</span>
+							<span class="ng-cloak pagestatus" ng-if="page.status!='published'">{{'deactivated'|trans}}</span>
+							</h3>
+							<div class="top-icons responsive-table-row">
+                                <p class="alive_range">
+									<span ng-bind-html="page.dateofbirth | dateforlang: {nl: 'D MMMM [<strong>]YYYY[</strong>]', en: 'MMMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofbirth | date('d M')}}</span>
+                                    -
+                                    <span ng-bind-html="page.dateofdeath | dateforlang: {nl: 'D MMMM [<strong>]YYYY[</strong>]', en: 'MMMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofdeath | date('d M')}}</span>
+								</p>
+								<div class="rest">
+									<a facebook></a>
+									<a twitter></a>
+									<div class="contact_icon" ng-show="user.loggedin && page.user.id !== user.id" ng-controller="messagesCtrl">
+										<a></a>
+										<div class="normal-wrap">
+											<img id="uploaded image" class="user_photo" width="45" height="45" alt="" ng-src="{[{imgresize(page.user.photoid,75,75)}]}">
+											<a ng-click="mailUser(page.user)">{{ 'The administrator of this page is' | trans }} {[{page.user.firstname}]} {[{page.user.lastname}]}</a>
+											<button class="med_blue_but" ng-click="mailUser(page.user)">{{ 'Send a message' | trans}}</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div ng-init="showLess=true">
+								<p class="introtext-animation introtext" ng-bind="page.introtext" collapse="2">{{introtext}}</p>
+								<p class="no_padding" ng-show="moreless">
+									<span ng-show="showLess"><a class="more" ng-click="showLess = false">{{'More...' |trans}}</a></span>
+									<span ng-hide="showLess"><a class="more" ng-click="showLess = true">{{'Less...' |trans}}</a></span>
+								</p>
+								<div class="clear"></div>
+							</div>
+
+						</div>
+						<div class="info_main_box2">
+							<div class="info_tab_thumb2">
+								<ul>
+									{% include 'application/page/memorytab' %}{% include 'application/page/mediatab' %}{% include 'application/page/youtubetab' %}<li ng-show="currenttab=='memory'" class="condolences">
+										<a ng-click="openTab('condolence')"><span class="pc-only">{{ 'Condolences' |trans }}</span></a>
+										<span ng-click="openTab('condolence')" class="mobile-only">{{ 'Condolences' |trans }}</span>
+									</li>{% include 'application/page/condolencetab' %}
+								</ul>
+								<div class="clear"><div>
+							</div>
+							</div>	
+							<div class="clear"></div>
+							
+							<div ng-if="ui.active=='post'" class="slide some-field-active"></div>
+							
+							<div ng-if="currentform=='memory'"     class="slide memory-space      mobile-only"></div>
+							<div ng-if="currentform=='condolence' && user.loggedin" class="slide condolence-space  mobile-only"></div>
+                            <div ng-if="currentform=='condolence' && !user.loggedin" class="slide condolence-space-anonymous  mobile-only"></div>
+							<div ng-if="currentform=='video'"      class="slide video-space       mobile-only"></div>
+							<div ng-if="currentform=='media'"      class="slide media-space       mobile-only"></div>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+		<div class="row_boxes ng-cloak">
+
+			<div class="row_filter">
+
+				<div class="row_filter_lft" ng-show="page.uselabels && (filter.types['memory'] || filter.types['photo'])" >
+					<p>
+					<span>{{ 'Filter:' |trans}}</span>
+					<a ng-class="{selected : allLabelsSelected()}" class="title-change" ng-click="clearLabels()">{{'Show all labels' |trans}}</a>
+					</p>
+					<p>
+					<a ng-repeat="label in page.labels"  ng-class="{selected : filter.labels[label.id]}" ng-click="clearLabels();toggle('labels',label.id)">{[{label.name}]}<span>({[{countLabels(label)}]})</span></a>
+					</p>
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+		</div>
+
+
+		<div class="row_boxes">
+			<div class="row_content">
+
+				<ul masonry style="max-width:960px;">
+					{% if format == 'html' %}
+						{% include 'application/content/index' with {'format':'tpl'} %}
+					{% else %}
+						<li class="masonry-brick memory" ng-repeat="item in page.memories | bytypeandlabel:filter.types:filter.labels">
+							<div ng-switch="item.type">
+							<div ng-switch-when="condolence" condolence="item">{{'condolence' |trans}}</div>
+							<div ng-switch-when="memory" memory="item">{{'memory' |trans}}</div>
+							<div ng-switch-when="photo" photo="item">{{'photo' |trans}}</div>
+							<div ng-switch-when="video" video="item">{{'video' |trans}}</div>
+						</div>
+						</li>
+				{% endif %}
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div> <!--content end-->
+{% endblock content %}

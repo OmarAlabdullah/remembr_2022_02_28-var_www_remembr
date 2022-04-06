@@ -1,0 +1,86 @@
+{% block content %}
+<div id="useraccount" class="welcome-popup"  ng-controller="dashboardCtrl">
+	<h5>{{'Welcome at Remembr.' | trans }}</h5>
+	<p>
+		{{'Please fill in your personal details:' |trans}}
+	</p>
+
+	<div class="update_info_lft">
+		<div class="select_file" ng-file-drop="onFileSelect($files)">
+			<span><img id="outputImage" ng-src="{[{imgresize(user.profilephoto,160,160)}]}" width="160" height="160" alt="{[{user.firstname}]} {[{user.lastname}]}"></span>
+
+			<div class="clear"></div>
+			<form name="profilePhoto" class="profilephoto-form" novalidate ng-submit="submitProfilePhoto()">
+				<span class="draganddrop">{{ 'To attach an image drag & drop it here or ' |trans }}</span>
+				<div class="upload-button">
+					<label class="btn">
+						<div class="input-wrapper">
+							<input type="file" ng-model="file" ng-file-select="onFileSelect($files)" />
+							<span>{{'select a file from your computer' | trans}}</span>
+						</div>
+					</label>
+				</div>
+
+				<div ng-show="uploading">
+					<span class="floatright">{{ 'One moment please, your image is being saved...' |trans }}</span>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="update_info_rht">
+		<form method="post" name="accountForm" id="accountForm" ng-submit="submitEditAccountForm(accountForm.$valid, '.^.^')" novalidate >
+			<ul class="two-column">
+				<li ng-class="{invalid : accountForm.name.$invalid &amp;&amp; accountForm.name.$dirty}" class="li_left">
+					<label>{{ 'Name' | trans }}</label>
+					<span class="light_txtbox_bg">
+						<input ng-model="user.name" name="name" type="text" class="light_txtbox" required="true" placeholder="{{ 'Enter your name' | trans }}" />
+					</span>
+				</li>
+				<li ng-class="{invalid : accountForm.residence.$invalid &amp;&amp; accountForm.residence.$dirty}" class="">
+					<label>{{ 'City' | trans }}</label>
+					<span class="light_txtbox_bg">
+						<input ng-model="user.residence" name="residence" type="text" class="light_txtbox" required="true" placeholder="{{ 'Enter your city...' | trans }}" />
+					</span>
+				</li>
+				<li ng-class="{invalid : accountForm.dateofbirth.$invalid && accountForm.dateofbirth.$dirty}" class="li_left">
+					<label>{{'Date of birth' | trans }}</label>
+					<span class="light_txtbox_bg">
+						<input ng-model="user.dateofbirth" name="dateofbirth" type="text" class="light_txtbox" datepicker="{[{user.dateformat}]}" placeholder="{[{user.dateformat | dateplaceholder}]}" required="true" ng-blur="accountForm.dateofbirth.$dirty=true" />
+					</span>
+				</li>
+				<li ng-class="{invalid : accountForm.country.$invalid &amp;&amp; accountForm.country.$dirty}" class="">
+					<label>{{ 'Country' | trans }}</label>
+					<span class="light_txtbox_bg">
+						<input ng-model="user.country" name="country" type="text" class="light_txtbox" required="true" placeholder="{{ 'Enter your country...' | trans }}" />
+					</span>
+				</li>
+				{# ng-model  in these checkbox like radio buttons is not real, but needed to change to forms pristine state #}
+				<li class="li_left">
+					<div class="label_box1 no_border">
+						<label><input name="gender" value="male" ng-model="user.gender" type="radio"><i></i>{{ 'Male' | trans }}</label>
+					</div>
+					<div class="label_box1 no_border">
+						<label><input name="gender" value="female" ng-model="user.gender" type="radio"><i></i>{{ 'Female' | trans }}</label>
+					</div>
+				</li>
+				<li>
+					<div class="label_box1 no_border">
+						<label><input name="language" value="nl" ng-model="user.language" type="radio"><i></i><img class="lang-img" src="/images/flag/nl.png" alt="nl"></label>
+					</div>
+					<div class="label_box1 no_border">
+						<label><input name="language" value="en" ng-model="user.language" type="radio"><i></i><img class="lang-img" src="/images/flag/en.png" alt="en"></label>
+					</div>
+				</li>
+			</ul>
+			<input type="submit" value="{{ 'Save changes' | trans }}" class="save_changes disabled" ng-class="{disabled:accountForm.$invalid || !accountForm.$dirty}">
+			<input type="button" value="{{ 'Cancel' | trans }}" class="cancel_but" ng-click="close()">
+		</form>
+
+		<div class="clear"></div>
+
+	</div>
+	<div class="clear"></div>
+</div>
+{% endblock content %}

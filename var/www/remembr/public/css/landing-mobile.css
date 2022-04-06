@@ -1,0 +1,125 @@
+
+/* allow content to have the full width of the window, whioch is not needed in most views/states */
+
+@media (max-width: 799px) {
+.search_box { display: none; }
+.rm-profiles h2 { margin-bottom: 30px; }
+.rm-pc-only.rm-pc-only.rm-pc-only.rm-pc-only.rm-pc-only.rm-pc-only { display: none; }
+    
+/* landing page fonts and colors */
+
+.rm-row.rm-row.rm-row h2 { text-align: center; margin-bottom: 12px; font-family: 'Houschka Rounded', sans-serif; font-size: 16pt; line-height: 20pt; padding: 0; }
+.rm-row.rm-row.rm-row h3 { text-align: center; margin-bottom: 4px; font-family: 'Houschka Rounded', sans-serif; font-size: 20pt; line-height: 30pt; padding: 0; }
+.rm-row.rm-row.rm-row p {  text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 14pt; margin-top: 4px; line-height: 20pt; }
+.rm-row.rm-row.rm-row a { font-family: Helvetica, Arial, sans-serif; font-size: 16pt; }
+
+/* row on the landingpage */
+.rm-row { width: 100%; width: 100%; clear: both; display: table; }
+.rm-row:last-child { padding-bottom: 20px; }
+.rm-row > .rm-row-inner { max-width: 960px; margin-left: auto; margin-right: auto; width: 96%; }
+.rm-row .rm-col1:not(.rm-row-inner) { width: 100%; clear: both}
+.rm-row .rm-col1 > div.rm-col-inner { padding: 30px; }
+.rm-row .rm-col3 { width: 100%; clear: both}
+.rm-row .rm-col3 > div.rm-col-inner { padding: 30px; }
+.rm-row .rm-col2 { width: 100%; clear: both}
+.rm-row .rm-col2 > div.rm-col-inner { padding: 30px; }
+.rm-row .rm-col5 { float: left; width: 50%; }
+.rm-row .rm-col5 > div.rm-col-inner { padding: 0 30px 30px 30px; }
+.rm-row .rm-col5.rm-profile.rm-profile h3 { height: 30pt; overflow: hidden; line-height: 15pt;}
+.rm-row .rm-col5.rm-profile.rm-profile:nth-child(n+6) { display: none; }
+
+/* circle steps 1.2.3 */
+.rm-step-last > div, .rm-step > div {
+    border: 0; margin-left: auto; margin-right: auto;
+    background-color: #514641;
+    height: 40px; width: 40px;
+    border: 0; border-radius: 50%;
+    text-align: center; font-size: 14pt; line-height: 40px;
+    font-family: 'Houschka Rounded', sans-serif; font-weight: 900; color: #fff;
+}
+
+.rm-row > .rm-row-inner {
+    max-width: 960px; margin: 0 auto; display: block; padding: 0 2%;
+}
+
+/* play icon */
+.rm-play-video img { margin: 10px auto 30px auto;}
+.rm-play-video p { color: #514641; }
+
+/* customer reponses */
+.contentview .rm-row.rm-row.rm-row.rm-row .rm-what-others-say.ng-scope { display: block; }
+.rm-customer-responses .rm-customer-response { display: block; width: 100%; }
+
+.contentview .rm-row.rm-row.rm-row.rm-row blockquote { font-size: 14pt; font-style: italic; font-family: Helvetica, Arial, sans-serif; text-align: center; }
+.contentview .rm-row.rm-row.rm-row.rm-row footer { margin-bottom: 50px; margin-top: 5px !important; font-size: 9pt; font-family: Helvetica, Arial, sans-serif; text-align: center; }
+.rm-customer-responses blockquote:before { content: open-quote; }
+.rm-customer-responses blockquote:after  { content: close-quote; }
+
+.rm-customer-responses ul, .rm-customer-responses li { margin: 0; padding: 0; border: 0; list-style: none; }
+
+.rm-customer-responses .rm-control { display: none; }
+.rm-customer-responses .rm-control.rm-control.rm-control > p { 
+    display: block; width: 30px; height: 30px; border-radius: 50%; border: solid 3px #fff; color: #fff;
+    font-family: 'Houschka Rounded', sans-serif; font-size: 20pt;
+    margin: 0; padding: 0;
+}
+.rm-customer-responses { width: 100%; }
+
+/* what RM offers circles */
+.rm-offering-light-green {background-color: #b9d97f; }
+.rm-offering-dark-green  {background-color: #7ecaaf; }
+.rm-offering-blue        {background-color: #91bce5; }
+
+.rm-offering {  display: flex; flex-direction: column;}
+.rm-offering .rm-circle {
+    width: 70px; height: 70px; line-height: 100px;
+    vertical-align: middle; margin: 0 auto; border-radius: 50%; order: -1; }
+
+.rm-offering .rm-circle.rm-circle.rm-circle > * { line-height: 70px; text-align: center; margin: 0; color: #fff;  font-family: 'Houschka Rounded', sans-serif;}
+
+
+
+/* profiles */
+.rm-row.rm-row.rm-row .rm-profile img { width: 100% }
+.rm-row.rm-row.rm-row .rm-profile h3 {
+    font-size: 11pt;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* what we offer */
+.rm-offering.rm-offering.rm-offering.rm-offering h3 { font-size: 12pt; margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; }
+.rm-offering.rm-offering.rm-offering.rm-offering p { font-size: 12pt;  }
+
+}
+
+
+/* news */
+@media (min-width: 400px) and (max-width: 799px) {
+.rm-row.rm-row.rm-row .rm-news { margin-left: auto; margin-right: auto; }
+
+.rm-row.rm-row.rm-row .rm-news h2 { font-family: Helvetica, Arial, sans-serif;
+                                    font-size: 12pt; text-align: left;
+                                    margin-bottom: 2px; }
+.rm-row.rm-row.rm-row .rm-news p { 
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt; margin-top: 2px;
+    text-align: left; text-align-last: left; }
+
+.rm-row.rm-row.rm-row .rm-news.rm-news.rm-news.rm-news p:first-child { width: 50%; padding: 5px; float: left; margin: 0 0 10px 0; clear: both; }
+.rm-row.rm-row.rm-row .rm-news.rm-news.rm-news.rm-news p:first-child img { width: 100%; }
+}
+
+@media (max-width: 399px) {
+.rm-row.rm-row.rm-row .rm-news { margin-left: auto; margin-right: auto; }
+
+.rm-row.rm-row.rm-row .rm-news h2 { font-family: Helvetica, Arial, sans-serif;
+                                    font-size: 12pt; text-align: left;
+                                    margin-bottom: 2px; }
+.rm-row.rm-row.rm-row .rm-news p { 
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt; margin-top: 2px;
+    text-align: left; text-align-last: left; }
+
+.rm-row.rm-row.rm-row .rm-news.rm-news.rm-news.rm-news p:first-child { width: 100%; padding: 5px; }
+.rm-row.rm-row.rm-row .rm-news.rm-news.rm-news.rm-news p:first-child img { width: 100%; }
+}

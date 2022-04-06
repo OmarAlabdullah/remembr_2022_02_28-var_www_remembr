@@ -1,0 +1,62 @@
+<table>
+	<tr><th>Order id</th><td>{{ payment.getOrderRef() }}</td></tr>
+	<tr><th>Payment key</th><td>{{ payment.getDdKey() }}</td></tr>
+	<tr><th>Status</th><td>{%set s = payment.getStatus()%}
+		{% if s==constant('TH\\ZfPayment\\Entity\\Payment::stStarted') %}Started
+		{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stPending') %}Pending
+		{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stPaid') %}Paid
+		{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stCanceled') %}Canceled
+		{% endif %}
+	</td></tr>
+	{% if s != constant('TH\\ZfPayment\\Entity\\Payment::stStarted') %}
+		<tr><th>Amount</th><td>{{ payment.getAmtRegistered() }}{{ payment.getAmtCurrency() }}</td></tr>
+		<tr><th>Pending</th><td>{{ payment.getAmtPendingShopper()+payment.getAmtPendingAcquirer() }}{{ payment.getAmtCurrency() }}</td></tr>
+		<tr><th>Approved</th><td>{{ payment.getAmtApprovedAcquirer() }}{{ payment.getAmtCurrency() }}</td></tr>
+		<tr><th>Captured</th><td>{{ payment.getAmtCaptured() }}{{ payment.getAmtCurrency() }}</td></tr>
+		<tr><th>Refunded</th><td>{{ payment.getAmtRefunded() }}{{ payment.getAmtCurrency() }}</td></tr>
+		<tr><th>Chargedback</th><td>{{ payment.getAmtChargedback() }}{{ payment.getAmtCurrency() }}</td></tr>
+	{% endif %}
+	<tr><th>Payment menu link</th><td><a href="{{dd.getMenuUrl(payment.getDdKey())}}">[link]</a></td></tr>
+</table>
+
+Payments
+
+<table>
+	<tr>
+		<th>Method</th>
+		<th>Auth status</th>
+		<th>Amount</th>
+		<th>Confidence</th>
+		<th colspan="4">Actions</th>
+	</tr>
+	<tr>
+		<th colspan="4"></th>
+		<th>Type</th>
+		<th>Status</th>
+		<th>Amount</th>
+		<th>Reason</th>
+	</tr>
+{%for payment in status.getPayments() %}
+	<tr>
+		<td>{{payment.getMethod()}}</td>
+		<td>{{payment.getAuthStatus()}}</td>
+		<td>{{payment.getAmount().getAmount()}} {{payment.getAmount().getCurrency()}}</td>
+		<td>{{payment.getConfidenceLevel()}}</td>
+		<td colspan="4"></td>
+	</tr>
+	{%for a in payment.getActions()%}
+		<tr>
+			<td colspan="4"></td>
+			<td>{%if a.getType()==constant('TH\\ZfPayment\\Comm\\Action::capture')%}Capture
+				{%elseif a.getType()==constant('TH\\ZfPayment\\Comm\\Action::refund')%}Refund
+				{%elseif a.getType()==constant('TH\\ZfPayment\\Comm\\Action::chargeback')%}Chargeback
+				{%endif%}
+			</td>
+
+			<td>{{ a.getStatus() }}</td>
+			<td>{{ a.getAmount().getAmount()}} {{ a.getAmount().getCurrency() }}</td>
+			<td>{{ a.getReason() }}</td>
+		</tr>
+	{%endfor%}
+{%endfor%}
+</table>

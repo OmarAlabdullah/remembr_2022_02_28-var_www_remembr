@@ -1,0 +1,56 @@
+
+1. Install Virtualbox
+
+	https://www.virtualbox.org/wiki/Downloads
+
+
+1.1 On fedora install kernel source and dkms
+
+	$> sudo dnf install kernel-core kernel-headers dkms
+
+
+2. Install vagrant:
+
+	http://www.vagrantup.com/downloads.html
+
+
+3. Install vagrant-vbguest plugin:
+	To make sure vb guest addtions get installed
+
+	$> vagrant plugin install vagrant-vbguest
+
+
+4. Start vagrant:
+	This wil install all required software
+	
+	$> vagrant up --provider=virtualbox
+
+
+5. Reload vagrant
+	 This will install the latest vbguest-additions
+	
+	$> vagrant reload
+
+
+6. Reload vagrant again 
+	To make sure all the synced folders are working as expected
+	
+	$> vagrant reload
+
+
+7. Stop vagrant
+	Will shutdown the vb
+
+	$> vagrant halt
+
+
+8. Misc
+
+	SSH is available if you need to do some stuff inside the vm
+	like importing a database
+
+	$> vagrant ssh
+
+	Sometimes its just cleanup time; removing the vm
+
+	$> vagrant destroy

@@ -1,0 +1,45 @@
+<li class="memory {# {{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}#}">
+    <span class="delete-content" ng-if="memory.user.id == $root.user.id || $root.page.user.id == $root.user.id" mem="memory"></span>
+    <span class="edit-content"   ng-if="memory.user.id == $root.user.id" mem="memory"></span>
+
+    <div class="row_gray_box not-editing">
+        <div class="row_btm">
+            <span class="row_btm_arrow"></span>
+            <span class="date_time" ng-bind="memory.creationdate | date:'dd-MM yyyy HH:mm'">{{memory.creationdate | date('d-m Y H:i') }}</span>
+            <em class="view_comment">
+                <a  href="{{url('remembr/page', {}, {}, ['page', 'lang'])}}/memory/{{memory.id}}"
+                    ui-sref="root.page.fancybox.memory({id : memory.id})"><span ng-bind="$root.translate('View / Comment')">{{'View / Comment'|trans}}</span> (<span ng-bind="memory.numbercomments">{{memory.comments|length}}</span>)</a>
+            </em>
+            <div class="clear"></div>
+            <div class="view_comment_open">
+                <div class="read_more_box">
+                    <div class="author_title">
+                        <div {% if not user %}class="ng-cloak"{% endif %} ng-show="$root.user.loggedin && $root.getUsername(memory.user)">
+                            <span class="user-msg" user="memory.user" text="'{{ 'Send a message to' | trans }}'"></span>
+                            <p><a ng-bind="$root.getUsername(memory.user, '{{'Anonymous user' | trans }}')">
+									{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+								</a> {#<i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i>#}</p>
+                        </div>
+
+                        <div {% if user %}class="ng-cloak"{% endif %} ng-show="!$root.user.loggedin || !$root.getUsername(memory.user)" >
+                            <p>
+                                <em ng-bind="$root.getUsername(memory.user, '{{'Anonymous user' | trans }}')">
+									{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+                                </em>
+                                {#<i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i>#}
+							</p>
+						</div>
+					</div>
+                    <div class="save-edit-content">
+                        <textarea ng-model="memory.text" name="text" required="true" rows="5" class="edit-content-text-field"></textarea>
+                        <a ng-click="saveContent(memory)" class="edit-content-submit" ng-bind="$root.translate('Save changes')">{{'Save changes' | trans}}</a>
+                    </div>
+					<p ng-bind="memory.text" shorten="10" class="edit-content-display">{{memory.text}}</p>
+					<p class="edit-content-display">
+						<span><a  ui-sref="root.page.fancybox.memory({id : memory.id})"  ng-bind="$root.translate('More...')">{{'More...' |trans}}</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>

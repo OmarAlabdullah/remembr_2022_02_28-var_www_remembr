@@ -1,0 +1,118 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Change page details | Remembr.' | trans)%}
+{% block settings %}
+<div>
+	<div class="update_info light_container">
+
+		<form name="info" novalidate ng-submit="save()">
+			<div ng-class="{loader : editpage.firstname === undefined }">
+				<div class="update_info_lft step1">
+					<ul>
+
+						<li class="genderinfo" ng-class="{invalid : info.gender.$invalid && info.gender.$dirty}">
+							<div class="label_box1 no_border">
+								<label><input name="gender" value="male" ng-model="editpage.gender" type="radio" required><i></i>{{ 'Male' | trans }}</label>
+							</div>
+							<div class="label_box1 no_border">
+								<label><input name="gender" value="female" ng-model="editpage.gender" type="radio" required><i></i>{{ 'Female' | trans }}</label>
+							</div>
+						</li>
+
+						<li ng-class="{invalid : info.firstname.$invalid && info.firstname.$dirty}">
+							<label>{{'First name' | trans }}</label>
+							<span class="light_txtbox_bg">
+								<input ng-model="editpage.firstname" name="firstname" type="text" class="light_txtbox" required ng-blur="info.firstname.$dirty=true" />
+							</span>
+						</li>
+
+						<li ng-class="{invalid : info.lastname.$invalid && info.lastname.$dirty}">
+							<label>{{'Last name' | trans }}</label>
+							<span class="light_txtbox_bg">
+								<input ng-model="editpage.lastname" name="lastname" type="text" class="light_txtbox" required ng-blur="info.lastname.$dirty=true" />
+							</span>
+						</li>
+
+						<li ng-class="{invalid : info.dateofbirth.$invalid && info.dateofbirth.$dirty}">
+							<label>{{'Date of birth' | trans }}</label>
+							<span class="light_txtbox_bg">
+								<input ng-model="editpage.dateofbirth" name="dateofbirth" type="text" class="light_txtbox" datepicker="{[{user.dateformat}]}" placeholder="{[{user.dateformat | dateplaceholder}]}" required ng-blur="info.dateofbirth.$dirty=true" />
+							</span>
+						</li>
+
+						<li ng-class="{invalid : info.dateofdeath.$invalid && info.dateofdeath.$dirty}">
+							<label>{{'Date of death (if applicable)' | trans }}</label>
+							<span class="light_txtbox_bg">
+								<input ng-model="editpage.dateofdeath" name="dateofdeath" type="text" class="light_txtbox" datepicker="{[{user.dateformat}]}" placeholder="{[{user.dateformat | dateplaceholder}]}" ng-blur="info.dateofdeath.$dirty=true" />
+							</span>
+						</li>
+
+
+						<li>
+							<label>{{'Web address (not adjustable)' | trans }}</label>
+							<span class="light_txtbox_bg">
+								<input value="{[{ 'www.remembr.com/' + editpage.url}]}" type="text" class="light_txtbox" readonly>
+							</span>
+						</li>
+
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+				<div class="update_info_rht step1">
+                    <div class="drag_drop_box" ng-file-drop="onFileSelect($files)">
+                        <div class="drag_drop_rht" >
+                            <label class="btn">
+                                <input type="file" ng-model="file" ng-file-select="onFileSelect($files)"/>
+                                <div class="allover" ng-show="!dataUrl && !(editpage.photo && editpage.photo !== '/images/user-icon-large.png')">
+                                    <p class="draganddrop">{{'To attach an image drag & drop it here or' | trans}}</p>
+                                    <p class="upload-link">{{'select a file from your computer' | trans}}</p>
+                                </div>
+                                <div class="upload-link another" ng-show="dataUrl || (editpage.photo && editpage.photo !== '/images/user-icon-large.png')" ng-click="disableCropper()">{{'I would like to select another file' | trans}}</div>
+                            </label>
+                            <div class="crop-container" ng-show="dataUrl || (editpage.photo && editpage.photo !== '/images/user-icon-large.png')">
+                                <img class="actual-image" src="/images/light_img.jpg" ng-src="{[{ dataUrl || ('/minify?files=' + editpage.photo) }]}" alt="preview" ng-img-load="enableCropper()"/>
+                            </div>
+                        </div>
+
+					<div class="update_brief" ng-class="{invalid : info.introtext.$invalid && info.introtext.$dirty}">
+						<p>{{ 'Short description of the person' | trans }}</p>
+						<span class="light_txtarea_bg">
+							<textarea ng-model="editpage.introtext" name="introtext" cols="2" rows="2" class="light_txtarea" required ng-blur="info.introtext.$dirty=true" ></textarea>
+						</span>
+					</div>
+
+					<ul class="place">
+					<li ng-class="{invalid : info.residence.$invalid && info.residence.$dirty}">
+						<label>{{'City' | trans }}</label>
+						<span class="light_txtbox_bg small">
+							<input ng-model="editpage.residence" name="residence" type="text" class="light_txtbox" placeholder="{{'City' | trans }}" required ng-blur="info.residence.$dirty=true" />
+						</span>
+					</li>
+
+					<li ng-class="{invalid : info.country.$invalid && info.country.$dirty}" class="country">
+						<label>{{'Country' | trans }}</label>
+						<span class="light_txtbox_bg ltb_select">
+							<select ng-model="editpage.country" name="country" class="light_txtbox" ng-options="country for country in countries" required>
+									<option value="" selected>{{ 'Country'| trans }}</option>
+							</select>
+						</span>
+					</li>
+				</ul>
+
+				</div>
+				<div class="clear"></div>
+			</div>
+            <div style="clear: both;"></div>
+
+			<input name="" type="submit" value="{{'Save changes' |trans}}" class="save_changes" ng-class="{disabled:info.$invalid || !info.$dirty}" >
+
+			<input name="" type="button" value="{{'Cancel' |trans}}" class="cancel_but" ng-click="close()">
+
+			<div class="clear"></div>
+
+		</form>
+
+	</div>
+
+</div>
+{% endblock settings %}

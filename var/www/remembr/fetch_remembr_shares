@@ -1,0 +1,25 @@
+import re, json, requests
+
+# get sitemap
+sitemap = requests.get('https://remembr.com/sitemap.xml')
+
+# filter all memorial pages from the sitemap
+pages = list(set(
+    re.findall(
+        r'\<xhtml\:link rel\=\"alternate\" hreflang\=\"nl\"\n\t\t\thref\=\"https\:\/\/remembr.com\/nl\/([a-zA-Z\.0-9]+)\" \/\>',
+        sitemap.content.decode('utf-8')
+    )
+))
+
+# for one memorial page, fetch the number of shares (and likes)
+get_facebook_info = lambda id: json.loads(
+    requests.get(
+        'https://graph.facebook.com/https://www.remembr.com/%s' % id
+    ).content.decode('utf-8')
+)
+
+# do this for alle memorial pages
+shares = dict()
+for page in pages:
+    info = get_facebook_info(page)
+    shares[info['id']] = info['shares']

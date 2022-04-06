@@ -1,0 +1,28 @@
+{% if format == 'tpl' %}{% set firstname = '{[{page.firstname}]}' %}{% set lastname = '{[{page.lastname}]}' %}{% endif %}<li ng-show="currenttab=='condolence'" class="condolences">
+	<a ng-class="{tab_act2 : currentform == 'condolence'}" ng-click="openForm('condolence')"><span class="pc-only">{{ 'Condolences' | trans }}</span></a>
+	<span class="mobile-only">{{'Condolences' |trans}}</span>
+
+	<span class="filed_top_arrow" ng-class="{active_blue : ui.active=='post'}"></span>
+
+	<div class="tabDetails2">
+
+		<div class="condolance" ng-class="{active_blue : ui.active=='post'}" ng-click="$event.stopPropagation()">
+			<form name="content" novalidate ng-submit="submit()">
+				<span class="anonuser" ng-hide="user.loggedin" >
+					<label>
+						<input type="text" ng-model="newContent.username" ng-minlength="3" ng-required="!user.loggedin" placeholder="{{'Your name'|trans}}" ng-focus="ui.active='post'"/>
+					</label>
+					<label>
+						<input type="email" name="email" ng-model="newContent.anonymousEmail" required ng-required="!user.loggedin" placeholder="{{'Email address (will not be displayed)'|trans}}" ng-focus="ui.active='post'"/>
+					</label>
+				</span>
+				<textarea name="text" ng-model="newContent.text" cols="2" rows="2"  ng-focus="ui.active='post'"
+						  placeholder="{{ 'Express your condolences here...' | trans }}"></textarea>
+
+					<input name="" type="submit" value="{{'Post' |trans}}" class="post_but" ng-if="ui.active=='post'">
+					<div class="clear"></div>
+			</form>
+        	<span class="ng-hide floatright" ng-show="saving">{{'One moment please, your post is being saved...' |trans}}</span>
+		</div>
+	</div>
+</li>

@@ -1,0 +1,44 @@
+<img src="/images/merk-logo-large.png" width="136" height="65" alt="">
+<div class="clear"></div>
+<p><br />{{cms('add_provider').text() | raw}}</p>
+<div ng-controller="LoginCtrl">
+    <div id="idps" style="background-color:#fff;margin-top:20px;">
+        <table width="100%" border="0">
+            <tr>
+                {% if "facebook" in active_providers %}
+                    {% if "facebook" in connected %}
+                    <td align="center"><img src="/images/icons/facebook-grey.png" title="facebook" /></td>
+                    {% else %}
+                        <td align="center"><img class="idpico" ng-click="providerlogin('facebook');$event.stopPropagation()" idp="facebook" src="/images/icons/facebook.png" title="facebook" /></td>
+                    {% endif %}
+                {% endif %}
+
+                {% if "linkedin" in active_providers %}
+                    {% if "linkedin" in connected %}
+                            <td align="center"><img src="/images/icons/linkedin-grey.png" title="linkedin" /></td>
+                    {% else %}
+                                <td align="center"><img class="idpico" ng-click="providerlogin('linkedin');$event.stopPropagation()" idp="linkedin" src="/images/icons/linkedin.png" title="linkedin" /></td>
+                    {% endif %}
+                {% endif %}
+
+                {% if "twitter" in active_providers %}
+                    {% if "twitter" in connected %}
+                                    <td align="center"><img src="/images/icons/twitter-grey.png" title="twitter" /></td>
+                    {% else %}
+                                        <td align="center"><img class="idpico" ng-click="providerlogin('twitter');$event.stopPropagation()" idp="twitter" src="/images/icons/twitter.png" title="twitter" /></td>
+                    {% endif %}
+                {% endif %}
+
+                {% if "google" in active_providers %}
+                    {% if "google" in connected %}
+                                            <td align="center"><img src="/images/icons/google-grey.png" title="google" /></td>
+                    {% else %}
+                                                <td align="center"><img class="idpico" ng-click="providerlogin('google');$event.stopPropagation()" idp="google" src="/images/icons/google.png" title="google" /></td>
+                    {% endif %}
+                {% endif %}
+
+             </tr>
+        </table>
+     </div>
+ </div>
+

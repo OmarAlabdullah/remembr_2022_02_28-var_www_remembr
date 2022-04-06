@@ -1,0 +1,37 @@
+{#{% extends 'layout/layout' %}#}
+{% block content %}
+
+<div class="toolbar">
+	<ul class="nav nav-pills">
+		<li><a href="{{url(null, {action: 'create'}, true)}}">New banner</a></li>
+	</ul>
+</div>
+
+<table>
+	<tr>
+		<th>Format</th>
+		<th>Type</th>
+		<th>Content</th>
+		<th>Views</th>
+		<th>Max. views</th>
+		<th>Clicks</th>
+		<th>Max. clicks</th>
+		<th>Options</th>
+	</tr>
+{%for b in banners%}
+	<tr>
+		<td>{{b.getFormat().getTitle()}}</td>
+		<td>{%if b.getType()==constant('Banner\\Entity\\Banner::typeHtml')%}Html{%else%}Image{%endif%}</td>
+		<td>{{b.getContent()}}</td>
+		<td>{{b.getViews()}}</td>
+		<td>{{b.getMaxViews()}}</td>
+		<td>{{b.getClicks()}}</td>
+		<td>{{b.getMaxClicks()}}</td>
+		<td><a href="{{url(null, {action: 'edit', id: b.getId()}, true)}}">Edit</a></td>
+	</tr>
+{%else%}
+	<tr><td colspan="8">There are no banners.</td></tr>
+{%endfor%}
+</table>
+
+{% endblock %}

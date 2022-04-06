@@ -1,0 +1,115 @@
+{% do headTitle('Online memorials and obituaries | Remembr.' |trans) %}
+<div ng-controller="LoginCtrl">
+
+    <div class="rm-row"><div class="rm-row-inner">
+        <div class="rm-col2">
+            {{ cms('landing_first').text() | raw }}
+        </div>
+        <div class="rm-pc-only rm-col2">
+            <a class="rm-play-video" ui-rel-sref="root.home.fancybox.showvideo">
+                <img src="/images/play-icon-home.png"/>
+                <p>{{"Watch the video" | trans}}</p>
+            </a>
+        </div>
+    </div></div>
+    <div class="rm-row rm-how-it-works"><div class="rm-row-inner">
+        <div class="rm-col1">
+            {{ cms('landing_how_it_works').text() | raw }}
+        </div>
+        </div><div class="rm-row-inner">
+        <div class="rm-col3">
+            <div class="rm-step"><div>1</div></div>
+            <p>{{ cms('landing_step1').text() | raw }}</p>
+        </div>
+        <div class="rm-col3">
+            <div class="rm-step"><div>2</div></div>
+            <p>{{ cms('landing_step2').text() | raw }}</p>
+        </div>
+        <div class="rm-col3">
+            <div class="rm-step-last"><div>3</div></div>
+            <p>{{ cms('landing_step3').text() | raw }}</p>
+        </div>
+        <div class="rm-mobile-only rm-col2">
+            <p>{{ cms('landing_watch_the_video').text() | raw }}</p>
+            <a class="rm-play-video" ui-rel-sref="root.home.fancybox.showvideo">
+                <img src="/images/play-icon-home.png"/>
+                <p>{{"Watch the video" | trans}}</p>
+            </a>
+        </div>
+    </div></div>
+    <div class="rm-row"><div class="rm-row-inner">
+        <div class="rm-col1">
+            <h1>{{cms('customer-responses-title').text() | raw}}</h1>
+        </div>
+    </div><div class="rm-row-inner rm-customer-responses rm-pc-only" ng-controller="sliderController" ng-mouseout="play()" ng-mouseover="stop()" autoplay="true">
+        <div class="rm-control" ng-click="prev()"><p>&lsaquo;</p></div>
+        <div class="rm-customer-response">
+            {{cms('customer-responses').text() | raw}}
+        </div>
+        <div class="rm-control" ng-click="next()"><p>&rsaquo;</p></div>
+    </div><div class="rm-row-inner rm-col1 rm-customer-responses rm-mobile-only">
+        {{cms('customer-responses').text() | raw}}
+    </div></div>
+    
+    <div class="rm-row"><div class="rm-row-inner">
+        <div class="rm-col1">
+            <p>{{ cms('landing_what_remembr_offers').text() | raw }}</p>
+        </div>
+    </div><div class="rm-row-inner">
+        <div class="rm-col3 rm-offering">
+            <div class="rm-circle rm-offering-dark-green"><p>www.</p></div>
+            <p>{{ cms('landing_what_remembr_offers_www').text() | raw }}</p>
+        </div>
+        <div class="rm-col3 rm-offering rm-offering-top">
+            <p>{{ cms('landing_what_remembr_offers_free').text() | raw }}</p>
+            <div class="rm-circle rm-offering-light-green">
+                <p><img src="/images/icons/piggy-bank-and-coin.png"/></p>
+            </div>
+        </div>
+        <div class="rm-col3 rm-offering">
+                <div class="rm-circle rm-offering-blue"><p>
+                    <img src="/images/landing-person-icon.png"/><img src="/images/landing-person-icon.png"/><img src="/images/landing-person-icon.png"/>
+                </p></div>
+            <p>{{ cms('landing_what_remembr_offers_share').text() | raw }}</p>
+        </div>
+    </div><div class="rm-row-inner">
+        <div class="rm-col1">
+            <p>{{ cms('landing_also_want_to_share').text() | raw }}</p>
+        </div>
+    </div></div>
+    <div class="rm-row"><div class="rm-row-inner">
+        <div class="rm-col1 rm-profiles">
+            {{ cms('landing_memorialpages').text() | raw }}
+        </div>
+    </div><div class="rm-row-inner">
+        <div style="clear: both"></div>
+        <div ng-repeat="(i, profile) in $root.landingSearchResults.pages || []" class="rm-col5 rm-profile"><div class="rm-col-inner">
+            <a ui-rel-sref="root.page({page:'{[{profile.url}]}'})">
+                {#<img ng-src="{[{imgcrop(profile.photo.url || '/images/top_info_img.jpg', page.roi, 320, 320)}]}"/>#}
+                <img ng-src="{[{imgcrop(profile.photo.url, profile.photo.roi, 320, 320)}]}"
+                     onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[320]h[320]f[true]'"
+                     alt="">
+                {[{profile.firstname}]} {[{profile.lastname}]}
+            </a>
+        </div></div>
+    </div><div class="rm-row-inner">
+        <div class="rm-col1">
+            {{ cms('landing_search').text() | raw }}
+            <div class="search_box search_strech" style="margin-bottom: 40px;">
+                {% include 'layout/search' %}
+            </div>
+        </div>
+    </div></div>
+    <div class="rm-row"><div class="rm-row-inner">
+        <div class="rm-col3 rm-news"><div class="rm-col-inner">
+            {{cms('news_item_1').text() | raw}}
+        </div></div>
+        <div class="rm-col3 rm-news"><div class="rm-col-inner">
+            {{cms('news_item_2').text() | raw}}
+        </div></div>
+        <div class="rm-col3 rm-news"><div class="rm-col-inner">
+            {{cms('news_item_3').text() | raw}}
+        </div></div>
+    </div></div>
+    
+</div>

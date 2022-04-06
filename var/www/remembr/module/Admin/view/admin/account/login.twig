@@ -1,0 +1,48 @@
+
+<script>
+	$(function() {
+		
+		
+		$("#login").on('submit', function(event) {
+			
+			var payload =
+				'{"password":"' + $("input[name=password]").val() + '",' +
+				'"email":"' + $("input[name=email]").val() + '",' +
+				'"rememberme": true}';
+			
+			$.ajax({
+				method: 'post',
+				url:    '/account/login',
+				data: payload,
+				processData: false,
+				contentType: 'application/json;charset=UTF-8',
+				success: function() {document.location = '';}
+			});
+			event.preventDefault();
+		});
+	});
+</script>
+
+<h1>Login</h1>
+<div class="box login-form" style="margin-top: 20px;">
+    <form id="login" method="POST" name="loginForm" ng-submit="submitLoginForm(loginForm.$valid)" novalidate>
+
+        <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }">
+            <label>
+                <span>{{ 'E-mail address' | trans }}</span>
+                <input type="email" ng-model="user.email" required="true" autocomplete="off" size="25" placeholder="{{ 'Enter your e-mail address' | trans }}" name="email" />
+            </label>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+            <label>
+                <span>{{ 'Password' | trans }}</span>
+                <input type="password" name="password" ng-model="user.password" required="true" placeholder="{{ 'Enter your password' | trans }}">
+            </label>
+        </div>
+
+        <input type="submit" value="{{ 'Log in' | trans }}" id="submitbutton" name="submit">
+    </form>
+
+    <div class="divider"></div>
+</div>

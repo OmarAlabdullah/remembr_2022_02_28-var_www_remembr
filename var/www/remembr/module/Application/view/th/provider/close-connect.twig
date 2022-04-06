@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+           
+            if (window.opener)
+            {
+                var zua = window.opener.parent.ZfUserApi;
+                zua.close();
+
+                {% if returnurl %}
+                zua.finishlogin('{{returnurl}}');
+                {% else %}
+                zua.faillogin('/account/login');
+                {% endif %}
+            }
+            window.open('', '_self', ''); // hack to prevent IE for asking if it is allright to close the window
+            window.self.close();
+            </script>
+        </head>
+        <body>
+        </body>
+    </html>

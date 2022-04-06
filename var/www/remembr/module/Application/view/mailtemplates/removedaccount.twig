@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <td valign="top">
+			<p>{{ 'Hi ' | trans }} {{ user.getProfile().getName() }}</p>
+
+				<br/>{%set deleteurl = url('account', {controller: 'account', action: 'delete-confirm'}, {force_canonical: true}) ~ '?key=' ~ user.getRestoreKey() %}
+				<br/>{{ 'Click the link below to delete your Remembr. account permanently.' | trans }}
+				<br/>
+				<br/><a href="{{deleteurl}}">{{ 'Delete account' | trans }}</a>
+				<br/>
+				<br />{{ 'Best regards,' | trans }}
+				<br />
+				Remembr.
+			</p>
+		</td>
+	</tr>
+</table>

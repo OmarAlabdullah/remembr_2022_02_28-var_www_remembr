@@ -1,0 +1,38 @@
+{% extends format == 'tpl' ? 'application/create-page/tpl' : 'application/create-page/index' %}
+{% do headTitle('Create a memorial page step 4 | Remembr.' | trans)%}
+{% block step %}
+	<div>
+		<div class="publish_page light_container">
+			<form name="publish" novalidate ng-submit="nextStep()">
+				<h5>{{'Publish your page'|trans}}</h5>
+
+				<div class="help_cont_lft">
+					{{cms('help_create_publish').text() | raw}}
+				</div>
+
+
+				<div class="update_info_rht wide publishstep">
+
+						<p ng-show="{[{allowpublish}]}">
+							<label><input ng-model="newpage.publishnow" type="checkbox" class="styled" /><i></i> {{ 'Publish now' | trans}}</label>
+						</p>
+						<p>
+							<label><input ng-disabled="!allowpublish" ng-model="newpage.publishnow" type="checkbox" class="styled" inverted /><i></i> {{ 'Publish later' | trans}}</label>
+						</p>
+
+						<p>
+							{{ "You need to publish the page before you send invitations." | trans }}
+						</p>
+				</div>
+
+				<div class="clear"></div>
+
+					<button ui-sref="^.url" class="save_changes floatleft">{{'Previous step' | trans }}</button>
+					<button ng-show="newpage.publishnow" ng-click="nextStep()" class="save_changes">{{'Next step' | trans }}</button>
+					<button ng-hide="newpage.publishnow" ng-click="nextStep()" class="save_changes ng-hide">{{'Create page' | trans }}</button>
+
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+{% endblock step %}

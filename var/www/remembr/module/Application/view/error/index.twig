@@ -1,0 +1,86 @@
+	<div class="container">
+
+		<div class="row">
+			<div class="twelvecol">
+				<div class="box error-msg">
+                                        <p><em>{% trans 'Sorry, an error occurred.' %}</em></p>
+                                        <p>{% trans 'Are you looking for something specific? Use the search box at the top of this page to find a memorial page or look at the menu in the footer to find your specific subject.'%}</p>
+
+					<p>&nbsp;</p>
+					<p align="center"><img style="width:128px;height:128px" src="/images/error-large.png"></p>
+					<p align="center">{{ message | trans}}</p>
+					<p>&nbsp;</p>
+
+				</div>
+
+			</div>
+		</div>
+
+		{% if display_exceptions %}
+
+			<div class="row">
+				<div class="twelvecol">
+
+					<div class="box">
+
+						{% if instanceof(exception,'Exception') %}
+							<hr/>
+							<h2>{% trans 'Additional information' %}:</h2>
+							<h3>{{ class(exception) }}</h3>
+							<dl>
+								<dt>{% trans 'File' %}:</dt>
+								<dd>
+									<pre class="prettyprint linenums">{{ exception.getFile() }}:{{ exception.getLine() }}</pre>
+								</dd>
+								<dt>{% trans 'Message' %}:</dt>
+								<dd>
+									<pre class="prettyprint linenums">{{ exception.getMessage() }}</pre>
+								</dd>
+								<dt>{% trans 'Stack trace' %}:</dt>
+								<dd>
+									<pre class="prettyprint linenums">{{ exception.getTraceAsString() }}</pre>
+								</dd>
+							</dl>
+							{% set e = exception.getPrevious() %}
+
+							{% if e %}
+								<hr/>
+								<h2>{% trans 'Previous exceptions' %}:</h2>
+								<ul class="unstyled">
+									{% for e in iterate(e, 'getPrevious') %}
+										<li>
+											<h3>{{ class(e) }}</h3>
+											<dl>
+												<dt>{% trans 'File' %}:</dt>
+												<dd>
+													<pre class="prettyprint linenums">{{ e.getFile() }}:{{e.getLine() }}</pre>
+												</dd>
+												<dt>{% trans 'Message' %}:</dt>
+												<dd>
+													<pre class="prettyprint linenums">{{ e.getMessage() }}</pre>
+												</dd>
+												<dt>{% trans 'Stack trace' %}:</dt>
+												<dd>
+													<pre class="prettyprint linenums">{{ e.getTraceAsString() }}</pre>
+												</dd>
+											</dl>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+
+						{% else %}
+
+							<h3>{% trans 'No Exceptions available' %}</h3>
+
+						{% endif %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		{% endif %}
+
+	</div>

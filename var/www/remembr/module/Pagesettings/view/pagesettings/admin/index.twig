@@ -1,0 +1,69 @@
+{% block content %}
+
+<div class="toolbar">
+    <ul class="nav nav-pills">
+        <li><a href="/admin/pagesettings/index/all">Toon alles</a></li>
+		<li><a href="/admin/pagesettings/index/nip">Toon normale personen</a></li>
+		<li><a href="/admin/pagesettings/index/vip">Toon bekende personen</a></li>
+		<li><a href="/admin/pagesettings/index/animal">Toon dieren</a></li>
+		<li><a href="/admin/pagesettings/index/rotators">Toon rotators</a></li>
+    </ul>
+</div>
+
+<form action="/admin/pagesettings/save-type" method="POST">
+	<table class="table tablesorter" id="adminTable">
+		<thead>
+		<tr>
+			<th>Foto</th>
+			<th>Voornaam</th>
+			<th>Achternaam</th>
+			<th>Created</th>
+			<th>Type</th>
+			<th>Rotating</th>
+		</tr>
+		</thead>
+		<tbody>
+			{% for p in pages %}
+			<tr class="{{p.status}}">
+                <td>{% if p.photo.url.location != null %}<img src="{{ p.photo.url.location }}" width="45" height="45" alt="{{ p.firstname }} {{ p.lastname }}">{% endif %}</td>
+				<td><a href="/{{ p.url }}" target="_blank">{{ p.firstname }}</a></td>
+				<td><a href="/{{ p.url }}" target="_blank">{{ p.lastname }}</a></td>
+				<td>{{ p.creationdate | date('Y-m-d H:i') }}</td>
+				<td>
+					 <input name="pagesettings[{{p.id}}][type]" {% if p.type == "nip" %}checked{%endif%} value="nip" type="radio"><label>normaal persoon</label><br />
+					 <input name="pagesettings[{{p.id}}][type]" {% if p.type == "vip" %}checked{%endif%} value="vip" type="radio"><label>bekend persoon</label><br />
+					 <input name="pagesettings[{{p.id}}][type]" {% if p.type == "animal" %}checked{%endif%} value="animal" type="radio"><label>dier</label><br />
+				</td>
+				<td>
+					 <input name="pagesettings[{{p.id}}][rotating]" {% if p.rotating %}checked{%endif%} value="1" type="radio"><label>rotate</label><br />
+					 <input name="pagesettings[{{p.id}}][rotating]" {% if not p.rotating %}checked{%endif%} value="0" type="radio"><label>do not rotate</label><br />
+				</td>
+			</tr>
+			{%else%}
+				<tr><td colspan="5">Alle pagina's zijn verwerkt.</td></tr>
+			{%endfor%}
+		</tbody>
+	</table>
+		<div style="float: right">
+		<input type="submit" value="{{ 'Send' | trans }}" class="submit save_changes">
+		</div>
+</form>
+<div class="clear"></div>
+
+<div id="pager" class="pager">
+                <form>
+                    <img src="/addons/pager/icons/first.png" class="first"/>
+                    <img src="/addons/pager/icons/prev.png" class="prev"/>
+                    <input type="text" class="pagedisplay"/>
+                    <img src="/addons/pager/icons/next.png" class="next"/>
+                    <img src="/addons/pager/icons/last.png" class="last"/>
+                    <select class="pagesize">
+                        <option selected="selected"  value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option  value="40">40</option>
+                    </select>
+                </form>
+            </div>
+
+{% endblock %}

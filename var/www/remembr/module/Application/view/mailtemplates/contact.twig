@@ -1,0 +1,11 @@
+<table>
+    <tr>
+        <td valign="top">
+            <p>
+                {{ text | escape | replace({'[[url]]' : '<a href="'~url~'">'~shorturl~'</a>'}) | raw | nl2br }}
+            </p>
+        </td>
+
+    </tr>
+</table>
+<hr />

@@ -1,0 +1,95 @@
+{% extends format != 'json' ? 'application/page/index' : 'layout/none' %}
+{% block gridcontent %}
+	{% for memory in memories %}
+		{% if memory.getType() == 'memory' %}
+			<li class="{{memory.getType()}} {{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}">
+				<div class="row_gray_box">
+					<div class="row_btm">
+						<span class="row_btm_arrow"></span>
+						<span class="date_time">{{memory.getCreationDate | date('d-m Y H:i') }}</span>
+						<em class="view_comment"><a href="#inline1" class="fancybox">{{'view' |trans}} / {{'comment' |trans}} (14)</a></em>
+						<div class="clear"></div>
+						<div class="view_comment_open">
+							<div class="read_more_box">
+								<p>
+									<span class="author_title"><a >{{random(['Random Pipo', 'Random Klaas', 'Random Piet', 'Random Rina'])}}</a> {{'wrote:' |trans}}</span>
+								</p>
+								<p ng-more-less shorten="10">
+									{{memory.getText()}}
+								</p>
+								<p>
+									<span><a >{{'More...' |trans}}</a></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+
+
+		{% elseif memory.getType() == 'photo' %}
+			<li class="{{memory.getType()}} {{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}">
+				<div class="row_gray_box">
+					<span class="hover_img"><img src="{{memory.getPhotoId()}}" width="320" height="320" alt=""></span>
+					<div class="row_btm">
+						<span class="row_btm_arrow"></span>
+						<span class="date_time">{{memory.getCreationDate | date('d-m Y H:i') }}</span>
+						<em class="view_comment"><a href="#inline1" class="fancybox"><span ng-bind="$root.translate('View / Comment')"></span> ({[{memory.numbercomments}]})</a></em>
+						<div class="clear"></div>
+						{% if memory.getText() %}
+							<div class="view_comment_open" >
+								<span class="row_btm_arrow2"></span>
+								<p>
+									<span><a >{{random(['Random Pipo', 'Random Klaas', 'Random Piet', 'Random Rina'])}}</a> {{'wrote' |trans}}:</span>
+								</p>
+								<p shorten="2">
+									{{memory.getText()}}
+								</p>
+								<p>
+									<span><a  class="more_link">{{'More...' |trans}}</a></span>
+								</p>
+							</div>
+						{% endif %}
+					</div>
+					<div class="star">
+						<a  class="star_icon_hov hover_img"></a>
+						<span class="pin_top"><a  class="hover_img">{{'Pin to top, make hero' |trans}} <span class="white_arrow"></span></a></span>
+					</div>
+				</div>
+			</li>
+
+		{% elseif memory.getType() == 'video' %}
+			<li class="{{memory.getType()}} {{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}">
+				<div class="row_gray_box">
+					<span class="hover_img">
+{#						<img width="320" height="320" alt="" src="/images/image_place_holder2.jpg?{{memory.getVideoId()}}">#}
+						<img width="320" height="320" alt="" src="//img.youtube.com/vi/{{memory.getVideoId()}}/0.jpg">
+{#url("//img.youtube.com/vi/L9szn1QQfas/0.jpg") no-repeat scroll center center / cover  rgba(0, 0, 0, 0)#}
+{#						<iframe type="text/html" src="//www.youtube.com/embed/{{memory.getVideoId()}}?enablejsapi=1&amp;fs=1&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autohide=0&amp;iv_load_policy=3&amp;autoplay=0&amp;wmode=transparent" frameborder="0" allowfullscreen="" wmode="Opaque"></iframe></p>#}
+					</span>
+{#					<a class="play_but" ></a>#}
+					<div class="row_btm">
+						<span class="row_btm_arrow"></span>
+						<span class="date_time">{{memory.getCreationDate | date('d-m Y H:i') }}</span>
+						<em class="view_comment"><a class="fancybox" href="#inline1">{{'view' |trans}} / {{'comment' |trans}} (14)</a></em>
+						<div class="clear"></div>
+						{% if memory.getText() %}
+							<div class="view_comment_open">
+								<span class="row_btm_arrow2"></span>
+								<p>
+									<span><a >{{random(['Random Pipo', 'Random Klaas', 'Random Piet', 'Random Rina'])}}</a> {{'wrote' |trans}}:</span>
+								</p>
+								<p shorten="2">
+									{{memory.getText()}}
+								</p>
+								<p>
+									<span><a  class="more_link">{{'More...' |trans}}</a></span>
+								</p>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</li>
+		{% endif %}
+	{% endfor %}
+{% endblock gridcontent %}

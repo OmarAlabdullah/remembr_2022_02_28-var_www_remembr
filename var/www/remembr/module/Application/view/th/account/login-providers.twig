@@ -1,0 +1,15 @@
+<div id="social-login">
+        <div id="idps">
+			<span><strong ng-bind="$root.translate('Or sign in with:')"></strong></span>
+            <ul>
+            {% for providername in active_providers %}
+                {% if providername != 'default' %}
+                    <li class="no_border">
+                        <img class="idpico" ng-click="providerlogin('{{ providername }}');$event.stopPropagation()" alt="login with {{ providername }}" src="/images/icons/{{ providername }}.png" style="width:auto; height:32px;" title="{{ 'Log in with' | trans }} {{ providername }}" />
+                    </li>
+                {% endif %}
+            {% endfor %}
+                </ul>
+            </div>
+        </div>
+<div class="clear"></div>

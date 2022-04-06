@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /*memory/
+Disallow: /*/create-page/*
+Sitemap: https://www.remembr.com/sitemap.xml
+

@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <td valign="top">
+            <p>{{ 'Hi ' | trans }} {{ username }},</p>
+            <p>
+                {{ 'Click the link below to delete the memorial page of [[profileurl]] permanently.'
+				| trans | escape | replace({'[[profileurl]]':'<a href="'~pageurl~'">'~(profile |escape)~'</a>'}) | raw | nl2br }}
+            </p>
+			<p>
+				<a href="{{removeurl}}">{{ 'Delete memorial page' | trans }}</a>
+			</p>
+        </td>
+        <td valign="top" style="width:100px;padding:10px;">
+            {% if pagephoto %}
+            <span><img src="{{url('remembr', [],{'force_canonical':true},0)}}{{ pagephoto }}" width="120" height="120"></span>
+            {% endif %}
+        </td>
+    </tr>
+</table>
+<br/>
+<br />{{ 'Kind regards,' | trans }}
+<br />
+<br />
+Remembr.

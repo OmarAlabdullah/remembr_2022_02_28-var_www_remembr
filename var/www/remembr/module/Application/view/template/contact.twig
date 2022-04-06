@@ -1,0 +1,36 @@
+{% do headTitle('Contact | Remembr.' |trans) %}
+<div ng-controller="ContactCtrl">
+    <div class="formheader">
+        <h1>{{ title }}</h1>
+    </div>
+	{{ text | raw }}
+    <div class="contact update_info_lft">
+        <form method="post" name="contactForm" id="contactForm" ng-submit="submitContactForm(contactForm.$valid)" novalidate>
+            <ul>
+                <li ng-class="{invalid : contactForm.name.$invalid && contactForm.name.$dirty}">
+                    <label>{{'Name' | trans }}</label>
+                    <span class="light_txtbox_bg">
+                        <input ng-model="contact.name" name="name" type="text" class="light_txtbox" required ng-blur="contactForm.name.$dirty=true" placeholder="{{ 'Enter your name' | trans }}" />
+                    </span>
+                </li>
+
+                <li ng-class="{invalid : contactForm.email.$invalid && contactForm.email.$dirty}">
+                    <label>{{'E-mail' | trans }}</label>
+                    <span class="light_txtbox_bg">
+                        <input ng-model="contact.email" name="email" type="email" class="light_txtbox"  required ng-blur="contactForm.email.$dirty=true" placeholder="{{ 'Enter your e-mail address' | trans }}" />
+                    </span>
+                    <p class="signup-error" ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">{{ 'Enter a valid e-mail address' | trans }}</p>
+                </li>
+
+            </ul>
+            <div class="update_brief" ng-class="{invalid : contactForm.comment.$invalid && contactForm.comment.$dirty}">
+                <p>{{ 'Comment' | trans }}</p>
+                <span class="light_txtarea_bg">
+                    <textarea ng-model="contact.comment" name="comment" cols="2" rows="2" class="light_txtarea" required ng-blur="contactForm.comment.$dirty=true"></textarea>
+                </span>
+            </div>
+            <input type="submit" value="{{ 'Send' | trans }}" class="submit save_changes" ng-class="{disabled:contactForm.$invalid || !contactForm.$dirty}">
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>

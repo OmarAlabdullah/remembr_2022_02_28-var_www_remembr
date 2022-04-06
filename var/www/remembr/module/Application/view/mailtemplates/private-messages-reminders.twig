@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <td valign="top">
+            <h1>{{ firstname | escape }} {{ lastname | escape }}</h1>
+            <p>Heeft {{ number }} nieuwe berichten</p>
+            <p>
+                {% for message in messages %}
+                    <li><a href="">{{ message.getTitle() }}</a></li>
+                {% endfor %}
+                {#{{ text | escape | replace({'[[url]]' : '<a href="'~url~'">'~shorturl~'</a>'}) | raw | nl2br }}#}
+            </p>
+        </td>
+
+    </tr>
+</table>
+<hr />

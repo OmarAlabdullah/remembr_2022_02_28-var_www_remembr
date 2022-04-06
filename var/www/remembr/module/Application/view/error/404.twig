@@ -1,0 +1,84 @@
+<h1>{% trans 'Sorry, this page does not exist or has been moved or deleted.' %}</h1>
+<h2>{{ message }}</h2>
+<p>{% trans 'Are you looking for something specific? Use the search box at the top of this page to find a memorial page or look at the menu in the footer to find your specific subject.' %}</p>
+
+{% if reason == 'error-controller-cannot-dispatch' %}
+	<p>{% trans 'The requested controller was unable to dispatch the request.' %}</p>
+{% elseif reason == 'error-controller-not-found' %}
+	<p>{% trans 'The requested controller could not be mapped to an existing controller class.' %}</p>
+{% elseif reason == 'error-controller-invalid' %}
+	<p>{% trans 'The requested controller was not dispatchable.' %}</p>
+{% elseif reason == 'error-router-no-match' %}
+	<p>{% trans 'The requested URL could not be matched by routing.' %}</p>
+{% else %}
+	{% trans 'We cannot determine at this time why a 404 was generated.'%}
+{% endif %}
+
+{% if controller %}
+	<dl>
+		<dt>{% trans 'Controller' %}:</dt>
+		<dd>{{ controller }}
+			{% if controller_class != controller %}
+				( {{ 'resolves to %s' | trans | format(controller_class) }} )
+			{% endif %}
+		</dd>
+	</dl>
+{% endif %}
+
+
+{% if display_exceptions %}
+
+	{% if instanceof(exception, 'Exception') %}
+		<hr/>
+		<h2>{% trans 'Additional information' %}:</h2>
+		<h3>{{ class(exception) }}</h3>
+		<dl>
+			<dt>{% trans 'File' %}:</dt>
+			<dd>
+				<pre class="prettyprint linenums">{{ exception.getFile() }}:{{ exception.getLine() }}</pre>
+			</dd>
+			<dt>{% trans 'Message' %}:</dt>
+			<dd>
+				<pre class="prettyprint linenums">{{ exception.getMessage() }}</pre>
+			</dd>
+			<dt>{% trans 'Stack trace' %}:</dt>
+			<dd>
+				<pre class="prettyprint linenums">{{ exception.getTraceAsString() }}</pre>
+			</dd>
+		</dl>
+		{% set e = exception.getPrevious() %}
+
+		{% if e %}
+			<hr/>
+			<h2>{% trans 'Previous exceptions' %}:</h2>
+			<ul class="unstyled">
+				{% for e in iterate(e, 'getPrevious') %}
+					<li>
+						<h3>{{ class(e) }}</h3>
+						<dl>
+							<dt>{% trans 'File' %}:</dt>
+							<dd>
+								<pre class="prettyprint linenums">{{ e.getFile() }}:{{ e.getLine() }}</pre>
+							</dd>
+							<dt>{% trans 'Message' %}:</dt>
+							<dd>
+								<pre class="prettyprint linenums">{{ e.getMessage() }}</pre>
+							</dd>
+							<dt>{% trans 'Stack trace' %}:</dt>
+							<dd>
+								<pre class="prettyprint linenums">{{ e.getTraceAsString() }}</pre>
+							</dd>
+						</dl>
+					</li>
+
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+	{% else %}
+
+		<h3>{% trans 'No Exceptions available' %}</h3>
+
+	{% endif %}
+
+{% endif %}

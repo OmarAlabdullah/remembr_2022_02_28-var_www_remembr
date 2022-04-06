@@ -1,0 +1,212 @@
+{{ doctype('HTML5') }}
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="/images/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="/images/favicon/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="/images/favicon/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16.png">
+        <link rel="apple-touch-icon" href="/images/favicon/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/images/favicon/favicon-144.png">
+        <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+        <meta name="google-site-verification" content="Pldm8sGX5odDJjrZG5k--kdsHmq1fKA99KdJsrq-LSc">
+        
+        {% block meta %}
+            {% do headMeta()
+                .setCharset('UTF-8')
+                .appendHttpEquiv('X-UA-Compatible','IE=edge')
+                .appendHttpEquiv('Content-Type','text/html; charset=utf-8')
+                .appendName('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0')
+                .appendName('title', 'Remembr. | The memorial website to share memories of loved ones' | trans)
+                .appendName('keywords', 'Remember, remembering, remembrance, memory, memories, memorial, memorial site, legacy, obituary, condolances, in memoriam, monument, deceased, precious, lost ones, funeral, obituaries, tribute, in memory, online memorial, grief, death, memorial website, loved ones, funaral services, mourn, words of sympathy, words of comfort, words of condolance, bereavement, lamentation, cremation, burial' |trans)
+                .appendProperty('og:site_name', 'Remembr')
+                .appendProperty('og:locale'            , (locale|default('en_US')) )
+            %}
+            {# .appendProperty('og:locale:alternate'  , 'nl_NL')
+                     .appendProperty('og:locale:alternate'  , 'en_US')
+#}
+            
+            {% if not metaDescriptionAlreadySet %}
+                {% do headMeta().appendName('description', 'Remembr. | Create a free memorial page to share memories of lost ones by sharing stories, images, movies and music. Invite family and friends to co-create. Login with Facebook.' | trans) %}
+            {% endif %}
+            {% if not isMemorialPage %}
+                {% do headMeta()
+            .appendProperty('og:image'      , baseurl ~ 'images/logo_facebook_left.png')
+						.appendProperty('og:title'      , 'Remembr. | The memorial website to share memories of loved ones' | trans)
+						.appendProperty('og:description', 'Create a free memorial page to share memories of lost ones by sharing stories, images, movies and music. Invite family and friends to co-create.' | trans)
+						.appendProperty('og:type'       , 'website')
+                %}
+                {% if slug == 'home' %}
+                    {% do headMeta().appendProperty('og:url', baseurl ~ (lang | default('en'))) %}
+                {% else %}
+                    {% do headMeta().appendProperty('og:url', (baseurl ~ (lang | default('en')) ~ '/cmscontent/') ~ slug) %}
+                {% endif %}
+            {% endif %}
+            {{ headMeta() }}
+        {% endblock %}
+        
+        <script>
+            // ie 9 or older
+            //optional need to be loaded before angular-file-upload-shim(.min).js
+            FileAPI = {
+                //only one of jsPath or jsUrl.
+                jsPath: '/js/angular-file-upload/',
+                //only one of staticPath or flashUrl.
+                staticPath: '/js/angular-file-upload/'
+                        //forceLoad: true, html5: false //to debug flash in HTML5 browsers
+            };
+        </script>
+
+        <script>
+            window.fbAsyncInit = function () {
+                        FB.init({
+                    appId: {% if facebookApiKey %}'{{facebookApiKey}}'{% else %}''{% endif %},
+                    xfbml: true,
+                    version: 'v2.2'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        {% block title %}
+            {{ headTitle() }}
+        {% endblock %}
+        
+        {% block link %}
+            {% set debug = included_resources.style.debug %}
+            {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+            {% do headLink({'rel': 'alternate', 'hreflang':'nl', 'href':canonicalurl | format('/nl')}) %}
+            {% do headLink({'rel': 'alternate', 'hreflang':'en', 'href':canonicalurl | format('/en')}) %}
+            {% do headLink({'rel': 'alternate', 'hreflang':'x-default', 'href':canonicalurl | format('')}) %}
+
+            {% do headLink().appendStylesheet(basePath('/css/style.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/responsive.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/form_css.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/jquery.fancybox.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/demos.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/jquery-ui-1.10.3.custom.min.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/banner.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/colorbox.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/cropper.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/landing.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/landing-mobile.css'), null, null, {'debug':debug}) %}
+            {% do headLink().appendStylesheet('https://fonts.googleapis.com/css?family=Varela+Round', null, null, {'debug': debug}) %}
+            {% do headLink().appendStylesheet(basePath('/css/font-awesome-4.6.3/css/font-awesome.min.css'), null, null, {'debug':debug}) %}
+            {{ headLink() }}
+        {% endblock %}
+
+
+        {% block headscript %}
+            {% set debug = included_resources.script.debug %}
+            {% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', null, {'debug':true} ) %}
+            {% do headScript().appendFile('//tinymce.cachefly.net/4.0/tinymce.min.js', null, {'debug':true} ) %}
+            {# {% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js') %} #}
+            {% do headScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js', null, {'debug':true} ) %}
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.8/i18n/angular-locale_nl-nl.js', null, {'debug':true} ) %}
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.8/i18n/angular-locale_en-us.js', null, {'debug':true} ) %}
+            
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js', null, {'debug':true, 'defer': 'defer'} ) %}
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', null, {'debug':true, 'defer': 'defer'} ) %}
+            
+            {% do headScript().appendFile(basePath('/js/tinymce-config.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/angular-file-upload/angular-file-upload-shim.min.js'), null, {'debug':debug, 'defer': 'defer'} ) %}
+            {% do headScript().appendFile(basePath('/js/angular-file-upload/FileApi.min.js'), null, {'debug':debug, 'defer': 'defer'} ) %}
+            {% do headScript().appendFile(basePath('/js/angular-local-storage.min.js'), null, {'debug':debug, 'defer': 'defer'} ) %}
+            {% do headScript().appendFile(basePath('/js/jquery-migrate-1.2.1.js'), null, {'debug':debug, 'defer': 'defer'} ) %}
+            {% do headScript().appendFile(basePath('/js/jquery.colorbox.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/add-provider.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            
+            {% do headScript().appendFile(basePath('/js/sort.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/custom_jquery.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/tab.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/jquery.hoverIntent.js'), null, {'debug':debug, 'defer': 'defer'}) %} {# not used, but might be usefull #}
+            {% do headScript().appendFile(basePath('/js/jquery-ui-datepicker-1.10.3.custom.min.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            
+            {% do headScript().appendFile(basePath('/js/angular-sprintf.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile(basePath('/js/sprintf.js'), null, {'debug':debug, 'defer': 'defer'}) %}
+            
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/nl.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do headScript().appendFile('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/en-gb.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            
+            {{ headScript() }}
+        {% endblock %}
+    </head>
+
+    <body id="ng-app" ng-app="remembr" ng-controller="mainCtrl" ng-click="ui.active='body'" ng-class="$root.bodyclass">
+        {% include 'layout/noscript' %}
+
+        <div infomessages></div>
+        {#
+                @TODO surely it can be done without adding a domElement to the page for everything you may ever want to show
+                And this still doesn't work well with a single-application page, because flashMessenger().hasMessages() depends on a reload
+                And it should preferably not be in the layout.
+
+                >> Ok, it would be nice to get some direction on how it could be done.
+        #}
+        {# PLEASE KEEP IN ONE LINE #}
+        <div ng-controller="flashCtrl">
+            <div id="flasherror">{% if flashMessenger().hasMessages() %}{% for message in flashMessenger().getMessages() %}{{ message | trans }}{% endfor %}{% endif %}</div>
+        </div>
+        <div class="wrapper" ng-class="{loader : $root.bodyclass === undefined}">
+
+            <div ui-view="header" autoscroll="false"></div>
+            <div ui-view="subheader" autoscroll="false"></div><div class="clear"></div>
+
+            {# @TODO at the moment 'masonry' causes some errors in the console when
+                    page/index is included as content in the ui-view below. It works, though.
+                    The issue has been reported with angular-ui at github. #}
+            <div class="contentview" ui-view autoscroll="false">
+                {#{% block content %}
+                    {{content|raw}}
+                {% endblock content %}#}
+            </div>
+
+            <div ui-view="footer" autoscroll="false"></div>
+
+        </div>
+
+        {% block inlinescript %}
+            {% set debug = included_resources.script.debug %}
+            {% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-resource.min.js', null, {'debug':true, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-animate.min.js', null, {'debug':true, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/jquery.fancybox.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/angular-ui-router.js', null, {'debug':debug, 'defer': 'defer'}) %} {#https://github.com/angular-ui/ui-router/issues/692 #}
+            {#		{% do inlineScript().appendFile('//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js') %}#}
+            {% do inlineScript().appendFile('/js/angular-masonry.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/angular-file-upload/angular-file-upload.js', null, {'debug':false, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/cropper.js', null, {'debug':false, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/remembr.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/remembr-directives.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/remembr-states.js', null, {'debug':debug, 'defer': 'defer'}) %}
+            {% do inlineScript().appendFile('/js/remembr-config.js', null, {'debug':debug, 'defer': 'defer'}) %}
+	    {% do inlineScript().appendFile('/js/ruf.js', null, {}) %}
+            {% include 'layout/googleanalytics' %}
+            {{ inlineScript() }}
+        {% endblock %}
+    </body>
+</html>

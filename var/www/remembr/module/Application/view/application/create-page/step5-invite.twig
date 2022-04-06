@@ -1,0 +1,54 @@
+{% extends format == 'tpl' ? 'application/create-page/tpl' : 'application/create-page/index' %}
+{% do headTitle('Create a memorial page step 5 | Remembr.' | trans)%}
+{% block step %}
+	<div>
+
+		<div class="light_container">
+
+			<h5>{{'Invite friends' | trans}}</h5>
+
+			<div class="help_cont_lft">
+				{{cms('help_create_invite').text() | raw}}
+			</div>
+
+
+			<div class="update_info_rht wide">
+
+{#				<div class="inv_friend_fb unavailable" title="{{'This feature will be available in the future' | trans}}">
+					<strong>Facebook</strong>
+					<a  class="connect_fb">{{'Connect with Facebook' | trans }}</a>
+				</div>
+#}
+
+{#				<div class="reg_user">
+					<strong>{{'Registered Remembr users' | trans }}</strong>
+					<div class="admin_lft_btm">
+						<span class="dotted_frame"></span>
+						<h6>{{'Send invitation' | trans }}</h6>
+						<span class="admin_txtbox_bg">
+							<input type="text" class="admin_txtbox" placeholder="{{'Specify an e-mail addres or username' | trans }}" name="">
+						</span>
+						<input type="button" class="add_but" value="add" name="">
+						<div class="clear"></div>
+					</div>
+				</div>#}
+
+				<div class="by_email">
+					<strong>{{'By e-mail' | trans }}</strong>
+{#					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed porta urn.</p>#}
+					<a   ui-sref="^.invite-email" class="blue-inline-btn">{{'Compose e-mail' | trans }}</a>
+				</div>
+
+			</div>
+
+			<div class="clear"></div>
+
+				<button ui-sref="^.publish" class="save_changes floatleft">{{'Previous step' | trans }}</button>
+				<button ng-click="nextStep()" class="save_changes">{{'Create page' | trans }}</button>
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div>
+{% endblock step %}

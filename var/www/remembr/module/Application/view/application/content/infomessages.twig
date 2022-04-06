@@ -1,0 +1,13 @@
+<div id="errormsgs">
+    <div alert ng-repeat="alert in allMessages()" class="repeated-item">
+        <div class="the-message {[{ alert.type }]}" msg-post-render>
+            <span ng-if="!alert.conf" ng-click="remove(alert)" class="close-message"></span>
+            <span ng-if="alert.conf" ng-click="confirm(alert, true)" class="confirmtrue"></span>
+            <span ng-if="alert.conf" ng-click="confirm(alert, false)" class="confirmfalse"></span>
+            <p>
+                {[{ $root.translate(alert.msg) }]}
+                <span class="link" ng-repeat="link in alert.links" ng-click="link.handler()" class="alertlink">{[{ $root.translate(link.lab) }]}</span>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+
+{% block settings %}
+	<div class="requestaccess">
+		<h5>{{ 'Request access' | trans }}</h5>
+        
+        <img class="floatleft" ng-src="{[{imgresize(page.photo.url || page.photo,150,150)}]}" width="150" height="150" alt="{[{page.firstname}]} {[{page.lastname}]}">
+		<div class="floatleft" >
+			<p class="name">{[{ page.firstname }]} {[{ page.lastname }]}</p>
+			<p class="dates">
+				<span class="dateofbirth">{[{ page.dateofbirth | date:'dd-MM-yyyy' }]}</span>
+				<span class="dateofdeath">{[{ page.dateofdeath | date:'dd-MM-yyyy' }]}</span>
+			</p>
+			<p class="msg">
+				{{ 'You can access this memorial page by invitation only.' | trans }}
+			</p>
+		</div>
+
+		<div class="clear"></div>
+  {#<a ui-sref="root.search.fancybox.login">login?</a>#}
+		
+		<input type="button" value="{{'Invite me' |trans}}" class="ng-cloak save_changes" ng-click="requestaccess()" >
+
+		<div class="clear"></div>
+
+	</div>
+{% endblock settings %}

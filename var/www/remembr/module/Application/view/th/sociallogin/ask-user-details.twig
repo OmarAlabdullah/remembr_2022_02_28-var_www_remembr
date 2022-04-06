@@ -1,0 +1,7 @@
+<strong>{{ 'We need some extra data' | trans }}</strong>
+<br /><br />
+{% do form.setAttribute('action', url(null, [], true)) %}
+{% do form.prepare() %}
+{{ form().openTag(form)|raw }}
+{{ formCollection(form) }}
+{{ form().closeTag()|raw }}

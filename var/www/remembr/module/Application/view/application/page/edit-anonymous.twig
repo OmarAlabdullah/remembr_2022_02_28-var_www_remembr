@@ -1,0 +1,32 @@
+{% block content  %}
+<div>
+    <div ng-if="loading" class="content"> <!--content start-->
+        <div class="container error-msg fancybox-width-enforcer-001" style="width: 660px; height: 150px;"></div>
+    </div>
+    <div ng-if="!loading && !found" class="content"> <!--content start-->
+        <div class="inv_friend_lft update_brief" style="padding: 20px;">
+            <h5>{{ 'We could not find the condolence message you are looking for.' | trans }}</h5>
+            <p><em>{{ 'Sorry, this condolence message does not exist or has been deleted.' | trans }}</em></p>
+        </div>
+    </div>
+    <div ng-if="!loading && found" class="error-login light_container" ng-controller="LoginCtrl">
+		<div class="edit_anonymous">
+            <h5>{{ 'Edit the condolence message for ' | trans }} {[{ page.firstname }]} {[{ page.lastname }]}</h5>
+            <p alert ng-repeat="alert in infoMsgs | filter:{type:'edit-anonymous'}">
+                {[{ $root.translate(alert.msg) }]}
+            </p>
+            <form name="anonymous-edit" novalidate ng-submit="save()" class="edit-anonymous-box">
+                <textarea ng-model="anonymousEdit.text" name="introtext" cols="2" rows="2" class="light_txtarea" required></textarea>
+                <div class="clear"></div>
+                <br/>
+                <span class="float-right">
+                    <input class="gray-button" name="" type="button" value="{{'Remove' |trans}}" ng-click="delete()">
+                    <input class="gray-button" name="" type="button" value="{{'Cancel' |trans}}"  ng-click="close()">
+                    <input class="pink-button" name="" type="button" value="{{'Save changes' |trans}}" ng-click="save()" ng-class="{disabled: anonymousEdit.text == undefined}">
+                </span>
+                <div class="clear"></div>
+            </form>
+        </div>
+	</div>
+</div>
+{% endblock content %}

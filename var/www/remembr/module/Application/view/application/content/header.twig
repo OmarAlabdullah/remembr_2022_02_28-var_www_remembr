@@ -1,0 +1,138 @@
+<div id="cookie" ng-controller="cookieCtrl">
+    <div ng-show="showCookieMsg" class="the-message"><span ng-click="showCookieMsg = false" class="close-message"></span>
+        <p>{{ 'Remembr. uses cookies to optimise your website experience. ' | trans }} <a ui-sref="root.cms({slug:'privacy'})">{{ 'Click here for more information.' | trans }}</a>
+            <button class="btn-blue" ng-click="removeCookieMsg()">{{' I understand' | trans }}</button>
+        </p>
+    </div>
+</div>
+
+<div class="header ng-cloak" ng-if="user.loggedin" ng-mouseleave="ui.active=ui.mouseover ? 'body' : ui.active;ui.mouseover=false;$event.stopPropagation()">
+    <div class="container">
+        <div class="logo">
+            <a href="/" ui-rel-sref="root.home">
+                <img ng-if="$root.page.url" src="/images/merk-logo-com-large.png" alt="">
+                <img ng-if="!$root.page.url" src="/images/merk-logo-large.png" alt="">
+
+                <span ng-if="$root.page.url">/</span>
+                <span initdata ng-bind="$root.page.url">{{page.getUrl()}}</span>
+            </a>
+        </div>
+
+        <div class="search_box  pc-only">
+            {% include 'layout/search' %}
+        </div>
+        <div id="management">
+            <div class="head_links">
+                <ul class="header_icons">
+                    <li class="page_name" ng-class="{selected: ui.active=='pages'}" >
+                        <a ng-click="ui.active=(ui.active=='pages' ? '' : 'pages');ui.mouseover=false;$event.stopPropagation()"
+                           ng-mouseenter="ui.active=($root.isTouchScreen ? ui.active : 'pages');ui.mouseover=true; $event.stopPropagation()">
+                            <span initdata="$root.page.firstname" ng-bind="page.firstname || '{{ 'Your' | trans }}'">{{firstname}}</span>
+                            <span initdata="$root.page.lastname" ng-bind="page.lastname || '{{'memorial pages' | trans }}'">{{lastname}}</span>
+                        </a>
+                    </li>
+                    <li class="notification" ng-class="{active: notifications.notifications.length, selected: ui.active=='notifications'}" ng-controller="notificationsCtrl">
+                        <a ng-click="ui.active=(ui.active=='notifications' ? '' : 'notifications');ui.mouseover=false;$event.stopPropagation();"
+                           ng-mouseenter="ui.active=($root.isTouchScreen ? ui.active : 'notifications');ui.mouseover=true;$event.stopPropagation()">
+                            <span class="ballon">{[{notifications.notifications.length > 99 ? '99+' : notifications.notifications.length}]}</span>
+                        </a>
+                    </li>
+                    <li class="message" ng-class="{active: newmessagescounter, selected: ui.active=='messages'}" ng-controller="messagesCtrl">
+                        <a ng-click="ui.active=(ui.active=='messages' ? '' : 'messages');ui.mouseover=false;$event.stopPropagation();"
+                           ng-mouseenter="ui.active=($root.isTouchScreen ? ui.active : 'messages');ui.mouseover=true;$event.stopPropagation()">
+                            <span class="ballon">{[{newmessagescounter > 99 ? '99+' : newmessagescounter}]}</span>
+                        </a>
+                    </li>
+                    <li class="no_border profile" ng-class="{selected: ui.active=='management'}">
+                        <a class="management" ng-click="ui.active=(ui.active=='management' ? '' : 'management');console.log(['ui.active', ui.active]); ui.mouseover=false;$event.stopPropagation()"
+                           ng-mouseenter="ui.active=($root.isTouchScreen ? ui.active : 'management');ui.mouseover=true;$event.stopPropagation()"></a>
+                    </li>
+                    {#<li class="settings" ng-class="{selected: ui.active=='settings'}">
+                        <a  ng-click="ui.active=(ui.active=='settings' ? '' : 'settings');ui.mouseover=false;$event.stopPropagation()"
+                            ng-mouseenter="ui.active=($root.isTouchScreen ? ui.active : 'settings');ui.mouseover=true;$event.stopPropagation()"></a>
+                    </li>#}
+                    
+                    <li class="hamburger" ng-class="{selected: ui.active=='hamburger'}">
+                        <a ng-click="ui.active=(ui.active=='hamburger' ? '' : 'hamburger'); console.log(['ui.active', ui.active]); ui.mouseover=false;$event.stopPropagation()"></a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <div class="header-menus-pc header-menus loggedin" ng-if="ui.active=='pages' || ui.active=='notifications' || ui.active=='messages' || ui.active=='management' || ui.active=='settings'">
+                    {% include 'application/content/headermenus' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-menus-mobile header-menus loggedin" ng-if="ui.active=='pages' || ui.active=='notifications' || ui.active=='messages' || ui.active=='management' || ui.active=='settings' || ui.active=='hamburger' || ui.active=='signin' || ui.active=='register' || ui.active=='forgotpassword'">
+        {% include 'application/content/headermenus' %}
+    </div>
+</div>
+
+
+<div class="header ng-cloak" ng-if="!user.loggedin" ng-controller="LoginCtrl">
+    <div class="container">
+        <div class="logo">
+            <a href="/" ui-rel-sref="root.home">
+                <img ng-if="$root.page.url" src="/images/merk-logo-com-large.png" width="180" height="65" alt="">
+                <img ng-if="!$root.page.url" src="/images/merk-logo-large.png" width="136" height="65" alt="">
+
+                <span ng-if="$root.page.url">/</span>
+                <span initdata ng-bind="$root.page.url">{{page.getUrl()}}</span>
+            </a>
+        </div>
+
+        <div class="search_box pc-only">
+            {% include 'layout/search' %}
+        </div>
+
+        <div id="management">
+            <div id="LoginCtrl-div">
+                <div ng-if="user && ! user.loggedin" class="not_member head_links">
+                    
+                    <ul>
+                        <li ng-class="{selected: ui.active=='register'}" class="register">
+                            <a class="register" ng-click="ui.active='register';ui.mouseover=false;$event.stopPropagation()"
+                               ng-mouseenter="ui.active='register';ui.mouseover=true;$event.stopPropagation()">{{'Register' | trans}}</a>
+                        </li>
+                        <li class="no_border sign_in" ng-class="{selected: ui.active=='signup'}" class="sign_in">
+                            <a class="sign_in" ng-click="ui.active='signup';ui.mouseover=false;$event.stopPropagation()"
+                               ng-mouseenter="ui.active='signup';ui.mouseover=true;$event.stopPropagation()">{{'Log in' | trans}}</a>
+                        </li>
+                        <li class="hamburger" ng-class="{selected: ui.active=='hamburger'}">
+                            <a ng-click="ui.active=(ui.active=='hamburger' ? '' : 'hamburger'); console.log(['ui.active', ui.active]); ui.mouseover=false;$event.stopPropagation()"></a>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="header-menus-pc header-menus" ng-if="ui.active=='forgotpassword'" ng-click="$event.stopPropagation()">
+                        <span class="slide_box" ng-include="'/account/forgotpassword'"></span>
+                    </div>
+                    <div class="header-menus-pc header-menus" ng-if="ui.active=='register'" ng-click="$event.stopPropagation()">
+                        <span class="slide_box">{% include '/th/account/signup' %}</span>
+                        <span ng-include="'/account/login-providers'"></span>
+                    </div>
+                    <div class="header-menus-pc header-menus" ng-if="ui.active=='signup'" ng-click="$event.stopPropagation()">
+                        <span class="slide_box">{% include '/th/account/login' %}</span>
+                        <span class="slide_box" ng-include="'/account/login-providers'"></span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-menus-mobile header-menus" ng-if="ui.active=='hamburger' || ui.active=='forgotpassword' || ui.active=='register' || ui.active=='signup'" >
+        <div ng-if="ui.active=='hamburger'" ng-click="$event.stopPropagation()">
+            {% include '/application/content/hamburger' %}
+        </div>
+        <div ng-if="ui.active=='forgotpassword'" ng-click="$event.stopPropagation()">
+            <span class="slide_box" ng-include="'/account/forgotpassword'"></span>
+        </div>
+        <div ng-if="ui.active=='register'" ng-click="$event.stopPropagation()">
+            <span class="slide_box">{% include '/th/account/signup' %}</span>
+            <span ng-include="'/account/login-providers'"></span>
+        </div>
+        <div ng-if="ui.active=='signup'" ng-click="$event.stopPropagation()">
+            <span class="slide_box">{% include '/th/account/login' %}</span>
+            <span class="slide_box" ng-include="'/account/login-providers'"></span>
+        </div>
+    </div>
+</div>

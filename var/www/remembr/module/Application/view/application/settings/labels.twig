@@ -1,0 +1,64 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+{% do headTitle('Create labels | Remembr.' | trans)%}
+{% block settings %}
+	<div>
+
+		<div class="label_tab light_container">
+			<form name="labels" novalidate ng-submit="save()">
+				<div class="inv_friend_lft"  ng-class="{loader : editpage.labels === undefined }">
+					<h5>{{ 'Labels' | trans }}</h5>
+
+					<div class="label_box1">
+						<label><input ng-model="editpage.uselabels" name="" type="checkbox" class="styled" /><i></i>{{'Enable labels to categorize shared memories' | trans }}</label>
+					</div>
+
+					<div class="label_box2">
+						<strong>{{ 'Add new labels' | trans }}</strong>
+						<span class="admin_txtbox_bg">
+							<input  ng-model="newlabel" name="newlabel" type="text" class="admin_txtbox" placeholder="{{'Specify a new label' | trans }}" ng-enter='add()' />
+						</span>
+						<input type="button" value="{{'add' | trans}}" class="add_but ng-cloak" ng-show="true" ng-click='add()' />
+						<div class="clear"></div>
+						<ul class="ng-cloak">
+							<li ng-repeat="label in editpage.labels | filter:{new:true}" ng-hide="label.delete">
+								<a class="new_label" ng-bind="label.name" ng-click="deleteToggle(label)"></a>
+							</li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+					<div class="label_box3">
+						<span>{{'Current labels' | trans }}</span>
+						<ul>
+							{% if format == 'tpl' %}
+								<li class="ng-cloak" ng-repeat="label in editpage.labels | filter:{new:'!true'}" ng-class="{deleted:label.delete}">
+									<a ng-bind="label.name" ng-click="deleteToggle(label)"></a>
+								</li>
+							{% else %}
+								{% for label in page.labels %}
+									<li><a>{{label.name}}</a></li>
+								{% endfor %}
+							{% endif %}
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+				</div>
+
+				<div class="help_cont">
+					<h5>{{cms('help_settings_labels').title()}}</h5>
+					{{cms('help_settings_labels').text() | raw}}
+				</div>
+
+				<div class="clear"></div>
+
+				<input type="submit" value="{{'Save changes' | trans }}" class="save_changes" ng-class="{disabled:!labels.$dirty}" />
+
+				<input name="" type="button" value="{{'Cancel' | trans }}" class="cancel_but" ng-click="close()" />
+
+				<div class="clear"></div>
+			</form>
+		</div>
+
+	</div>
+{% endblock settings %}

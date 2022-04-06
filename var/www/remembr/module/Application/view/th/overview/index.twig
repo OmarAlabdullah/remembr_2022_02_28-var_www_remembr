@@ -1,0 +1,58 @@
+<form action="" method="get">
+	Search:
+	Name <input type="text" name="name" value="{{filter.name}}" />
+	Order <input type="text" name="order" value="{{filter.orderId}}" />
+	Status
+	{% set statuses = {
+			(constant('TH\\ZfPayment\\Entity\\Payment::stStarted')): 'Started',
+			(constant('TH\\ZfPayment\\Entity\\Payment::stPending')): 'Pending',
+			(constant('TH\\ZfPayment\\Entity\\Payment::stPaid')): 'Paid',
+			(constant('TH\\ZfPayment\\Entity\\Payment::stCanceled')): 'Canceled'
+		} %}
+	<select name="status">
+		<option value="">All payments</option>
+		{% for val, name in statuses %}
+			<option value="{{val}}"{%if filter.status is not empty and filter.status==val%} selected="selected"{%endif%}>{{name}}</option>
+		{% endfor %}
+	</select>
+	<input type="submit" value="Filter" />
+</form>
+
+<table>
+	<tr>
+		<th>Order id</th>
+		<th>Payment key</th>
+		<th>Status</th>
+		<th>Amount</th>
+		<th>Pending</th>
+		<th>Approved</th>
+		<th>Captured</th>
+		<th>Refunded</th>
+		<th>Chargedback</th>
+		<th>Payment menu link</th>
+	</tr>
+	{% for p in payments %}
+	<tr>
+		<td><a href="{{url(null, {action: 'details', id: p.getOrderRef()}, true)}}">{{ p.getOrderRef() }}</a></td>
+		<td><a href="{{url(null, {action: 'details', id: p.getOrderRef()}, true)}}">{{ p.getDdKey() }}</a></td>
+		<td>{%set s = p.getStatus()%}
+			{% if s==constant('TH\\ZfPayment\\Entity\\Payment::stStarted') %}Started
+			{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stPending') %}Pending
+			{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stPaid') %}Paid
+			{% elseif s==constant('TH\\ZfPayment\\Entity\\Payment::stCanceled') %}Canceled
+			{% endif %}
+		</td>
+		{% if s != constant('TH\\ZfPayment\\Entity\\Payment::stStarted') %}
+			<td>{{ p.getAmtRegistered() }}{{ p.getAmtCurrency() }}</td>
+			<td>{{ p.getAmtPendingShopper()+p.getAmtPendingAcquirer() }}{{ p.getAmtCurrency() }}</td>
+			<td>{{ p.getAmtApprovedAcquirer() }}{{ p.getAmtCurrency() }}</td>
+			<td>{{ p.getAmtCaptured() }}{{ p.getAmtCurrency() }}</td>
+			<td>{{ p.getAmtRefunded() }}{{ p.getAmtCurrency() }}</td>
+			<td>{{ p.getAmtChargedback() }}{{ p.getAmtCurrency() }}</td>
+		{% else %}
+			<td colspan="6"></td>
+		{% endif %}
+		<td><a href="{{dd.getMenuUrl(p.getDdKey())}}">[link]</a></td>
+	</tr>
+	{% endfor %}
+</table>

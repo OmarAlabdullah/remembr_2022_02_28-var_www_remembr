@@ -1,0 +1,38 @@
+{#{% extends 'layout/layout' %}#}
+{% block content %}
+<div id="plain_light">
+
+	<div class="light_head">
+
+		<div class="light_logo">
+                        <img src="/images/merk-logo-large.png" width="136" height="65" style="width: 136px; height: 65px;" alt="">
+		</div>
+
+		<div class="light_white_block">
+			<span><img src="//lorempixel.com/80/80" class="profilephoto" ng-src="{[{imgresize($root.user.profilephoto,80,80)}]}" width="80" height="80" alt=""></span>
+			<div class="light_white_text">
+				<em>{{'Logged in as:' |trans}}</em>
+				<em><a  initdata ng-bind="$root.user.name">{{user.getName()}}</a></em>
+				<em>{{'(administrator)' |trans}}</em>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+	<div class="light_cont">
+
+		<div class="light_thumb_nav">
+			<img src="/images/create-page-step{{step}}.jpg" ng-src="/images/create-page-step{[{newpage.currentstep}]}.jpg" />
+		</div>
+
+		<div class="light_main_cont" ui-view="createstep">
+			{% block step %}
+			{% endblock %}
+		</div>
+
+	</div>
+
+</div>
+{% endblock content %}

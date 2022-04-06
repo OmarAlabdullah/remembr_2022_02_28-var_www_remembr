@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="row">
+        <div class="twelvecol">
+
+            <div class="box">
+                <h1>{{ 'Choose password' | trans }}</h1>
+                <p>{{ 'Please enter a password to secure your account.' | trans }}</p>
+					{% do form.setAttribute('action', url(null, [], true)) %}
+					{% do form.prepare() %}
+					{{ form().openTag(form)|raw }}
+					{{ formCollection(form) }}
+					{{ form().closeTag()|raw }}
+            </div>
+
+        </div>
+    </div>
+
+</div>

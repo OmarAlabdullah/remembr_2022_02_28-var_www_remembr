@@ -1,0 +1,56 @@
+{#{% extends 'layout/layout' %}#}
+{% block content %}
+<div id="plain_light">
+
+	<div class="light_head">
+
+		<div class="light_logo">
+			<img src="/images/merk-logo-large.png" width="136" height="65" style="width: 136px; height: 65px;" alt="">
+		</div>
+
+		<div class="light_white_block">
+			<span><img src="//lorempixel.com/80/80" class="profilephoto" ng-src="{[{imgresize(user.profilephoto,80,80)}]}" width="80" height="80" alt="{[{user.firstname}]} {[{user.lastname}]}"></span>
+			<div class="light_white_text">
+				<em>{{'Logged in as:' |trans}}</em>
+				<em><a  initdata ng-bind="$root.user.name">{{user.getName()}}</a></em>
+				<em>{{'(administrator)' |trans}}</em>
+			</div>
+		</div>
+
+		<span class="light_page_set">{{'Page settings for:' |trans}}
+			<a >
+				<span initdata ng-bind="$root.page.firstname">{{firstname}}</span>
+				<span initdata ng-bind="$root.page.lastname">{{lastname}}</span>
+			</a>
+		</span>
+
+		<div class="clear"></div>
+
+	</div>
+
+	<div class="light_cont">
+
+		<div class="light_thumb_nav">
+			<ul>
+				<li><a  ui-sref="root.page.fancybox.setting.info" ui-sref-active="tab_act3">{{'Personal details' | trans}}</a></li>
+{#				<li><a  ui-sref="root.page.fancybox.setting.admins" ui-sref-active="tab_act3">{{'Administrators' | trans}}</a></li>#}
+				<li><a  ui-sref="root.page.fancybox.setting.privacy" ui-sref-active="tab_act3">{{'Privacy settings' | trans}}</a></li>
+				<li><a  ui-sref="root.page.fancybox.setting.invite" ui-sref-active="tab_act3">{{'Send invitations' | trans}}</a></li>
+				<li><a  ui-sref="root.page.fancybox.setting.labels" ui-sref-active="tab_act3">{{'Define labels' | trans}}</a></li>
+{#				<li><a  ui-sref="root.page.fancybox.setting.block" ui-sref-active="tab_act3">{{'Blocked Users' | trans}}</a></li>#}
+				<li><a  ui-sref="root.page.fancybox.setting.publish" ui-sref-active="tab_act3">{{'Publish page' | trans}}</a></li>
+{#				<li><a  ui-sref="root.page.fancybox.setting.themes" ui-sref-active="tab_act3">{{'Themes' | trans}}</a></li>#}
+				<li><a  ui-sref="root.page.fancybox.setting.qrcode" ui-sref-active="tab_act3">{{'QR code' | trans}}</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+
+		<div class="light_main_cont" ui-view="settings">
+			{% block settings %}
+			{% endblock %}
+		</div>
+
+	</div>
+
+</div>
+{% endblock content %}

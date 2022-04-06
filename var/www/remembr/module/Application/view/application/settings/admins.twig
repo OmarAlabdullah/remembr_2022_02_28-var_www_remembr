@@ -1,0 +1,63 @@
+{% extends format == 'tpl' ? 'application/settings/tpl' : 'application/settings/index' %}
+
+{% block settings %}
+	<div>
+
+		<div class="admin light_container">
+
+			<div class="admin_lft">
+
+				<div class="admin_lft_top">
+					<h4>{{ 'Manage administrators' | trans }}</h4>
+					<ul>
+						<li>
+							<span class="admin_img">
+								<img src="/images/admin_img.jpg" width="60" height="60" alt="">
+							</span>
+							<div class="admin_post">
+								<a><b>Roy Nikkelen</b></a>
+								<p>Roy {{'can manage admin roles, send messages and manage and create posts' |trans}}</p>
+								<a>{{'Remove' |trans}}</a>
+							</div>
+							<div class="clear"></div>
+						</li>
+
+						<li>
+							<span class="admin_img">
+								<img src="/images/admin_img.jpg" width="60" height="60" alt="">
+							</span>
+							<div class="admin_post">
+								<a ><b>Micky LeLarge</b> (page creator)</a>
+								<p>Roy {{'can manage admin roles, send messages and manage and create posts' |trans}}</p>
+								<a>{{'Remove' |trans}}</a>
+							</div>
+							<div class="clear"></div>
+						</li>
+
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+				<div class="admin_lft_btm">
+					<span class="dotted_frame"></span>
+					<h6>{{ 'Add an administrator' | trans }}</h6>
+					<span class="admin_txtbox_bg">
+						<input name="" type="text" placeholder="{{'Enter an e-mail address'|trans}}" class="admin_txtbox" />
+					</span>
+					<input name="" type="button" value="{{'Add' |trans}}" class="add_but">
+					<div class="clear"></div>
+				</div>
+
+			</div>
+
+			<div class="help_cont">
+				<h5>{{cms('help_settings_admins').title()}}</h5>
+				{{cms('help_settings_admins').text() | raw}}
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div>
+{% endblock settings %}

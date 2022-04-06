@@ -1,0 +1,246 @@
+{% block content %}
+<div class="content"> <!--content start-->
+    <div id="search_header" ng-controller="sliderController"><div>
+
+
+		<div class="recent-list">
+			<h5>{{ 'Recent pages' | trans }}</h5>
+			<table>
+				<tr ng-repeat="(idx, item) in $root.recent.pages">
+					<td class="recent-img">
+						<a ui-rel-sref="root.page({page:'{[{item.url}]}'})">
+							<!-- <img onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[150]h[150]f[true]'" ng-src="{[{imgresize(item.photo.url,35,35)}]}" width="35" height="35" alt="{[{item.firstname}]} {[{item.lastname}]}"> -->
+                            <img ng-src="{[{imgcrop(item.photo.url, item.photo.roi, 35, 35)}]}"
+                                 onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[35]h[35]f[true]'"
+                                 alt="{[{page.firstname}]} {[{item.lastname}]}" width="35" height="35"/>
+						</a>
+					</td>
+					<td class="recent-text">
+						<p><a ui-rel-sref="root.page({page:'{[{item.url}]}'})">{[{item.firstname}]} {[{item.lastname}]}</a></p>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="slideshow" bz-slider delay="delay" autoplay="true">
+			<div ng-repeat="(i, slide) in $root.slides.pages || []" ng-show="i == $slideIndex" ng-class="slide.class" class="animation-fade" ng-mouseout="play()" ng-mouseover="stop()">
+
+				<div class="info_main_photo">
+					<!-- <img src="/images/top_info_img.jpg" onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[320]h[320]f[true]'" ng-src="{[{imgresize(slide.photo.url || '/images/top_info_img.jpg',320,320)}]}" width="320" height="320" alt=""> -->
+                    <img ng-src="{[{imgcrop(slide.photo.url, slide.photo.roi, 320, 320)}]}"
+                         onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[320]h[320]f[true]'"
+                         alt="{[{slide.firstname}]} {[{slide.lastname}]}" width="320" height="320"/>
+				</div>
+
+				<div class="info_main_rht">
+					<span class="white_arrow2"></span>
+					<div class="info_main_txt_cont">
+						<div class="info_main_box1">
+							<h3>
+								<a ui-rel-sref="root.page({page:'{[{slide.url}]}'})">{[{slide.firstname}]} {[{slide.lastname}]}</a>
+							</h3>
+                            <p class="alive_range">
+                                <span ng-bind-html="slide.dateofbirth | dateforlang: {nl: 'D MMMM [<strong>]YYYY[</strong>]', en: 'MMMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofbirth | date('d M')}}</span>
+                                -
+                                <span ng-bind-html="slide.dateofdeath | dateforlang: {nl: 'D MMMM [<strong>]YYYY[</strong>]', en: 'MMMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofdeath | date('d M')}}</span>
+                            </p>
+
+							<div ng-init="showLess=true">
+								<p class="introtext-animation introtext" ng-bind="slide.introtext" collapse="8">{{introtext}}</p>
+								<a ui-rel-sref="root.page({page:'{[{slide.url}]}'})" class="more">
+											{{'More...' |trans}}
+									</a>
+									<div class="clear"></div>
+								</div>
+
+							</div>
+						</div>
+						<div class="pink-bullets">
+							<ul>
+								<li ng-repeat="(idx, s) in $root.slides.pages" ng-class="{active : i == idx}"></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+        </div></div>
+
+	   {#{% include 'layout/search' %}#}
+
+
+		<div class="clear"></div>
+		<div class="container search_container" ng-controller="searchCtrl">
+			<div id="plain_light">
+				<div class="update_info_lft search-advanced">
+					<form name="extendedSearch" id="extendedSearch" ng-submit="submitExtendedSearch()" novalidate>
+						<ul>
+							<li>
+								<span class="light_txtbox_bg">
+									<input ng-model="search.firstname" ng-click="term=false" name="firstname" type="text" class="light_txtbox" placeholder="{{ 'First name' | trans }}"  />
+								</span>
+							</li>
+							<li>
+								<span class="light_txtbox_bg">
+									<input ng-model="search.lastname" ng-click="term=false" name="lastname" type="text" class="light_txtbox" placeholder="{{ 'Last name' | trans }}"  />
+								</span>
+							</li>
+							<li>
+								<span class="light_txtbox_bg">
+									<input ng-model="search.residence" ng-click="term=false" name="residence" type="text" class="light_txtbox" placeholder="{{ 'City' | trans }}"  />
+								</span>
+							</li>
+							<li>
+								<span class="light_txtbox_bg ltb_select custom-dropdown">
+									<select ng-model="search.country" name="country" class="light_txtbox customSelect" ng-options="country for country in countries">
+										<option value="" selected>{{ 'Country'| trans }}</option>
+									</select>
+								</span>
+							</li>
+							<li ng-class="{invalid : search.dateofbirth.$invalid && search.dateofbirth.$dirty}">
+								<span class="light_txtbox_bg ltb_select custom-dropdown">
+										<select ng-model="search.yearofbirth" name="yearofbirth" class="light_txtbox customSelect" ng-options="year for year in range">
+											<option value="" selected>{{ 'Year of birth'| trans }}</option>
+										</select>
+									</span>
+								</li>
+								<li ng-class="{invalid : search.dateofdeath.$invalid && search.dateofdeath.$dirty}">
+									<span class="light_txtbox_bg ltb_select custom-dropdown">
+											<select ng-model="search.yearofdeath" name="dateofdeath" class="light_txtbox customSelect" ng-options="year for year in range">
+												<option value="" selected>{{ 'Year of death'| trans }}</option>
+											</select>
+										</span>
+									</li>
+									<li class="gender">
+										<span class="privacy">
+											<input ng-model="search.gender" ng-click="term=false" name="gender" value="male" type="radio" class="" />
+												{{ 'Male' | trans }}
+										</span>
+									</li>
+									<li class="gender">
+										<span class="privacy">
+											<input ng-model="search.gender" ng-click="term=false" name="gender" value="female" type="radio" class="" />
+												{{ 'Female' | trans }}
+										</span>
+									</li>
+								</ul>
+								<ul id="privacy">
+									<li>
+										<h4><span>{{ 'Privacy' | trans }}</span></h4>
+									</li>
+									<li>
+										<span class="privacy">
+											<input ng-model="search.open" ng-click="term=false" name="open" type="checkbox" class="" />
+												{{ 'Open' | trans }}
+										</span>
+									</li>
+									<li>
+										<span class="privacy">
+											<input ng-model="search.prive" ng-click="term=false" name="prive" type="checkbox" class="" />
+												{{ 'Private' | trans }}
+										</span>
+									</li>
+								</ul>
+								<ul id="type">
+									<li>
+										<h4><span>{{ 'Type page' | trans }}</span></h4>
+									</li>
+									<li>
+										<span class="type">
+											<input ng-model="search.type" value="all" ng-click="term=false" name="type" type="radio" class="" />
+								{{ 'All people' | trans }}
+										</span>
+									</li>
+									<li>
+										<span class="type">
+											<input ng-model="search.type" value="vip" ng-click="term=false" name="type" type="radio" class="" />
+								{{ 'Only famous people' | trans }}
+										</span>
+									</li>
+									<li>
+										<span class="type">
+											<input ng-model="search.type" value="animal" ng-click="term=false" name="type" type="radio" class="" />
+								{{ 'Only pets' | trans }}
+										</span>
+									</li>
+									<li>
+										<h4><span></span></h4>
+									</li>
+									<li class="reset-filters">
+										<a ng-click="resetFilters()">{{ 'Reset filters' | trans }}</a>
+									</li>
+									<li>
+										<h4><span></span></h4>
+									</li>
+									<li>
+										<input name="" type="submit" value="{{ 'Search' | trans }}" class="save_changes">
+									</li>
+								</ul>
+
+								<div class="clear"></div>
+							</form>
+							<div class="clear"></div>
+						</div>
+						<div class="update_info_rht search-results" id="sort" ng-controller="pagingCtrl">
+                            
+
+							<div class="head_links2 ng-scope sort-dropdown">
+								<ul>
+									<li class=" no_bg">
+										<a class="sorting" ng-click="ui.active='sort';$event.stopPropagation()">{{ 'Sort' | trans }}</a>
+										<ul class="sett_drop slide ng-scope" ng-show="ui.active=='sort'" ng-click="$event.stopPropagation()" style="display: block;">
+											<li>
+                                        {# use: $root.reverse=!$root.reverse; to reverse on each click #}
+													<p><a ng-click="predicate = 'lastname'; reverse=false;">{{ 'Alphabetical order' | trans }}</a></p>
+													<p><a ng-click="predicate = 'dateofbirth'; reverse=false;">{{ 'Date of birth' | trans }}</a></p>
+													<p><a ng-click="predicate = 'dateofdeath'; reverse=true;">{{ 'Date of death' | trans }}</a></p>
+													<cite class="top_arrow"></cite>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+
+								<div ng-hide="term">
+									<h5 ng-show="search.firstname || search.lastname || search.dateofbirth || search.dateofdeath">{{ 'Search results for' | trans }} "{[{search.firstname}]} {[{search.lastname}]} {[{search.dateofbirth | date:(user.dateformat|dpToNg) }]} {[{search.dateofdeath | date:(user.dateformat|dpToNg)}]}" ({[{ searchpages.pages.length }]})</h5>
+									<h5 ng-hide="search.firstname || search.lastname || search.dateofbirth || search.dateofdeath">{{ 'Search results' | trans }} ({[{ searchpages.pages.length }]})</h5>
+								</div>
+								<h5 ng-show="term">{{ 'Search results for' | trans }} "{[{ term }]}" ({[{searchpages.pages.length }]})</h5>
+
+                            
+                                <div class="search_box search_strech" style="margin-bottom: 10px;">
+                                    {% include 'layout/search' %}
+                                </div>
+								<div>
+									<ul class="search-list">
+										<li class="searchpage-listing" ng-repeat="(url, page) in searchpages.pages | orderBy:predicate:reverse  | startFrom:currentPage * pageSize | limitTo:pageSize {#| filter:search#}"> {# 3rd column no-padding handled by :nth-child() in css #}
+											<a ng-click="open(page,$event)">
+												<!-- <img ng-src="{[{imgresize(page.photo.url,150,150)}]}"
+                                                 onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[150]h[150]f[true]'"
+                                                 width="150" height="150" alt="{[{page.firstname}]} {[{page.lastname}]}"> -->
+                                                <img ng-src="{[{imgcrop(page.photo.url, page.photo.roi, 150, 150)}]}"
+                                                     onerror="this.src='/minify?files=/images/user-icon-large.png&resize=w[150]h[150]f[true]'"
+                                                     alt="{[{page.firstname}]} {[{page.lastname}]}" width="150" height="150"/>
+											</a>
+											<p class="name"><a ng-click="open(page,$event)">{[{ page.firstname }]} {[{ page.lastname }]}</a></p>
+											<p class="dates">
+                                                
+                                                <span ng-bind-html="page.dateofbirth | dateforlang: {nl: 'D MMM [<strong>]YYYY[</strong>]', en: 'MMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofbirth | date('d M')}}</span>
+                                                -
+                                                <span ng-bind-html="page.dateofdeath | dateforlang: {nl: 'D MMM [<strong>]YYYY[</strong>]', en: 'MMM D, [<strong>]YYYY[</strong>]'} | unsafe">{{dateofdeath | date('d M')}}</span>
+											</p>
+										</li>
+									</ul>
+									<div class="clear"></div>
+									<span page-size='9' simplepaging nritems='{[{searchpages.pages.length}]}'></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+{% endblock content %}
+

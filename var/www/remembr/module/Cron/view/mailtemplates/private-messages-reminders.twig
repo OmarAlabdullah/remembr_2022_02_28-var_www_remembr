@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <td valign="top">
+            <p>{{ 'Hi %s %s' | trans | format(firstname, lastname) }}</p>
+            <p>{{ title | trans }}</p>
+            <p>
+				{% trans %}
+					1 new message
+				{% plural number %}
+					{{ number }} new messages
+				{% endtrans %}</p>
+            <ul>
+                {% for message in messages %}
+                    <li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}messages/{{message.getId()}}">
+						{% if message.message.extra.type == 'link' %}
+							{% set msgtitle = 'Invitation' | trans %}
+						{% elseif message.message.extra.type == 'request' %}
+							{% set msgtitle = 'Request for invite' | trans %}
+						{% else %}
+							{% set msgtitle = message.message.title %}
+						{% endif %}
+                        {{ msgtitle|length > 50 ? msgtitle|slice(0, 50) ~ '...' : msgtitle }}
+                    </a></li>
+                {% endfor %}
+            </ul>
+        </td>
+
+    </tr>
+</table>

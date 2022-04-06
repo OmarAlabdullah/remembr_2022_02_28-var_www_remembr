@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <td valign="top" style="width:400px;">
+            <p style="color:#4a57d0">{{ 'Subject' | trans }}: {{ title | raw }}</p>
+           <p></p>
+            {{ content | raw }}
+        </td>
+        <td valign="top" style="width:130px;padding:10px;">
+            <p>{{ sender }}</p>
+            <div style="width:80px;height:80px;overflow:hidden;">
+                <span><img src="{{url('remembr', [],{'force_canonical':true},0)}}{{ from_profilephoto }}" width="80" /></span>
+            </div>
+        </td>
+
+    </tr>
+</table>
+<hr />
+<table>
+    <tr>
+        <td valign="top" colspan="2">
+            <p>
+                <small>
+		{{ 'This e-mail is sent by Remembr. on behalf of %s'
+			| trans| format(sender) | escape
+			| raw }}
+                </small>
+            </p>
+        </td>
+
+    </tr>
+</table>

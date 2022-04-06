@@ -1,0 +1,45 @@
+<li class="condolence {#{{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}#}">
+
+	<span class="delete-content" ng-if="condolence.user.id == $root.user.id || $root.page.user.id == $root.user.id" mem="condolence"></span>
+    <span class="edit-content"   ng-if="condolence.user.id == $root.user.id" mem="condolence"></span>
+	<div class="row_gray_box not-editing">
+	<div class="row_btm">
+		<span class="row_btm_arrow"></span>
+		<span class="date_time" ng-bind="video.creationdate | date:'dd-MM yyyy HH:mm'">{{memory.creationdate | date('d-m Y H:i') }}</span>
+	<em class="view_comment">
+	<a  href="{{url('remembr/page', {}, {}, ['page', 'lang'])}}/memory/{{memory.id}}"
+		ui-sref="root.page.fancybox.memory({id : condolence.id})"><span ng-bind="$root.translate('View / Comment')">{{'View / Comment'|trans}}</span> (<span ng-bind="condolence.numbercomments">{{memory.comments|length}}</span>)</a>
+	</em>
+		<div class="clear"></div>
+		<div class="view_comment_open">
+			<div class="read_more_box">
+			<div class="author_title">
+					<div {% if not user %}class="ng-cloak"{% endif %} ng-if="$root.user.loggedin && $root.getUsername(condolence.user)">
+						<span class="user-msg" user="condolence.user" text="'{{ 'Send a message to' | trans }}'"></span>
+						<p><a ng-bind="$root.getUsername(condolence.user, '{{'Anonymous' | trans }}')">
+								{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+							</a> {#<i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i>#}</p>
+					</div>
+
+					<div {% if user %}class="ng-cloak"{% endif %} ng-if="!$root.user.loggedin || !$root.getUsername(condolence.user)" >
+						<p>
+							<em ng-bind="$root.getUsername(condolence.user, condolence.username || '{{'Anonymous user' | trans }}')">
+								{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+							</em>
+							{#<i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i>#}
+							</p>
+						</div>
+					</div>
+                    <div class="save-edit-content">
+                        <textarea ng-model="condolence.text" name="text" required="true" class="edit-content-text-field"></textarea>
+                        <a ng-click="saveContent(condolence)" class="edit-content-submit" ng-bind="$root.translate('Save changes')">{{'Save changes' | trans}}</a>
+                    </div>
+					<p class="edit-content-display" ng-bind="condolence.text" shorten="3">{{condolence.text}}</p>
+					<p class="edit-content-display">
+						<span><a ui-sref="root.page.fancybox.memory({id : condolence.id})" ng-bind="$root.translate('More...')">{{'More...' |trans}}</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>

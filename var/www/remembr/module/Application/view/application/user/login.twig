@@ -1,0 +1,58 @@
+<div>
+    <div class="error-login light_container" ng-controller="LoginCtrl">
+		<div class="inv_friend_lft update_brief">
+
+
+			<div ng-if="ui.active!='forgotpassword' && ui.active!='register2'">
+				<div class="popupregister not_member">
+					<span>{{'New to Remembr? Sign up here:' | trans}} </span>
+					<a class="register" ng-click="ui.active='register2';$event.stopPropagation()">{{'Register' | trans}}</a>
+				</div>
+				<h5>{{ 'Login' | trans }}</h5>
+
+				<p alert ng-repeat="alert in infoMsgs | filter:{type:'login'}">
+					{[{ $root.translate(alert.msg) }]}
+				</p>
+				<p ng-show="(infoMsgs | filter:{type:'login'}).length == 0" >
+					{{ 'You need to login before you can continue' | trans }}
+				</p>
+
+				<ul class="note_drop slide noclose" ng-click="$event.stopPropagation()">
+					<li class="no_border">
+						<cite class="top_arrow_right"></cite>
+						<span class="slide_box">{% include '/th/account/login' %}</span>
+						<span ng-include="'/account/login-providers'"></span>
+					</li>
+				</ul>
+			</div>
+
+			<div ng-if="ui.active=='forgotpassword'">
+				<h5>{{ 'Forgot password?' | trans }}</h5>
+				<ul class="note_drop slide noclose" ng-click="$event.stopPropagation()">
+					<li class="account-edit no_border">
+						<cite class="top_arrow_right"></cite>
+						<span class="slide_box" ng-include="'/account/forgotpassword'"></span>
+					</li>
+				</ul>
+			</div>
+
+			<div ng-if="ui.active=='register2'">
+				<div class="popupregister not_member">
+					<span>{{'Already member? Log in here:' | trans}} </span>
+					<a class="register" ng-click="ui.active='login';$event.stopPropagation()">{{'Login' | trans}}</a>
+				</div>
+				<h5>{{ 'Register' | trans }}</h5>
+				<ul class="note_drop slide noclose" ng-click="$event.stopPropagation()">
+					<li class="no_border">
+						<cite class="top_arrow_right"></cite>
+						<span id="signup_template" class="slide_box">{% include '/th/account/signup' %}</span>
+						<span ng-include="'/account/login-providers'"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+</div>

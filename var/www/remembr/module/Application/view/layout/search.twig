@@ -1,0 +1,6 @@
+<div class="search_pages" ng-controller="searchCtrl">
+    <form method="post" name="pageSearchForm" id="pageSearchForm" ng-submit="submitPageSearchForm()" novalidate>
+        <input class="txtbox1" ng-click="$event.stopPropagation()" ng-model="search.searchterm" type="text" placeholder="{{"Name..."|trans}}" />
+        <input value="{{ "Searchbuttontop" | trans}}" type="submit" class="search_but">
+    </form>
+</div>

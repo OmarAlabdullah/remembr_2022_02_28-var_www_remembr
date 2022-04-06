@@ -1,0 +1,63 @@
+<table>
+	<tr>
+		<td valign="top">
+			<p>{{ 'Hi %s %s' | trans | format(firstname, lastname) }}</p>
+			<p>{{ title | trans }}</p>
+			<p>
+				{{ 'You have' | trans }}
+				{% if nmemories > 0 %}
+					{% trans %}
+						1 new memory{% plural nmemories %}
+						{{ nmemories }} new memories{% endtrans %}{% if nphotos+nvideos+ncondolences > 0 %}{% if nvideos+ncondolences > 0 %}, {% else %} and {% endif %}{% endif %}
+				{% endif %}
+				{% if nphotos > 0 %}
+					{% trans %}
+						1 new photo{% plural nphotos %}
+						{{ nphotos }} new photos{% endtrans %}{% if nvideos+ncondolences > 0 %}{% if ncondolences > 0 %}, {% else %} and {% endif %}{% endif %}
+				{% endif %}
+				{% if nvideos > 0%}
+					{% trans %}
+						1 new video{% plural nvideos|length %}
+						{{ nvideos }} new videos{% endtrans %}{% if ncondolences > 0 %} and {% endif %}
+				{% endif %}
+				{% if ncondolences > 0%}
+					{% trans %}
+						1 new condolence
+					{% plural ncondolences %}
+						{{ ncondolences }} new condolences
+					{% endtrans %}
+				{% endif %} 
+			</p>
+			<ul>
+				{% for m in memories %}
+					<li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{m.memory.page.url}}/memory/{{m.memory.id}}">
+						{% set memtext = m.memory.text %}
+						{{ memtext|length > 50 ? memtext[:50] ~ '...' : memtext }}
+					</a></li>
+				{% endfor %}
+				{% for m in condolences %}
+					<li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{m.memory.page.url}}/memory/{{m.memory.id}}">
+						{% set memtext = m.memory.text %}
+						{{ memtext|length > 50 ? memtext[:50] ~ '...' : memtext }}
+					</a></li>
+				{% endfor %}
+				{% for m in photos %}
+					<li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{m.memory.page.url}}/memory/{{m.memory.id}}">
+						<img src="{{ cron_url('', {}, {}) }}{{m.memory.photoid}}" width="128" alt="{{ 'New image' | trans }}">
+					</a></li>
+				{% endfor %}
+				{% for m in videos %}
+					<li><a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{m.memory.page.url}}/memory/{{m.memory.id}}">
+						{{ 'New video' | trans }}
+					</a></li>
+				{% endfor %}
+			</ul>
+			{# {% for m in photos %}
+				<a href="{{ cron_url('', {}, {}) }}{% if lang %}{{lang}}/{% endif %}{{m.memory.page.url}}/{{m.memory.id}}">
+					<img src="{{ cron_url('', {}, {}) }}/minify?files={{m.memory.photoid}}&resize=w[320]h[320]f[true]" width="32" height="32" alt="{{ memtext|length > 50 ? memtext[:50] ~ '...' : memtext }}"></a>
+					{{ memtext|length > 50 ? memtext[:50] ~ '...' : memtext }}
+				</a>
+			{% endfor %} #}
+		</td>
+	</tr>
+</table>

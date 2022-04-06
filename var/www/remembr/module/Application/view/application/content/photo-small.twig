@@ -1,0 +1,50 @@
+<li class="photo{# {{random(['most-populair', 'most-recent', ''])}} {{random(['active', ''])}}#}">
+	<span class="delete-content" ng-if="photo.user.id == $root.user.id || $root.page.user.id == $root.user.id" mem="photo"></span>
+    <span class="edit-content"   ng-if="photo.user.id == $root.user.id" mem="photo"></span>
+	<div class="row_gray_box not-editing">
+		<span class="hover_img" ng-click="hideComment = !hideComment">
+			<img ng-src="{[{$root.imgresize(photo.photoid,320,320)}]}" src="{{'/minify?files=' ~ memory.photoid ~ '&resize=w[320]h[320]f[true]'}}" width="320" height="320" alt="">
+		</span>
+		<div class="row_btm">
+			<span class="row_btm_arrow" ng-click="hideComment = !hideComment"></span>
+			<span class="date_time" ng-bind="photo.creationdate | date:'dd-MM yyyy HH:mm'">{{memory.creationdate | date('d-m Y H:i') }}</span>
+			<em class="view_comment">
+				<a  href="{{url('remembr/page', {}, {}, ['page', 'lang'])}}/memory/{{memory.id}}"
+					ui-sref="root.page.fancybox.memory({id : photo.id})"><span ng-bind="$root.translate('View / Comment')">{{'View / Comment'|trans}}</span> (<span ng-bind="photo.numbercomments">{{memory.comments|length}}</span>)</a>
+			</em>
+			<div class="clear"></div>
+			<div ng-if="(photo.text !== '' && photo.text !== undefined) || photo.editing">
+				<div class="view_comment_open" ng-class="{hide: hideComment}">
+					<span class="row_btm_arrow2"></span>
+					<div class="author_title">
+						<div {% if not user %}class="ng-cloak"{% endif %} ng-show="$root.user.loggedin && $root.getUsername(photo.user)">
+							<span class="user-msg" user="photo.user" text="'{{ 'Send a message to' | trans }}'"></span>
+							<p><a ng-bind="$root.getUsername(photo.user, '{{'Anonymous user' | trans }}')">
+									{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+								</a> {#<i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i>#}</p>
+						</div>
+
+						<div {% if user %}class="ng-cloak"{% endif %} ng-show="!$root.user.loggedin || !$root.getUsername(photo.user)" >
+							<p>
+								<em ng-bind="$root.getUsername(photo.user, '{{'Anonymous user' | trans }}')">
+									{{ memory.user.profile.firstname ~ ' ' ~ memory.user.profile.lastname | default('Anonymous user' | trans) }}
+								</em>
+								{# <i ng-bind="$root.translate('wrote:')">{{'wrote:' |trans}}</i> #}
+							</p>
+						</div>
+					</div>
+                    <div class="save-edit-content">
+                        <textarea ng-model="photo.text" name="text" required="true" class="edit-content-text-field"></textarea>
+                        <a ng-click="saveContent(photo)" class="edit-content-submit"  ng-bind="$root.translate('Save changes')">{{'Save changes' | trans}}</a>
+                    </div>
+                    <p class="edit-content-display" ng-bind="photo.text" shorten="1">{{memory.text}}</p>
+                    <p class="right-one-up edit-content-display"><span><a class="more_link" ui-sref="root.page.fancybox.memory({id : photo.id})" ng-bind="$root.translate('More...')">{{'More...' |trans}}</a></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="star">
+			<a  class="star_icon_hov hover_img"></a>
+			<span class="pin_top"><a  class="hover_img">{{'Pin to top, make hero' | trans }} <span class="white_arrow"></span></a></span>
+		</div>
+	</div>
+</li>

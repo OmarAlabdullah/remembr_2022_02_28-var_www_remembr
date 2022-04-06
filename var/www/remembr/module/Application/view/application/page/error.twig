@@ -1,0 +1,24 @@
+{#{% extends 'layout/layout' %}#}
+{% block content %}
+<div class="content"> <!--content start-->
+
+	<div class="container error-msg">
+
+		<div ng-switch on="page.error">
+			<p ng-switch-when="accessdenied">{{ 'You do not have sufficient access rights to view this page.' | trans }}</p>
+			<div ng-switch-when="gone">
+				<div ng-if="page.details[0] == 'profile-page no longer available'"> {# details are only available with display_errors is true. So we need an alternative for production #}
+					<p>{{ 'This page is no longer available.' | trans }}</p>
+				</div>
+				<div ng-if="page.details[0] != 'profile-page no longer available'">
+					<p><em>{{ 'Sorry, this page does not exist or has been moved or deleted.' | trans }}</em></p>
+					<p>{{ 'Are you looking for something specific? Use the search box at the top of this page to find a memorial page or look at the menu in the footer to find your specific subject.' | trans }}</p>
+				</div>
+			</div>
+			<p ng-switch-when="unavailable">{{ 'This page is no longer available.' | trans }}</p>
+			<p ng-switch-default>{{ 'Some unspecified error has occurred.' | trans }}</p>
+		</div>
+	</div>
+
+</div> <!--content end-->
+{% endblock content %}
